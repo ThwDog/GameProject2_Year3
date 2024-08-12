@@ -26,6 +26,10 @@ public class InputManager : MonoBehaviour
         return inputs.Player.Movement.ReadValue<Vector2>();
     }
 
+    public bool jump(){
+        return inputs.Player.Jump.triggered;
+    }
+
     public Vector2 GetMouseDelta()
     {
         return inputs.Player.Look.ReadValue<Vector2>();
