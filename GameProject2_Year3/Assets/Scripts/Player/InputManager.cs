@@ -1,10 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class InputManager : MonoBehaviour
 {
-    private PlayerAction inputs;
+    internal PlayerAction inputs;
 
     public void Awake() 
     {
@@ -19,6 +18,15 @@ public class InputManager : MonoBehaviour
     private void OnDisable() 
     {
         inputs.Disable();    
+    }
+
+    // for disable action 
+    public void Disable(InputAction action){
+        action.Disable();
+    }
+
+    public void Enable(InputAction action){
+        action.Enable();
     }
 
     public Vector2 GetPlayerMovement()
