@@ -9,13 +9,14 @@ public class InventorySystem : MonoBehaviour{
     internal List<string> inventory = new List<string>(); // item that player has collect    
 
     private void Start() {
-
+        if (checkItemReq != null){
         // get name of requirement item
-        for(int i = 0; i < checkItemReq.listOfItem.Length ;i++){
-            if(itemReq.Contains(checkItemReq.listOfItem[i].name))
-                return;
+            for(int i = 0; i < checkItemReq.listOfItem.Length ;i++){
+                if(itemReq.Contains(checkItemReq.listOfItem[i].name))
+                    return;
 
-            itemReq.Add(checkItemReq.listOfItem[i].name);
+                itemReq.Add(checkItemReq.listOfItem[i].name);
+            }
         }
         
     }
