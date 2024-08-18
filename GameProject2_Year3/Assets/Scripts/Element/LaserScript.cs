@@ -9,11 +9,11 @@ public class LaserScript : MonoBehaviour
     [Header("Laser setting")]
     public LineRenderer lineR;
     [SerializeField] Transform firePoint;
-    [SerializeField] float maxLength = 3;
+    [Tooltip("Max length of laser")][SerializeField] float maxLength = 3;
     [SerializeField] Vector3 direction = new Vector3(0, 0, 1);
     [Header("")]
     LaserScript hitObj;
-    public bool isOpen;
+    [Tooltip("If it first to so laser then click in on")]public bool isOpen = false;
 
     private void Start() {
         if(isOpen) EnableLaser();
