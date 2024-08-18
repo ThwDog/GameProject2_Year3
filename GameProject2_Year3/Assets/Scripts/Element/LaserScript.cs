@@ -12,7 +12,7 @@ public class LaserScript : MonoBehaviour
     [SerializeField] float maxLength = 3;
     [SerializeField] Vector3 direction = new Vector3(0, 0, 1);
     [Header("")]
-    [SerializeField] MeshCollider _collider;
+    LaserScript hitObj;
     public bool isOpen;
 
     private void Start() {
@@ -23,19 +23,34 @@ public class LaserScript : MonoBehaviour
         if(isOpen)  EnableLaser();
         else DisableLaser();
         laserUpdate();
-        colliderUpdate();
+        ray();
+        // colliderUpdate();
 
     }
+    // check ray cast hit if in hit to another laser or not
+    void ray(){
+        RaycastHit hit;
 
-    private void colliderUpdate(){
-        if (_collider == null) lineR.gameObject.AddComponent<MeshCollider>();
-        _collider = lineR.gameObject.GetComponent<MeshCollider>();
-        Mesh mesh = new Mesh();
-        lineR.BakeMesh(mesh,false);
-        _collider.sharedMesh = mesh;
-        _collider.convex = true;
-        _collider.isTrigger = true;
+        if(Physics.Raycast(firePoint.position, firePoint.forward,out hit,maxLength)){
+            if(hit.transform.gameObject.GetComponent<LaserScript>()){
+                hitObj = hit.transform.gameObject.GetComponent<LaserScript>();
+                hitObj.isOpen = true;
+            }
+        }
+        else {
+            if(hitObj != null) hitObj.isOpen = false;
+        }
     }
+
+    // private void colliderUpdate(){
+    //     if (_collider == null) lineR.gameObject.AddComponent<MeshCollider>();
+    //     _collider = lineR.gameObject.GetComponent<MeshCollider>();
+    //     Mesh mesh = new Mesh();
+    //     lineR.BakeMesh(mesh,false);
+    //     _collider.sharedMesh = mesh;
+    //     _collider.convex = true;
+    //     _collider.isTrigger = true;
+    // }
 
     private void laserUpdate(){
         lineR.positionCount = 2;
@@ -46,22 +61,9 @@ public class LaserScript : MonoBehaviour
 
     public void EnableLaser(){
         lineR.enabled = true;
-        if(lineR.gameObject.GetComponent<MeshCollider>()) _collider.enabled = true;
     } 
 
     public void DisableLaser(){
         lineR.enabled = false;
-        if(lineR.gameObject.GetComponent<MeshCollider>()) _collider.enabled = false;
-    }
-
-    private void OnTriggerStay(Collider other) {
-        if(other.gameObject.GetComponent<LineRenderer>() && other.gameObject.GetComponent<LineRenderer>()!= lineR){
-            Debug.Log(other.name);
-            isOpen = true;
-        }
-    }
-
-    private void OnTriggerExit(Collider other) {
-        Debug.Log(other.name);
     }
 }
