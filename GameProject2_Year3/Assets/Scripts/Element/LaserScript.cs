@@ -16,15 +16,14 @@ public class LaserScript : MonoBehaviour
     [Tooltip("If it first to so laser then click in on")]public bool isOpen = false;
 
     private void Start() {
+        laserUpdate();
         if(isOpen) EnableLaser();
     }
 
     private void Update() {
         if(isOpen)  EnableLaser();
         else DisableLaser();
-        laserUpdate();
         ray();
-        // colliderUpdate();
 
     }
     // check ray cast hit if in hit to another laser or not
@@ -42,6 +41,13 @@ public class LaserScript : MonoBehaviour
         }
     }
 
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.matrix = firePoint.transform.localToWorldMatrix;
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(Vector3.zero,firePoint.forward * maxLength);
+    }
+
     // private void colliderUpdate(){
     //     if (_collider == null) lineR.gameObject.AddComponent<MeshCollider>();
     //     _collider = lineR.gameObject.GetComponent<MeshCollider>();
@@ -54,9 +60,7 @@ public class LaserScript : MonoBehaviour
 
     private void laserUpdate(){
         lineR.positionCount = 2;
-        lineR.SetPosition(0,firePoint.position);
-        Vector3 endPosition = firePoint.position + direction * maxLength;
-        lineR.SetPosition(1,endPosition);
+        lineR.SetPosition(1,lineR.GetPosition(1) + direction * maxLength);
     }
 
     public void EnableLaser(){
