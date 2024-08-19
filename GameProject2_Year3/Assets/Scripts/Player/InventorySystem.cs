@@ -6,7 +6,7 @@ using UnityEngine;
 public class InventorySystem : MonoBehaviour{
     public Inventory_Scriptable checkItemReq; //inventory in level
     public List<string> itemReq = new List<string>(); // get name of item in inventory scriptable // TODO : this value use for check that what item player should collect
-    internal List<string> inventory = new List<string>(); // item that player has collect    
+    public List<string> inventory = new List<string>(); // item that player has collect    
 
     private void Start() {
         if (checkItemReq != null){
@@ -18,6 +18,5 @@ public class InventorySystem : MonoBehaviour{
                 itemReq.Add(checkItemReq.listOfItem[i].name);
             }
         }
-        
     }
 }
