@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using HeneGames.DialogueSystem;
 using UnityEngine;
 
 public class ItemScript : MonoBehaviour , Ipauseable
@@ -7,6 +8,7 @@ public class ItemScript : MonoBehaviour , Ipauseable
     [SerializeField] CollectableItem_Scriptable _Scriptable;
     [SerializeField] GameObject description;
     [SerializeField] bool hasCollect;
+    DialogueUI dialogueUI;
     InventorySystem _inventory;
 
     public void ShowDescription(){
@@ -43,6 +45,10 @@ public class ItemScript : MonoBehaviour , Ipauseable
         if(_inventory.inventory.Contains(_Scriptable.name)) return;
         _inventory.inventory.Add(_Scriptable.name);
         hasCollect = true;
+        if(!dialogueUI) dialogueUI = FindAnyObjectByType<DialogueUI>();{
+            dialogueUI.ClearText();
+            dialogueUI.ShowInteractionUI(false);
+        }
         this.gameObject.SetActive(false);
     }
 

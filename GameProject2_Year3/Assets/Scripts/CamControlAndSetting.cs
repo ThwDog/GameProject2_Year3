@@ -27,6 +27,7 @@ public class CamControlAndSetting : MonoBehaviour, Ipauseable
     }
 
     private void FixedUpdate() {
+        c_Cam.m_Lens.FieldOfView = fov_len;
         // c_Cam.m_Lens.FieldOfView = fov_len;
         if(paused) return;
         // float scrollingDelta =Input.GetAxis("Mouse ScrollWheel");

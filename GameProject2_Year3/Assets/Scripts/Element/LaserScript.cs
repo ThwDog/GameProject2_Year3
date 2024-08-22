@@ -29,9 +29,10 @@ public class LaserScript : MonoBehaviour
     // check ray cast hit if in hit to another laser or not
     void ray(){
         RaycastHit hit;
+        if(!isOpen) return;
 
         if(Physics.Raycast(firePoint.position, firePoint.forward,out hit,maxLength)){
-            if(hit.transform.gameObject.GetComponent<LaserScript>()){
+            if(hit.transform.gameObject.GetComponent<LaserScript>() && !hit.transform.gameObject.GetComponent<LaserScript>().isOpen){
                 hitObj = hit.transform.gameObject.GetComponent<LaserScript>();
                 hitObj.isOpen = true;
             }
