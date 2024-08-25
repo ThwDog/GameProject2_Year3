@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(InputManager) , typeof(InventorySystem))]
 public class PlayerController : MonoBehaviour , Ipauseable
 {
-    //TODO : Jump ,Push obj , inventory (reset when next LEVEL) , spite 45 deg player 0 deg 
+    //TODO : inventory (reset when next LEVEL) , spite 45 deg player 0 deg 
 
     [Header("Setting")]
     [SerializeField] float speed;

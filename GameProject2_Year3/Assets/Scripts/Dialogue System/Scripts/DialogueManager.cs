@@ -7,6 +7,7 @@ namespace HeneGames.DialogueSystem
 {
     public class DialogueManager : MonoBehaviour
     {
+        // TODO : Use sentence event to setActive NPC Sprite When talk to NPC
         private int currentSentence;
         private float coolDownTimer;
         private bool dialogueIsOn;
@@ -271,6 +272,11 @@ namespace HeneGames.DialogueSystem
                     break;
                 }
             }
+        }
+
+        // use for play dialogue that doesnt need to set trigger
+        public void playDialogue(){
+            DialogueUI.instance.StartDialogue(this);
         }
     }
 
