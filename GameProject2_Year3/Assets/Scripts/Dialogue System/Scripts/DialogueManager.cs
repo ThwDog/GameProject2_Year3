@@ -26,7 +26,7 @@ namespace HeneGames.DialogueSystem
         public UnityEvent startDialogueEvent;
         public UnityEvent nextSentenceDialogueEvent;
         public UnityEvent endDialogueEvent;
-        [SerializeField] private bool questIsFinish =false;
+        public bool questIsFinish = false;
         [SerializeField] private List<CollectableItem_Scriptable> req_item = new List<CollectableItem_Scriptable>();  // check if player inventory and reqment inven is match
 
         [Header("Dialogue")]
