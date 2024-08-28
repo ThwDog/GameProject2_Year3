@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlateScript : MonoBehaviour
 {
-    PlatePuzzle platePuzzle;
+    [SerializeField]PlatePuzzle platePuzzle;
     [SerializeField] private bool hasStep = false;
 
     private void OnTriggerEnter(Collider other) {
@@ -15,5 +15,6 @@ public class PlateScript : MonoBehaviour
 
     public void resetPlate(){
         if(hasStep) hasStep = false;
+        platePuzzle = null;
     }
 }
