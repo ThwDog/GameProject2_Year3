@@ -23,7 +23,7 @@ public class GrassSpawnItem : MonoBehaviour , Ipauseable
 
     public void Spawn(){
         if(!isSpawn){
-            Debug.Log("Spawn");
+            Debug.Log("Spawn Item : "  + spawnObj.name);
             isSpawn = true;
             if(!spawnObj) return;
             ItemScript obj = Instantiate(spawnObj , transform.position, transform.rotation);

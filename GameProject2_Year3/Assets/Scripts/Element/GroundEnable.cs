@@ -24,7 +24,6 @@ public class GroundEnable : MonoBehaviour
 
     private void Update() {
         if(!mapOpen) return;
-        if(Vector3.Distance(player.position,transform.position) > dis) return;
 
         if(Vector3.Distance(player.position,transform.position) < dis && !colliders.enabled){
             colliders.enabled = true;

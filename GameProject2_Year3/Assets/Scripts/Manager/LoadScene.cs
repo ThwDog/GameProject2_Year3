@@ -9,14 +9,15 @@ public class LoadScene : MonoBehaviour
 {
     // TODO : Add load Path in scene use additional
     [Header("Loading Scene")]
-    [SerializeField] GameObject loadScene; 
+    [SerializeField] GameObject loadScene; // set if  load next scene then get new component obj or just make another obj and add this script
     [SerializeField] Slider progressBar; 
     List<AsyncOperation> sceneLoad = new List<AsyncOperation>();
 
     // for go to new stage or next scene
     public void _LoadStage(){
         loadScene.gameObject.SetActive(true);
-        sceneLoad.Add(SceneManager.LoadSceneAsync(CheckNextStage(),LoadSceneMode.Additive));
+        // sceneLoad.Add(SceneManager.LoadSceneAsync(CheckNextStage(),LoadSceneMode.Additive)); // for load multiple scene add once
+        sceneLoad.Add(SceneManager.LoadSceneAsync(CheckNextStage(),LoadSceneMode.Single));
 
         StartCoroutine(LoadingScene());
     }
