@@ -84,6 +84,7 @@ public class PlatePuzzle : MonoBehaviour
 
     public void StepOnPlate(string plateNum)
     {
+        if(isWin) return;
         plateName.Add(plateNum);
     }
 
