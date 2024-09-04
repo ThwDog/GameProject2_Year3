@@ -341,6 +341,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   c_Cam: {fileID: 8856886612499088727}
-  fov_len: 60
+  fov_len: 40
   scrollScale: 10
   paused: 0

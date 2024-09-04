@@ -62,7 +62,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1, y: 0, z: 1}
-  m_LocalScale: {x: 11.5, y: 11.5, z: 11.5}
+  m_LocalScale: {x: 23, y: 23, z: 23}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 7148494480227257868}
@@ -153,6 +153,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundType: 0
   types: 0
-  dis: 2
+  dis: 5
   mesh: {fileID: -3525279465595429977, guid: 12d47376b77f2494f8610dfe70e00059, type: 3}
   mapOpen: 1
