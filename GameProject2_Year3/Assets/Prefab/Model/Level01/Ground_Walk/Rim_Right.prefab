@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 3436850636260435727}
   - component: {fileID: 2413076026337206303}
   - component: {fileID: 3092378480305871071}
+  - component: {fileID: 2363032259403650737}
   m_Layer: 8
   m_Name: Rim_Right_01
   m_TagString: Untagged
@@ -75,7 +76,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9064916334105908866}
-  m_Mesh: {fileID: -7468394756423760642, guid: 0685ba4f9ebc4aa49809647d1aa9ca12, type: 3}
+  m_Mesh: {fileID: 4535227100511690235, guid: 0685ba4f9ebc4aa49809647d1aa9ca12, type: 3}
 --- !u!23 &1842929030596927349
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -154,7 +155,6 @@ MonoBehaviour:
   groundType: 1
   types: 1
   dis: 5
-  mesh: {fileID: 0}
   mapOpen: 1
 --- !u!114 &3092378480305871071
 MonoBehaviour:
@@ -171,3 +171,15 @@ MonoBehaviour:
   meshes:
   - {fileID: 4535227100511690235, guid: 0685ba4f9ebc4aa49809647d1aa9ca12, type: 3}
   - {fileID: -7468394756423760642, guid: 0685ba4f9ebc4aa49809647d1aa9ca12, type: 3}
+--- !u!114 &2363032259403650737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9064916334105908866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43fdd43f147ad844cb9e1ff9aa433a18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
