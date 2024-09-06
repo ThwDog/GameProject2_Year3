@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 4033665351989819666}
   - component: {fileID: 550018293895992943}
   - component: {fileID: 8031664851135462553}
+  - component: {fileID: 5213706108273302628}
   m_Layer: 7
   m_Name: center
   m_TagString: Untagged
@@ -153,5 +154,16 @@ MonoBehaviour:
   groundType: 0
   types: 1
   dis: 5
-  mesh: {fileID: -3525279465595429977, guid: 12d47376b77f2494f8610dfe70e00059, type: 3}
   mapOpen: 1
+--- !u!114 &5213706108273302628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1988146342296616444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43fdd43f147ad844cb9e1ff9aa433a18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
