@@ -46,7 +46,6 @@ GameObject:
   - component: {fileID: 8337820087094364694}
   - component: {fileID: 1277313194697442794}
   - component: {fileID: 8116984190918108482}
-  - component: {fileID: 6774926515287699122}
   m_Layer: 8
   m_Name: Centeclean
   m_TagString: Untagged
@@ -155,6 +154,7 @@ MonoBehaviour:
   groundType: 1
   types: 1
   dis: 5
+  mesh: {fileID: 0}
   mapOpen: 1
 --- !u!114 &8116984190918108482
 MonoBehaviour:
@@ -173,15 +173,3 @@ MonoBehaviour:
   - {fileID: 2795819726819822036, guid: 0685ba4f9ebc4aa49809647d1aa9ca12, type: 3}
   - {fileID: -1269497821088307791, guid: 0685ba4f9ebc4aa49809647d1aa9ca12, type: 3}
   - {fileID: -4163437782417030750, guid: 0685ba4f9ebc4aa49809647d1aa9ca12, type: 3}
---- !u!114 &6774926515287699122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8333146775664893360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43fdd43f147ad844cb9e1ff9aa433a18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

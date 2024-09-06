@@ -6,7 +6,6 @@ public class LaserScript : MonoBehaviour
 {
 
     // TODO : make line static *can only assign length when in editor* and child to point and add box collision in line to check
-    // TODO : use Q and E to  rotation this by 45 Deg
     [Header("Laser setting")]
     public LineRenderer lineR;
     [SerializeField] Transform firePoint;

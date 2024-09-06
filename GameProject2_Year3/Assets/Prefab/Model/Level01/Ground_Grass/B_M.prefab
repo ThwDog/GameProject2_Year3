@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 3672064887071882031}
   - component: {fileID: 3123522535769022681}
   - component: {fileID: 607608643237986734}
-  - component: {fileID: 8081810167088789304}
   m_Layer: 7
   m_Name: Top_middle
   m_TagString: Untagged
@@ -123,19 +122,8 @@ MonoBehaviour:
   groundType: 0
   types: 0
   dis: 5
+  mesh: {fileID: -3525279465595429977, guid: 12d47376b77f2494f8610dfe70e00059, type: 3}
   mapOpen: 1
---- !u!114 &8081810167088789304
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7126180563341883587}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43fdd43f147ad844cb9e1ff9aa433a18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8974053126845859486
 GameObject:
   m_ObjectHideFlags: 0
