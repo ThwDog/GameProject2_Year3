@@ -11,7 +11,11 @@ public class CamControlAndSetting : MonoBehaviour, Ipauseable
 
     [SerializeField] float fov_len = 60;
     [SerializeField] float scrollScale = 10f;
+    [Header(" ")]
+    [Tooltip("Min value of cam")][SerializeField] float min = 4f;
+    [Tooltip("Max value of cam")][SerializeField] float max = 15f; 
 
+    [Header(" ")]
     [SerializeField] bool paused = false;
 
     public void pause(){
@@ -33,11 +37,11 @@ public class CamControlAndSetting : MonoBehaviour, Ipauseable
         // float scrollingDelta =Input.GetAxis("Mouse ScrollWheel");
 
         if(Input.GetMouseButton(1) && Input.GetKey(KeyCode.W)){
-            if(c_tran.m_FollowOffset.y > 15f ) return;
+            if(c_tran.m_FollowOffset.y > max ) return;
             c_tran.m_FollowOffset.y +=  scrollScale * Time.deltaTime;
         }
         else if(Input.GetMouseButton(1) && Input.GetKey(KeyCode.S)){
-            if(c_tran.m_FollowOffset.y < 4f) return;
+            if(c_tran.m_FollowOffset.y < min) return;
             c_tran.m_FollowOffset.y += -scrollScale * Time.deltaTime;
         }
 

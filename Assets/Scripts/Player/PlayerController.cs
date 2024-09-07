@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent(typeof(InputManager) , typeof(InventorySystem))]
@@ -9,7 +10,6 @@ public class PlayerController : MonoBehaviour , Ipauseable
 
     [Header("Setting")]
     [SerializeField] float speed;
-    //Jump
     [Header("")]
     private float verticalSpeed;
     [SerializeField] private float gravityValue = 20f;
@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour , Ipauseable
     private Collider playerCollider;
     bool isGrounded;
 
+    //Animation
+    public Animator anim;
     private CharacterController controller;
     private InputManager input;
 
@@ -29,6 +31,16 @@ public class PlayerController : MonoBehaviour , Ipauseable
     }
 
     [SerializeField] bool paused = false;
+
+    //check if animation is play
+    bool isAnimPlaying(int animLayer, string stateName)
+    {
+        if (anim.GetCurrentAnimatorStateInfo(animLayer).IsName(stateName) &&
+                anim.GetCurrentAnimatorStateInfo(animLayer).normalizedTime < 1.0f)
+            return true;
+        else
+            return false;
+    }
 
     public void pause(){
         if(!paused) paused = !paused;
@@ -68,12 +80,21 @@ public class PlayerController : MonoBehaviour , Ipauseable
 
         Vector2 movement = input.GetPlayerMovement();
         Vector3 move = new Vector3(movement.x, 0, movement.y);
+
         if (move.sqrMagnitude > 1.0f)
             move.Normalize();
-        
+
+        //Animation
+
+        //Movement
         move += verticalSpeed * Vector3.up;
         // move.y = 0;
         if(Input.GetMouseButton(1))return;
+        if(isAnimPlaying(0,"CollectItem"))return; // if animation collect item is play return
+
+        anim.SetFloat("Vertical",move.z); 
+        anim.SetFloat("Horizontal",move.x); 
+
 
         controller.Move(move * Time.deltaTime * speed);
     }
@@ -87,5 +108,4 @@ public class PlayerController : MonoBehaviour , Ipauseable
             verticalSpeed -= current_GValue;
         }
     }
-    
 }
