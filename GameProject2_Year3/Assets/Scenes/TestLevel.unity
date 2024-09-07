@@ -3351,7 +3351,7 @@ MonoBehaviour:
   triggerState: 1
   NormalSentences:
   - dialogueCharacter: {fileID: 0}
-    sentence: This is grass
+    sentence: 'what is this  '
     skipDelayTime: 0
     sentenceSound: {fileID: 0}
     sentenceEvent:
@@ -3359,7 +3359,7 @@ MonoBehaviour:
         m_Calls: []
   reqSentences:
   - dialogueCharacter: {fileID: 0}
-    sentence: 'what is this '
+    sentence: This is grass
     skipDelayTime: 0
     sentenceSound: {fileID: 0}
     sentenceEvent:
