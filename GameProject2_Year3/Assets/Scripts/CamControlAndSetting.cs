@@ -26,11 +26,23 @@ public class CamControlAndSetting : MonoBehaviour, Ipauseable
         if(paused) paused = !paused;
     }    
 
+    private void Awake() {
+        if(!c_Cam.Follow || !c_Cam.LookAt) {
+            c_Cam.Follow = FindAnyObjectByType<PlayerController>().transform;
+            c_Cam.LookAt = FindAnyObjectByType<PlayerController>().transform;
+        }
+    }
+
     private void Start() { 
         c_tran = c_Cam.GetCinemachineComponent<CinemachineTransposer>();
     }
 
     private void FixedUpdate() {
+        if(!c_Cam.Follow || !c_Cam.LookAt) {
+            c_Cam.Follow = FindAnyObjectByType<PlayerController>().transform;
+            c_Cam.LookAt = FindAnyObjectByType<PlayerController>().transform;
+        }
+
         c_Cam.m_Lens.FieldOfView = fov_len;
         // c_Cam.m_Lens.FieldOfView = fov_len;
         if(paused) return;

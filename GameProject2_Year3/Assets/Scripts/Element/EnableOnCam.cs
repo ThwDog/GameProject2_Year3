@@ -12,7 +12,7 @@ public class EnableOnCam : MonoBehaviour
     Plane[] cameraFrustum;
     internal bool _isEnable = false;
 
-    private void Start() {
+    private void Awake() {
         // get camera component from camera name FrustumCam 
         cam = GameObject.Find("FrustumCam").GetComponent<Camera>();
         _renderer = GetComponent<MeshRenderer>();

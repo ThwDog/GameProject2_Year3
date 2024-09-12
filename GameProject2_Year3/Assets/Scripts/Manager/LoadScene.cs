@@ -20,6 +20,7 @@ public class LoadScene : MonoBehaviour
         sceneLoad.Add(SceneManager.LoadSceneAsync(CheckNextStage(),LoadSceneMode.Single));
 
         StartCoroutine(LoadingScene());
+
     }
 
     public void _UnloadStage(){
@@ -35,7 +36,9 @@ public class LoadScene : MonoBehaviour
             }
         }
         if(!loadScene) yield break;
-        loadScene.gameObject.SetActive(false);
+        yield return new WaitForSeconds(1f); // for safe
+        loadScene.gameObject.SetActive(false); 
+        progressBar.value = 0f; // reset
     }
 
     private int CheckNextStage(){
