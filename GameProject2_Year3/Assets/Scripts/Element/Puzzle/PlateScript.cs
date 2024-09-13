@@ -8,6 +8,8 @@ public class PlateScript : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.GetComponent<PlayerController>() && !hasStep){
             if(!platePuzzle) platePuzzle = GetComponentInParent<PlatePuzzle>();
+            
+            if(!platePuzzle.canStep) return;
             platePuzzle.StepOnPlate(this.gameObject.name);
             hasStep = true;
         }

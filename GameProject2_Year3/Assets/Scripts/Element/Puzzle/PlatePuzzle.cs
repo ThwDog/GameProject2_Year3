@@ -15,6 +15,7 @@ public class PlatePuzzle : MonoBehaviour
     private List<plateList> usePlateLists; // list of plate pattern but it use
     [SerializeField] private List<string> plateName = new List<string>(); // list of plate that player has step
     [SerializeField] private bool isWin = false;
+    public bool canStep;
 
 
     private void Start()

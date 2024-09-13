@@ -8,6 +8,7 @@ public class LaserScript : MonoBehaviour
     // TODO : make line static *can only assign length when in editor* and child to point and add box collision in line to check
     // TODO : use Q and E to  rotation this by 45 Deg
     [Header("Laser setting")]
+    [Tooltip("If this prism can open check it to true else check to false")][SerializeField] bool canOpen = true; // can open this laser
     public LineRenderer lineR;
     [SerializeField] Transform firePoint;
     [Tooltip("Max length of laser")][SerializeField] float maxLength = 3;
@@ -15,6 +16,12 @@ public class LaserScript : MonoBehaviour
     [Header("")]
     LaserScript hitObj;
     [Tooltip("If it first to so laser then click in on")]public bool isOpen = false;
+    [Header("")]
+    [SerializeField][Range(0f,10f)] private float delayButtonTime = 1.5f;
+    [SerializeField][Range(0f,100f)] private float rotateSpeed = 10f;
+    bool isPressButton = false;
+    bool isRo = false;
+    Quaternion rotateTarget; // target of rotation
 
     private void Start() {
         laserUpdate();
@@ -22,11 +29,27 @@ public class LaserScript : MonoBehaviour
     }
 
     private void Update() {
-        if(isOpen)  EnableLaser();
-        else DisableLaser();
+        if(!canOpen) return;
+        if(!isOpen){
+            DisableLaser();
+            gameObject.GetComponent<SphereCollider>().enabled = false;
+            return;
+        }
+        else gameObject.GetComponent<SphereCollider>().enabled = true;
+        EnableLaser();
         ray();
+        // if rotate is true slowly rotate to target
+        if(isRo){
+            transform.rotation = Quaternion.Lerp(transform.rotation, rotateTarget, rotateSpeed * Time.deltaTime);
+            if (Quaternion.Angle(transform.rotation, rotateTarget) < 0.01f)
+            {
+                isRo = false;
+            }
+        }
+        
 
     }
+    
     // check ray cast hit if in hit to another laser or not
     void ray(){
         RaycastHit hit;
@@ -49,6 +72,37 @@ public class LaserScript : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawLine(Vector3.zero,firePoint.forward * maxLength);
     }
+
+    private void rotateLaser(float Deg){
+        if(this.gameObject.transform.localRotation == Quaternion.Euler(0,360,0)){
+            this.gameObject.transform.localRotation = Quaternion.Euler(0,0,0);
+        }
+        rotateTarget = transform.rotation * Quaternion.Euler(0, Deg, 0);
+        isRo = true;
+    }
+
+    private void OnTriggerStay(Collider other) {
+        if(!other.gameObject.GetComponent<PlayerController>()) return;
+        //rotate left
+        if(Input.GetKey(KeyCode.Q) && !isPressButton && !isRo) {
+            rotateLaser(-45f);
+            isPressButton = true;
+            StartCoroutine(resetButton(delayButtonTime));
+        }
+        //rotate Right
+        if(Input.GetKey(KeyCode.E) && !isPressButton && !isRo) {
+            rotateLaser(45f);
+            isPressButton = true;
+            StartCoroutine(resetButton(delayButtonTime));
+        }
+    }
+
+    IEnumerator resetButton(float sec){
+        if(!isPressButton) yield break;
+        yield return new WaitForSeconds(sec);
+        isPressButton = false;
+    }
+
 
     // private void colliderUpdate(){
     //     if (_collider == null) lineR.gameObject.AddComponent<MeshCollider>();
