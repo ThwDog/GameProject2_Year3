@@ -20,6 +20,7 @@ public class LaserScript : MonoBehaviour
     [SerializeField][Range(0f,10f)] private float delayButtonTime = 1.5f;
     [SerializeField][Range(0f,100f)] private float rotateSpeed = 10f;
     bool isPressButton = false;
+    bool rayHit = false;
     bool isRo = false;
     Quaternion rotateTarget; // target of rotation
     ShowUICollision showUI;
@@ -32,13 +33,17 @@ public class LaserScript : MonoBehaviour
     private void Update() {
         if(!canOpen) return;
         if(!isOpen){
+            if(hitObj != null) {
+                hitObj.isOpen = false;
+                hitObj = null;
+            }
             DisableLaser();
             gameObject.GetComponent<SphereCollider>().enabled = false;
             return;
         }
         else gameObject.GetComponent<SphereCollider>().enabled = true;
+        rayHitOtherObj();
         EnableLaser();
-        
         // if rotate is true slowly rotate to target
         if(isRo){
             transform.rotation = Quaternion.Lerp(transform.rotation, rotateTarget, rotateSpeed * Time.deltaTime);
@@ -57,23 +62,39 @@ public class LaserScript : MonoBehaviour
         if(!isOpen) return;
 
         if(Physics.Raycast(firePoint.position, firePoint.forward,out hit,maxLength)){
-
             if(hit.transform.gameObject.GetComponent<LaserScript>() && !hit.transform.gameObject.GetComponent<LaserScript>().isOpen){
-                // set line renderer end position to obj that hit
-                lineR.SetPosition(1, new Vector3(0,0,hit.distance + 0.4f));             
+                // set line renderer end position to obj that hit and add float to it
+                lineR.SetPosition(1, new Vector3(0,0,hit.distance + 0.4f));              
                 
                 hitObj = hit.transform.gameObject.GetComponent<LaserScript>();
                 hitObj.isOpen = true;
+                rayHit = true;
             }
         }
         else {
             lineR.SetPosition(1,new Vector3(0,0,maxLength));
+            rayHit = false;
 
             if(hitObj != null) {
                 hitObj.isOpen = false;
                 hitObj = null;
             }
         }
+    }
+
+    // TODO : Add more obj if has other obj
+    void rayHitOtherObj(){
+        RaycastHit hit;
+        if(!isOpen) return;
+
+        if(Physics.Raycast(firePoint.position, firePoint.forward,out hit,maxLength)){
+            // TODO : Here
+            if(hit.transform.gameObject.GetComponent<PlayerController>() && !rayHit){
+                lineR.SetPosition(1, new Vector3(0,0,hit.distance + 0.4f));              
+            }
+        }
+        else lineR.SetPosition(1,new Vector3(0,0,maxLength));
+
     }
 
     private void OnDrawGizmosSelected()
