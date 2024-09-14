@@ -6,21 +6,19 @@ public class GrassSpawnItem : MonoBehaviour , Ipauseable
 {
     [Header("Setting")]
     [SerializeField] ItemScript spawnObj;
-    [SerializeField] GameObject description;
+    ShowUICollision showUI;
     public bool isSpawn = false;
 
     public void ShowDescription(){
-        // Debug.Log("Show Description " + gameObject.name);
-        if(!description) return;
-        description.SetActive(true);
+        if(!showUI) showUI = GetComponent<ShowUICollision>();
+        showUI.ShowDescription();
     }
 
     public void CloseDescription(){
-        // Debug.Log("Close Description " + gameObject.name);
-        if(!description) return;
-        description.SetActive(false);
+        if(!showUI) showUI = GetComponent<ShowUICollision>();
+        showUI.CloseDescription();
     }
-
+    
     public void Spawn(){
         if(!isSpawn){
             Debug.Log("Spawn Item : "  + spawnObj.name);

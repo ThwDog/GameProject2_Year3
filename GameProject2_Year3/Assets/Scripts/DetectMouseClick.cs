@@ -17,6 +17,7 @@ public class DetectMouseClick : MonoBehaviour , Ipauseable
         RaycastHit hit;
 
         if(Physics.Raycast(ray, out hit)){
+            // if have more item that can show ui when hold cursor on add it
             if (hit.transform.gameObject.GetComponent<GrassSpawnItem>()){
                 grass = hit.transform.gameObject.GetComponent<GrassSpawnItem>();
                 if(grass.isSpawn) return;

@@ -12,9 +12,9 @@ public class LaserScript : MonoBehaviour
     public LineRenderer lineR;
     [SerializeField] Transform firePoint;
     [Tooltip("Max length of laser")][SerializeField] float maxLength = 3;
-    [SerializeField] Vector3 direction = new Vector3(0, 0, 1);
+    // [SerializeField] Vector3 direction = new Vector3(0, 0, 1);
     [Header("")]
-    LaserScript hitObj;
+    LaserScript hitObj; // last obj that been hit
     [Tooltip("If it first to so laser then click in on")]public bool isOpen = false;
     [Header("")]
     [SerializeField][Range(0f,10f)] private float delayButtonTime = 1.5f;
@@ -22,6 +22,7 @@ public class LaserScript : MonoBehaviour
     bool isPressButton = false;
     bool isRo = false;
     Quaternion rotateTarget; // target of rotation
+    ShowUICollision showUI;
 
     private void Start() {
         laserUpdate();
@@ -37,7 +38,7 @@ public class LaserScript : MonoBehaviour
         }
         else gameObject.GetComponent<SphereCollider>().enabled = true;
         EnableLaser();
-        ray();
+        
         // if rotate is true slowly rotate to target
         if(isRo){
             transform.rotation = Quaternion.Lerp(transform.rotation, rotateTarget, rotateSpeed * Time.deltaTime);
@@ -56,13 +57,22 @@ public class LaserScript : MonoBehaviour
         if(!isOpen) return;
 
         if(Physics.Raycast(firePoint.position, firePoint.forward,out hit,maxLength)){
+
             if(hit.transform.gameObject.GetComponent<LaserScript>() && !hit.transform.gameObject.GetComponent<LaserScript>().isOpen){
+                // set line renderer end position to obj that hit
+                lineR.SetPosition(1, new Vector3(0,0,hit.distance + 0.4f));             
+                
                 hitObj = hit.transform.gameObject.GetComponent<LaserScript>();
                 hitObj.isOpen = true;
             }
         }
         else {
-            if(hitObj != null) hitObj.isOpen = false;
+            lineR.SetPosition(1,new Vector3(0,0,maxLength));
+
+            if(hitObj != null) {
+                hitObj.isOpen = false;
+                hitObj = null;
+            }
         }
     }
 
@@ -83,6 +93,9 @@ public class LaserScript : MonoBehaviour
 
     private void OnTriggerStay(Collider other) {
         if(!other.gameObject.GetComponent<PlayerController>()) return;
+        if(!showUI) showUI = GetComponent<ShowUICollision>();
+        showUI.ShowDescription();
+        ray();
         //rotate left
         if(Input.GetKey(KeyCode.Q) && !isPressButton && !isRo) {
             rotateLaser(-45f);
@@ -95,6 +108,12 @@ public class LaserScript : MonoBehaviour
             isPressButton = true;
             StartCoroutine(resetButton(delayButtonTime));
         }
+    }
+
+    private void OnTriggerExit(Collider other) {
+        if(!other.gameObject.GetComponent<PlayerController>()) return;
+        if(!showUI) showUI = GetComponent<ShowUICollision>();
+        showUI.CloseDescription();
     }
 
     IEnumerator resetButton(float sec){
@@ -116,7 +135,8 @@ public class LaserScript : MonoBehaviour
 
     private void laserUpdate(){
         lineR.positionCount = 2;
-        lineR.SetPosition(1,lineR.GetPosition(1) + direction * maxLength);
+        lineR.SetPosition(0,firePoint.localPosition);
+        lineR.SetPosition(1,new Vector3(0,0,maxLength));
     }
 
     public void EnableLaser(){
