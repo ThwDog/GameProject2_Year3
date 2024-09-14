@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour , Ipauseable
 
     //Animation
     public Animator anim;
+    SpriteRenderer sprite;
     private CharacterController controller;
     private InputManager input;
 
@@ -58,7 +59,7 @@ public class PlayerController : MonoBehaviour , Ipauseable
     private void Start()
     {
         current_GValue = gravityValue;
-
+        sprite = anim.gameObject.GetComponent<SpriteRenderer>();
         // Cursor.visible = false;
 
         controller = GetComponent<CharacterController>();
@@ -84,19 +85,33 @@ public class PlayerController : MonoBehaviour , Ipauseable
         if (move.sqrMagnitude > 1.0f)
             move.Normalize();
 
-        //Animation
 
         //Movement
         move += verticalSpeed * Vector3.up;
         // move.y = 0;
         if(Input.GetMouseButton(1))return;
+        //Animation
         if(isAnimPlaying(0,"CollectItem"))return; // if animation collect item is play return
 
+        if(move.x > 0) {
+            flipX(true);
+        }
+        else flipX(false);
+        anim.SetBool("SideWalk",move.x > 0  && move.z == 0 || move.x < 0 && move.z == 0); 
         anim.SetFloat("Vertical",move.z); 
-        anim.SetFloat("Horizontal",move.x); 
 
 
         controller.Move(move * Time.deltaTime * speed);
+    }
+
+    // flip sprite
+    void flipX(bool flip){
+        if(flip){
+            sprite.flipX = true;
+        }
+        else{
+            sprite.flipX = false;
+        }
     }
 
     void checkGround(){
