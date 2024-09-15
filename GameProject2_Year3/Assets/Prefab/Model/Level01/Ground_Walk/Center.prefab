@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &352094752523590697
 Transform:
@@ -52,7 +52,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7161232984664540388
 Transform:
@@ -63,8 +63,8 @@ Transform:
   m_GameObject: {fileID: 8333146775664893360}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.02, z: 0}
-  m_LocalScale: {x: 23, y: 23, z: 23}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 22.25, y: 22.25, z: 22.25}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 352094752523590697}
@@ -155,6 +155,9 @@ MonoBehaviour:
   groundType: 1
   types: 1
   dis: 5
+  player: {fileID: 0}
+  colliders: {fileID: 0}
+  enableOnCam: {fileID: 0}
   mapOpen: 1
 --- !u!114 &8116984190918108482
 MonoBehaviour:

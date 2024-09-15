@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GrassSpawnItem : MonoBehaviour , Ipauseable
+public class GrassSpawnItem : MonoBehaviour , Ipauseable , IRestartable
 {
     [Header("Setting")]
     [SerializeField] ItemScript spawnObj;
@@ -34,5 +34,10 @@ public class GrassSpawnItem : MonoBehaviour , Ipauseable
     }
 
     public void resume(){
+    }
+
+    public void _Restart()
+    {
+        isSpawn = false;
     }
 }

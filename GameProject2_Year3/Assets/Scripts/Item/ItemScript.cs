@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using HeneGames.DialogueSystem;
 using UnityEngine;
 
-public class ItemScript : MonoBehaviour , Ipauseable
+public class ItemScript : MonoBehaviour , Ipauseable , IRestartable
 {
     [SerializeField] CollectableItem_Scriptable _Scriptable;
     [SerializeField] bool hasCollect;
@@ -12,8 +12,8 @@ public class ItemScript : MonoBehaviour , Ipauseable
     ShowUICollision showUI;
 
     private void OnTriggerStay(Collider other) {
+        if(hasCollect) return;
         if(other.gameObject.GetComponent<InventorySystem>()){
-            if(hasCollect) return;
             _inventory = other.gameObject.GetComponent<InventorySystem>();
             
             if(!showUI) showUI = GetComponent<ShowUICollision>();
@@ -25,6 +25,7 @@ public class ItemScript : MonoBehaviour , Ipauseable
     }
 
     void OnTriggerExit(Collider other){
+        if(hasCollect) return;
         if(other.gameObject.GetComponent<PlayerController>()){
             showUI.CloseDescription();
         }      
@@ -40,12 +41,30 @@ public class ItemScript : MonoBehaviour , Ipauseable
             dialogueUI.ClearText();
             dialogueUI.ShowInteractionUI(false);
         }
-        this.gameObject.SetActive(false);
+        // this.gameObject.SetActive(false);
+        disableObj();
+    }
+
+    void disableObj(){
+        GetComponent<MeshRenderer>().enabled = false;
+        GetComponent<Collider>().enabled = false;
+        if(showUI) showUI.CloseDescription();
+    }
+
+    void enableObj(){
+        GetComponent<MeshRenderer>().enabled = true;
+        GetComponent<Collider>().enabled = true;
     }
 
     public void pause(){
     }
 
     public void resume(){
+    }
+
+    public void _Restart()
+    {
+        enableObj();
+        hasCollect = false;
     }
 }

@@ -5,7 +5,7 @@ using System.Linq;
 using HeneGames.DialogueSystem;
 using UnityEngine;
 
-public class PlatePuzzle : MonoBehaviour
+public class PlatePuzzle : MonoBehaviour , IRestartable
 {
     // TODO : use signal that player know is it win or need to start again 
 
@@ -87,6 +87,14 @@ public class PlatePuzzle : MonoBehaviour
     {
         if(isWin) return;
         plateName.Add(plateNum);
+    }
+
+    public void _Restart()
+    {
+        resetAllPlate();
+        mirrorList();
+        canStep = true;
+        isWin = false;
     }
 
 
