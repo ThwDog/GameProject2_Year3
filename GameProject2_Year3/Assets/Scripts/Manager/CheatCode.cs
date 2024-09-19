@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class CheatCode : MonoBehaviour
 {
+    // TODO : Make Cheat code easy to use 
     LoadScene loadScene;
 
     private void Awake() {
