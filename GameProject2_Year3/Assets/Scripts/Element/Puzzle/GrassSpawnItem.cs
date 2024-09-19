@@ -24,8 +24,7 @@ public class GrassSpawnItem : MonoBehaviour , Ipauseable , IRestartable
             Debug.Log("Spawn Item : "  + spawnObj.name);
             isSpawn = true;
             if(!spawnObj) return;
-            ItemScript obj = Instantiate(spawnObj , transform.position, transform.rotation);
-            obj.Collect(FindAnyObjectByType<InventorySystem>());
+            spawnObj.Collect(FindAnyObjectByType<InventorySystem>());
             CloseDescription();
         }
     }

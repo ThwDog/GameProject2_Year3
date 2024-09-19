@@ -260,7 +260,7 @@ namespace HeneGames.DialogueSystem
 
             return sentences[currentSentence].sentence.Length;
         }
-
+        // Check inventory in player
         private void inventoryCheck(InventorySystem inventory){
             if(req_item == null) return;
             for(int i = 0; i < req_item.Count ;i++){

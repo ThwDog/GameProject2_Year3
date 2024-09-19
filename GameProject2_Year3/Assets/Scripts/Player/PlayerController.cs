@@ -20,10 +20,12 @@ public class PlayerController : MonoBehaviour , Ipauseable
     bool isGrounded;
 
     //Animation
+    bool isFishing = false;
     public Animator anim;
     SpriteRenderer sprite;
     private CharacterController controller;
     private InputManager input;
+    [SerializeField] List<string> listOfAnimation;
 
     bool ground()
     {
@@ -91,7 +93,11 @@ public class PlayerController : MonoBehaviour , Ipauseable
         // move.y = 0;
         if(Input.GetMouseButton(1))return;
         //Animation
+        fishingCheck();
+        if(isFishing) return;
         if(isAnimPlaying(0,"CollectItem"))return; // if animation collect item is play return
+        if(isAnimPlaying(0,"Flute"))return;
+        if(isAnimPlaying(0,"Fishing_End"))return;
 
         if(move.x > 0) {
             flipX(true);
@@ -102,6 +108,14 @@ public class PlayerController : MonoBehaviour , Ipauseable
 
 
         controller.Move(move * Time.deltaTime * speed);
+    }
+    // play by bool
+    public void _PlayAnimation(string AnimationName, bool _bool){
+        anim.SetBool(AnimationName,_bool);
+    }
+    // play by trigger
+    public void _PlayAnimation(string AnimationName){
+        anim.SetTrigger(AnimationName);
     }
 
     // flip sprite
@@ -122,5 +136,24 @@ public class PlayerController : MonoBehaviour , Ipauseable
         else{
             verticalSpeed -= current_GValue;
         }
+    }
+    // check if start fishing
+    void fishingCheck(){
+        if(isAnimPlaying(0,"Fishing_Start")){
+            anim.SetBool("IsFishing",true); //set is fishing is true
+            if(!isFishing){
+                StartCoroutine(fishing_Finish(3f));
+            }
+        }
+
+        //TODO : if fishing end is play get item
+    }
+
+    IEnumerator fishing_Finish(float time){
+        isFishing = true;
+        yield return new WaitForSeconds(time);
+        anim.SetBool("IsFishing",false); //set is fishing is true
+        yield return null;
+        isFishing = false;
     }
 }
