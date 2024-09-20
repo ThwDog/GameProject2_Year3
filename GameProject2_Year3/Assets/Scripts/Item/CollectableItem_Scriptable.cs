@@ -12,7 +12,7 @@ public class CollectableItem_Scriptable : ScriptableObject {
     public string objNam;
     public string disc;// discription of item
     public GameObject obj;
-    public level itemlevel = level.one ; // item in level what
+    public level itemArea = level.one ; // item in level what
 
 }
 

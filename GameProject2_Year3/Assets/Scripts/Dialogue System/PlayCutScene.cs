@@ -8,7 +8,7 @@ using UnityEngine;
 public class PlayCutScene : MonoBehaviour
 {
     // TODO : check key from Dialogue UI and run next sprite CutScene
-    public bool playCutScene = false;
+    public bool playCutScene = false; // set to true if want to play on start
     [SerializeField] Sprite[] cutSceneSprite;
     bool hasPlayDialogue = false;
     DialogueManager dialogueManager;

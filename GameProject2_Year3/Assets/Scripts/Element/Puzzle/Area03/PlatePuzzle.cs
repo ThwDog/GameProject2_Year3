@@ -17,29 +17,27 @@ public class PlatePuzzle : MonoBehaviour , IRestartable
     [SerializeField] private bool isWin = false;
     public bool canStep;
 
+    private PuzzleEvent _event;
+
 
     private void Start()
     {
         mirrorList();
-        // this  is just of check
-        // for (int i = 0; i < plateLists.Count; i++)
-        // {
-        //     for (int j = 0; j < plateLists[i].plateNum.Length; j++)
-        //     {
-        //         Debug.Log($"plate list : {i} plate Name : {plateLists[i].plateNum[j].gameObject.name}");
-        //     }
-        // }
+        _event = GetComponent<PuzzleEvent>();
     }
 
     private void Update()
     {
+        if(isWin) return;
+
         if (usePlateLists.Count == 0 && !isWin)
         {
             isWin = true;
-            winCheck.SetActive(false);
+            _event._FinishPuzzle();
+            return;
         }
-        else if (usePlateLists.Count == 0) return;
 
+        // Check if plate is same
         if (usePlateLists[0].plateNum.Length == plateName.Count)
         {
             bool isSame = true;

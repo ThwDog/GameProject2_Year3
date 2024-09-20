@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class CutSceneManager : MonoBehaviour
 {
     // TODO : one manager per stage
+    // TODO : Run on Unity Event On Player Scene
     [Header("CutScene")]
     [SerializeField] GameObject cutSceneObj;
     [Header("Talk Dialogue")]
@@ -27,7 +28,7 @@ public class CutSceneManager : MonoBehaviour
         }
 
         setSprite(playerSpriteRen,foundSprite);
-        showSpriteRen(npcSpriteRen);
+        showSpriteRen(playerSpriteRen);
     }
 
     public void _PlayNPCSprite(string spiteName){
