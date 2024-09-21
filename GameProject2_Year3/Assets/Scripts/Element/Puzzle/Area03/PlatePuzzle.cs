@@ -2,28 +2,28 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using HeneGames.DialogueSystem;
 using UnityEngine;
 
+// if player fail one player need to play again
 public class PlatePuzzle : MonoBehaviour , IRestartable
 {
     // TODO : use signal that player know is it win or need to start again 
 
     [Header("Setting")]
     [SerializeField] private GameObject winCheck; // for player to know that win or lose
-    [SerializeField] private List<plateList> plateLists; // list of plate pattern
-    private List<plateList> usePlateLists; // list of plate pattern but it use
+    [SerializeField] private List<plateList> originalPlateLists; // list of plate pattern
+    internal List<plateList> usePlateLists; // list of plate pattern but it use
     [SerializeField] private List<string> plateName = new List<string>(); // list of plate that player has step
     [SerializeField] private bool isWin = false;
     public bool canStep;
 
-    private PuzzleEvent _event;
+    private EventScript _event;
 
 
     private void Start()
     {
         mirrorList();
-        _event = GetComponent<PuzzleEvent>();
+        _event = GetComponent<EventScript>();
     }
 
     private void Update()
@@ -33,7 +33,7 @@ public class PlatePuzzle : MonoBehaviour , IRestartable
         if (usePlateLists.Count == 0 && !isWin)
         {
             isWin = true;
-            _event._FinishPuzzle();
+            _event._FinishEvent();
             return;
         }
 
@@ -67,7 +67,7 @@ public class PlatePuzzle : MonoBehaviour , IRestartable
     }
 
     private void mirrorList(){
-        usePlateLists = plateLists.ToList();
+        usePlateLists = originalPlateLists.ToList();
     }
 
     // usee when ever player win or lose

@@ -6,6 +6,10 @@ public class ShowUICollision : MonoBehaviour
 {
     [SerializeField] GameObject description;
 
+    public bool checkActive(){
+        return description.activeSelf;
+    }
+
     public void ShowDescription(){
         if(!description) {
             GetComponentInChildren<Canvas>();

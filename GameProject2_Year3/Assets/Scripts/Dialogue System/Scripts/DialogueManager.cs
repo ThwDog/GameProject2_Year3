@@ -264,7 +264,7 @@ namespace HeneGames.DialogueSystem
         private void inventoryCheck(InventorySystem inventory){
             if(req_item == null) return;
             for(int i = 0; i < req_item.Count ;i++){
-                if(inventory.inventory.Contains(req_item[i].name)){
+                if(inventory.inventory.Contains(req_item[i])){
                     questIsFinish = true;
                 }
                 else {

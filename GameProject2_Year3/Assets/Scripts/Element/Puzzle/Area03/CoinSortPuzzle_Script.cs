@@ -8,18 +8,18 @@ public class CoinSortPuzzle_Script : MonoBehaviour , IRestartable
     [SerializeField] private GameObject canvas;
     [SerializeField] List<Coin_Scriptable> reqCoinList; // sort requirement
     [Tooltip("Size of coin that can sort")][SerializeField] private int coinSortListSize = 3;
-    [Tooltip("Coin that player sort")]List<Coin_Scriptable> coinSort = new List<Coin_Scriptable>(3); // show coin that player sort
+    [Tooltip("Coin that player sort")]List<Coin_Scriptable> coinSort = new List<Coin_Scriptable>(); // show coin that player sort
     
     [Header("")]
     [SerializeField] List<CoinIdentify> listOfCoinSort;
     [SerializeField] bool isWin = false;
 
-    private PuzzleEvent _event;
+    private EventScript _event;
 
     PlayerController player;
 
     private void Start() {
-        _event = GetComponent<PuzzleEvent>();
+        _event = GetComponent<EventScript>();
         createCoinListSort(coinSortListSize);
     }
 

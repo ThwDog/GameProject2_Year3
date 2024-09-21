@@ -1,6 +1,7 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+
+//TODO : one per area 
 
 public class SpawnPlayer : MonoBehaviour
 {
@@ -9,9 +10,12 @@ public class SpawnPlayer : MonoBehaviour
     [SerializeField] Vector3 offset;
     [SerializeField] bool isSpawn = false;
     PlayerController player;
+    EventScript _event;
 
     private void Awake() {
         if(!_gameObject) return;
+        _event = GetComponent<EventScript>();
+        
         if(_gameObject.GetComponent<PlayerController>()){
             if(!FindAnyObjectByType<PlayerController>()){
                 spawn();
@@ -20,6 +24,9 @@ public class SpawnPlayer : MonoBehaviour
                 deSpawn();
             }
         }
+    }
+
+    private void Start() {
     }
 
     void spawn(){
@@ -41,6 +48,7 @@ public class SpawnPlayer : MonoBehaviour
         // player.gameObject.SetActive(false);
         StartCoroutine(DeSpawnWait(player.gameObject));
         reSpawn();
+        _event._StartEvent();
     }
 
     void reSpawn(){

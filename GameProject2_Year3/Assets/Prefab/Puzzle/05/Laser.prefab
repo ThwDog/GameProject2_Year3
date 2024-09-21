@@ -124,13 +124,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f221e9f1ae2be144aa408371fc79e1b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canOpen: 1
+  _type: 0
   lineR: {fileID: 1106435291497230473}
   firePoint: {fileID: 5419014802370618368}
   maxLength: 4
   isOpen: 0
   delayButtonTime: 0.5
   rotateSpeed: 10
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 72
 --- !u!114 &8870307413665625177
 MonoBehaviour:
   m_ObjectHideFlags: 0

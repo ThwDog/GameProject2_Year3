@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 // Have one per Scene or One Active other not
 // TODO : Should be in every puzzle Script
-public class PuzzleEvent : MonoBehaviour
+public class EventScript : MonoBehaviour
 {
     public UnityEvent startEvent;
     public UnityEvent finishEvent;
@@ -14,17 +14,17 @@ public class PuzzleEvent : MonoBehaviour
     
     // use when start that puzzle
     // Should start when player stay or enter trigger
-    public void _StartPuzzle(){
+    public void _StartEvent(){
         startEvent.Invoke();
     }
 
     // use when finish that puzzle
-    public void _FinishPuzzle(){
+    public void _FinishEvent(){
         finishEvent.Invoke();
     }
 
     // use when player Exit puzzle
-    public void _ExitPuzzle(){
+    public void _ExitEvent(){
         exitEvent.Invoke();
     }
 }

@@ -33,9 +33,9 @@ public class ItemScript : MonoBehaviour , Ipauseable , IRestartable
     // TODO : Add function
     // add item to inventory
     public void Collect(InventorySystem _inventory){
-        if(_inventory.inventory.Contains(_Scriptable.name)) return;
+        if(_inventory.inventory.Contains(_Scriptable)) return;
         _inventory.player.anim.SetTrigger("Collect");
-        _inventory.inventory.Add(_Scriptable.name);
+        _inventory.inventory.Add(_Scriptable);
         hasCollect = true;
         if(!dialogueUI) dialogueUI = FindAnyObjectByType<DialogueUI>();{
             dialogueUI.ClearText();

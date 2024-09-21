@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5949221788596465290}
   - component: {fileID: 905498933462998803}
   - component: {fileID: 3215988915142884801}
+  - component: {fileID: 8863847491416363046}
   m_Layer: 0
   m_Name: SpawnPlayer
   m_TagString: Untagged
@@ -98,4 +99,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gameObject: {fileID: 6461981819148202631, guid: d5eb1b2644f77774595eaf932a6cc490, type: 3}
   target: {fileID: 0}
+  offset: {x: 0, y: 2, z: 0}
   isSpawn: 0
+--- !u!114 &8863847491416363046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8916857956358259112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f57536325ff7084a833494ccaabc1a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  finishEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  exitEvent:
+    m_PersistentCalls:
+      m_Calls: []
