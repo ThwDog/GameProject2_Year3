@@ -53,6 +53,7 @@ public class LaserScript : MonoBehaviour
                 hitObj = null;
             }
             DisableLaser();
+            showUI.CloseDescription();
             gameObject.GetComponent<SphereCollider>().enabled = false;
             return;
         }

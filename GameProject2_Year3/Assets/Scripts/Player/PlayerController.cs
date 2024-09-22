@@ -97,7 +97,7 @@ public class PlayerController : MonoBehaviour , Ipauseable
         if(isFishing) return;
         if(isAnimPlaying(0,"CollectItem"))return; // if animation collect item is play return
         if(isAnimPlaying(0,"Flute"))return;
-        if(isAnimPlaying(0,"Fishing_End"))return;
+        // if(isAnimPlaying(0,"Fishing_End"))return;
 
         if(move.x > 0) {
             flipX(true);
@@ -153,7 +153,7 @@ public class PlayerController : MonoBehaviour , Ipauseable
         isFishing = true;
         yield return new WaitForSeconds(time);
         anim.SetBool("IsFishing",false); //set is fishing is true
-        yield return null;
+        yield return new WaitForSeconds(time);
         isFishing = false;
     }
 }

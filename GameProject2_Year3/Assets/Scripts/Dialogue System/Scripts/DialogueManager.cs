@@ -104,9 +104,9 @@ namespace HeneGames.DialogueSystem
                 //Try to find the "DialogueTrigger" component in the crashing collider
                 if (other.gameObject.TryGetComponent<DialogueTrigger>(out DialogueTrigger _trigger))
                 {
-                    if(other.gameObject.TryGetComponent<InventorySystem>(out InventorySystem _inventorySystem)){
-                        inventoryCheck(_inventorySystem);
-                    }
+                    // if(other.gameObject.TryGetComponent<InventorySystem>(out InventorySystem _inventorySystem)){
+                    //     inventoryCheck(_inventorySystem);
+                    // }
                     //Show interaction UI
                     DialogueUI.instance.ShowInteractionUI(true);
 
@@ -260,8 +260,9 @@ namespace HeneGames.DialogueSystem
 
             return sentences[currentSentence].sentence.Length;
         }
+        
         // Check inventory in player
-        private void inventoryCheck(InventorySystem inventory){
+        public void inventoryCheck(InventorySystem inventory){
             if(req_item == null) return;
             for(int i = 0; i < req_item.Count ;i++){
                 if(inventory.inventory.Contains(req_item[i])){

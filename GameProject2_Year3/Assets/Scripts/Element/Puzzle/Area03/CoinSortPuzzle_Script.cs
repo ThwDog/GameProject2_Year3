@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CoinSortPuzzle_Script : MonoBehaviour , IRestartable
 {
@@ -14,6 +16,7 @@ public class CoinSortPuzzle_Script : MonoBehaviour , IRestartable
     [SerializeField] List<CoinIdentify> listOfCoinSort;
     [SerializeField] bool isWin = false;
 
+    private ShowUICollision showUI;
     private EventScript _event;
 
     PlayerController player;
@@ -21,10 +24,14 @@ public class CoinSortPuzzle_Script : MonoBehaviour , IRestartable
     private void Start() {
         _event = GetComponent<EventScript>();
         createCoinListSort(coinSortListSize);
+        showUI = GetComponent<ShowUICollision>();
     }
 
     private void Update() {
-        if(isWin) return;
+        if(isWin) {
+            _event._FinishEvent();
+            return;
+        }
 
         checkCoin();
     }
@@ -99,6 +106,33 @@ public class CoinSortPuzzle_Script : MonoBehaviour , IRestartable
                 isWin = true;
             }
         }
+    }
+
+    private void OnTriggerStay(Collider other) {
+        if(!other.gameObject.GetComponent<PlayerController>()) return;
+        if(!canvas.activeSelf) {
+            showUI.ShowDescription();
+            if(Input.GetKey(KeyCode.E)){
+                showUI.CloseDescription();
+                canvas.SetActive(true);
+                _event._StartEvent();
+            }
+        }
+        else
+        {
+            if(Input.GetKey(KeyCode.Escape)){
+                showUI.ShowDescription();
+                resetAll();
+                canvas.SetActive(false);
+                _event._ExitEvent();
+            }
+        }
+    }
+
+    private void OnTriggerExit(Collider other) {
+        if(!other.gameObject.GetComponent<PlayerController>()) return;
+
+        showUI.CloseDescription();
     }
 
     public void _Restart()

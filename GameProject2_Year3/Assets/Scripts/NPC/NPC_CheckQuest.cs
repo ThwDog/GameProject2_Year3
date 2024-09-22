@@ -6,55 +6,76 @@ using UnityEngine;
 
 public class NPC_CheckQuest : MonoBehaviour
 {
-    enum type{
-        Trigger , _bool
+    enum animationType
+    { // type of play animation
+        Trigger, _bool, none
     }
 
-    DialogueManager dialogue;
+    internal DialogueManager dialogue;
     [Header("Setting")]
     [SerializeField] string playerPlayAnimationName;
-    [SerializeField] type animationType;
-    [SerializeField] bool isQuestFinish = false;
-    ShowUICollision showUI;
+    [SerializeField] animationType _animationType;
+    public bool isQuestFinish = false;
+    internal ShowUICollision showUI;
+    internal EventScript _event;
+    internal PlayerController player;
 
-    private void Start() {
-        if(GetComponentInChildren<DialogueManager>()) dialogue = GetComponentInChildren<DialogueManager>();
+    private void Start()
+    {
+        if (GetComponentInChildren<DialogueManager>()) dialogue = GetComponentInChildren<DialogueManager>();
+        _event = GetComponent<EventScript>();
     }
 
-    private void OnTriggerStay(Collider other) {
-        if(GetComponent<ShowUICollision>())
-        showUI = GetComponent<ShowUICollision>();
-        if(other.TryGetComponent<PlayerController>(out PlayerController player) && isQuestFinish){
-            showUI.ShowDescription();
-            if(!isQuestFinish) return;
+    public virtual void OnTriggerStay(Collider other)
+    {
+        if (isQuestFinish) return;
 
-            if(Input.GetKey(KeyCode.E)) {
-                Debug.Log("play Animation");
-                playAnimation(player); // play Player Animation
+        if (GetComponent<ShowUICollision>())
+            showUI = GetComponent<ShowUICollision>();
+
+        if (other.TryGetComponent<PlayerController>(out PlayerController _player))
+        {
+            if(!dialogue.questIsFinish) showUI.ShowDescription();
+            // player must give item then talk to npc 
+            if (Input.GetKey(KeyCode.E))
+            {
+                showUI.CloseDescription();
+                dialogue.inventoryCheck(_player.gameObject.GetComponent<InventorySystem>());
+                this.player = _player;
             }
+
         }
     }
 
-    private void OnTriggerExit(Collider other) {
-        if(other.GetComponent<PlayerController>() && isQuestFinish){
+    private void OnTriggerExit(Collider other)
+    {
+        if (isQuestFinish) return;
+        if (other.GetComponent<PlayerController>() && !isQuestFinish)
+        {
             showUI.CloseDescription();
         }
     }
 
-    void playAnimation(PlayerController player){
-        switch(animationType){
-            case type.Trigger:
+    // normally it working on dialogue manager
+    public void playAnimation()
+    {
+        switch (_animationType)
+        {
+            case animationType.Trigger:
                 player._PlayAnimation(playerPlayAnimationName);
                 break;
-            case type._bool:
-                player._PlayAnimation(playerPlayAnimationName,isQuestFinish);
+            case animationType._bool:
+                player._PlayAnimation(playerPlayAnimationName, isQuestFinish);
+                break;
+            case animationType.none:
                 break;
             default:
                 break;
         }
     }
 
-    public void _SetQuest(bool _bool){
+    public void _SetQuest(bool _bool)
+    {
         isQuestFinish = _bool;
     }
 }

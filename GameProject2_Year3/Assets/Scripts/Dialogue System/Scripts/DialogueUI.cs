@@ -144,6 +144,10 @@ namespace HeneGames.DialogueSystem
             }
         }
 
+        public bool checkSentence(){
+            return dialogueWindow.activeSelf;
+        }
+
         public void ClearText()
         {
             dialogueWindow.SetActive(false);
