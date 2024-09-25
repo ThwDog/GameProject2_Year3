@@ -10,24 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9af4cd7f71d1b5743aa3a3fb04f8ae31, type: 3}
-  m_Name: Quest_Scriptable
+  m_Name: Quest_Scriptable 1
   m_EditorClassIdentifier: 
   itemArea: 0
   description: Start Area one
   quests:
   - questTitle: Go to Black Smith
     questDescription: Find and talk to Black Smith
-    _checkQuestType: 0
+    _checkQuestType: 1
     itemReq: {fileID: 11400000, guid: 809b060ba4a25924582cc596860c619f, type: 2}
-  - questTitle: yoyo
-    questDescription: Wat sup
-    _checkQuestType: 0
-    itemReq: {fileID: 11400000, guid: f637d0625dbf9354c8a68e23e277f7a4, type: 2}
-  - questTitle: Hum
-    questDescription: Wat sup
-    _checkQuestType: 1
-    itemReq: {fileID: 0}
-  - questTitle: Hum2
-    questDescription: Wat sup
-    _checkQuestType: 1
-    itemReq: {fileID: 0}

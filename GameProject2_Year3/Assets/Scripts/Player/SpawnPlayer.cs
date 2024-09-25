@@ -46,6 +46,7 @@ public class SpawnPlayer : MonoBehaviour
     public void deSpawn(){
         player = FindAnyObjectByType<PlayerController>();
         // player.gameObject.SetActive(false);
+        Debug.Log("ReSpawn");
         StartCoroutine(DeSpawnWait(player.gameObject));
         reSpawn();
         _event._StartEvent();

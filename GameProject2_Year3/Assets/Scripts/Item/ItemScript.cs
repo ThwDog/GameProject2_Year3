@@ -10,6 +10,7 @@ public class ItemScript : MonoBehaviour , Ipauseable , IRestartable
     DialogueUI dialogueUI;
     InventorySystem _inventory;
     ShowUICollision showUI;
+    QuestManager quest;
 
     private void OnTriggerStay(Collider other) {
         if(hasCollect) return;
@@ -36,6 +37,8 @@ public class ItemScript : MonoBehaviour , Ipauseable , IRestartable
         if(_inventory.inventory.Contains(_Scriptable)) return;
         _inventory.player.anim.SetTrigger("Collect");
         _inventory.inventory.Add(_Scriptable);
+        // if(!quest) quest = FindAnyObjectByType<QuestManager>();
+        // quest.changeQuestList();
         hasCollect = true;
         if(!dialogueUI) dialogueUI = FindAnyObjectByType<DialogueUI>();{
             dialogueUI.ClearText();
