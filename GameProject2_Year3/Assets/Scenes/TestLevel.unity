@@ -2098,7 +2098,7 @@ MonoBehaviour:
   isQuestFinish: 0
   itemFishing:
   - {fileID: 7529165984275043446, guid: cd6efc64f7141b84fb836299c4997dd3, type: 3}
-  finishTimeDelay: 0
+  finishTimeDelay: 5
 --- !u!1 &1060766136
 GameObject:
   m_ObjectHideFlags: 0
