@@ -15,8 +15,8 @@ MonoBehaviour:
   itemArea: 0
   description: Start Area one
   quests:
-  - questTitle: Go to Black Smith
-    questDescription: Find and talk to Black Smith
+  - questTitle: Black smith ask you to find his hammer
+    questDescription: Find hammer
     _checkQuestType: 0
     itemReq: {fileID: 11400000, guid: 809b060ba4a25924582cc596860c619f, type: 2}
   - questTitle: yoyo

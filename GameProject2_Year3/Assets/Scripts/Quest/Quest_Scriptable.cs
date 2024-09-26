@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 // TODO : Should set this in npc and npc set to Quest manager
 [CreateAssetMenu(fileName = "Quest_Scriptable", menuName = "ScriptableObj/Quest", order = 0)]

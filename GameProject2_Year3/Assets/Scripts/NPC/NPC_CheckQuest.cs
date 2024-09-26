@@ -56,7 +56,7 @@ public class NPC_CheckQuest : MonoBehaviour
         }
     }
 
-    // normally it working on dialogue manager
+    // normally it working on Dialogue manager
     public void playAnimation()
     {
         switch (_animationType)
