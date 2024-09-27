@@ -18,7 +18,7 @@ public class CutSceneManager : MonoBehaviour
 
 
     public void _PlayPlayerSprite(string spiteName){
-        if(playerSprite == null) return;
+        if(playerSprite == null) {Debug.Log("yo"); return;}
 
         Sprite foundSprite = playerSprite.Find(sprite => sprite.name == spiteName); // find sprite name
 
@@ -48,16 +48,18 @@ public class CutSceneManager : MonoBehaviour
         
     }
 
-    private void setSprite(Image img , Sprite sprite){
+    public void setSprite(Image img , Sprite sprite){
         // change sprite and set in location
         img.sprite = sprite;
     }
 
-    private void showSpriteRen(Image obj){
+    [HideInInspector]
+    public void showSpriteRen(Image obj){
         // show sprite render
         if(!obj.gameObject.activeSelf) obj.gameObject.SetActive(true);
     }
 
+    // can use in PlayCutScene
     public void closeSpriteRen(Image obj){
         // close sprite render
         if(obj.gameObject.activeSelf) obj.gameObject.SetActive(false);

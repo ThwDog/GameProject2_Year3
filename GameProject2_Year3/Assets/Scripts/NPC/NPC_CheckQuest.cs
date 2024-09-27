@@ -19,6 +19,7 @@ public class NPC_CheckQuest : MonoBehaviour
     internal ShowUICollision showUI;
     internal EventScript _event;
     internal PlayerController player;
+    bool canShowDes;
 
     private void Start()
     {
@@ -35,12 +36,18 @@ public class NPC_CheckQuest : MonoBehaviour
 
         if (other.TryGetComponent<PlayerController>(out PlayerController _player))
         {
-            if(!dialogue.questIsFinish) showUI.ShowDescription();
+            if(!dialogue.questIsFinish && canShowDes) showUI.ShowDescription();
             // player must give item then talk to npc 
             if (Input.GetKey(KeyCode.E))
             {
                 showUI.CloseDescription();
                 dialogue.inventoryCheck(_player.gameObject.GetComponent<InventorySystem>());
+                // if player doesn't have item call dialogue you doesn't have item
+                if(!dialogue.questIsFinish){
+                    PlayCutScene cutScene = GameObject.Find("Doesn'tHaveItemScene").GetComponent<PlayCutScene>();
+                    // dialogue.gameObject.SetActive(false);
+                    cutScene._playCutScene();
+                }
                 this.player = _player;
             }
 
@@ -52,6 +59,10 @@ public class NPC_CheckQuest : MonoBehaviour
         if (isQuestFinish) return;
         if (other.GetComponent<PlayerController>() && !isQuestFinish)
         {
+            // if(!dialogue.gameObject.activeSelf) dialogue.gameObject.SetActive(true);
+            if(!canShowDes){
+                canShowDes = true;
+            }
             showUI.CloseDescription();
         }
     }

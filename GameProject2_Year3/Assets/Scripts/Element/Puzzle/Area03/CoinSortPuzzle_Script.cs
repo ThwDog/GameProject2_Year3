@@ -4,14 +4,14 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CoinSortPuzzle_Script : MonoBehaviour , IRestartable
+public class CoinSortPuzzle_Script : MonoBehaviour, IRestartable
 {
     [Header("setting")]
     [SerializeField] private GameObject canvas;
     [SerializeField] List<Coin_Scriptable> reqCoinList; // sort requirement
     [Tooltip("Size of coin that can sort")][SerializeField] private int coinSortListSize = 3;
-    [Tooltip("Coin that player sort")]List<Coin_Scriptable> coinSort = new List<Coin_Scriptable>(); // show coin that player sort
-    
+    [Tooltip("Coin that player sort")] List<Coin_Scriptable> coinSort = new List<Coin_Scriptable>(); // show coin that player sort
+
     [Header("")]
     [SerializeField] List<CoinIdentify> listOfCoinSort;
     [SerializeField] bool isWin = false;
@@ -21,14 +21,17 @@ public class CoinSortPuzzle_Script : MonoBehaviour , IRestartable
 
     PlayerController player;
 
-    private void Start() {
+    private void Start()
+    {
         _event = GetComponent<EventScript>();
         createCoinListSort(coinSortListSize);
         showUI = GetComponent<ShowUICollision>();
     }
 
-    private void Update() {
-        if(isWin) {
+    private void Update()
+    {
+        if (isWin)
+        {
             _event._FinishEvent();
             return;
         }
@@ -36,16 +39,19 @@ public class CoinSortPuzzle_Script : MonoBehaviour , IRestartable
         checkCoin();
     }
 
-    public void _AddCoinButton(GameObject obj){
-        if(isWin) return;
+    public void _AddCoinButton(GameObject obj)
+    {
+        if (isWin) return;
 
-        Coin_Scriptable coin = obj.GetComponent<CoinIdentify>().coin; 
+        Coin_Scriptable coin = obj.GetComponent<CoinIdentify>().coin;
 
-        if(coinSort.Contains(coin)) return;
+        if (coinSort.Contains(coin)) return;
 
 
-        foreach(var coins in listOfCoinSort){
-            if(coins.coin == null){
+        foreach (var coins in listOfCoinSort)
+        {
+            if (coins.coin == null)
+            {
                 coins.changeIden(coin);
                 coinSort[0] = coins.coin;
                 break;
@@ -55,14 +61,17 @@ public class CoinSortPuzzle_Script : MonoBehaviour , IRestartable
         _UpdateCoinForSort();
     }
 
-    public void _RemoveCoinButton(GameObject obj){
-        if(isWin) return;
-        if(obj.GetComponent<CoinIdentify>().coin == null) return;
+    public void _RemoveCoinButton(GameObject obj)
+    {
+        if (isWin) return;
+        if (obj.GetComponent<CoinIdentify>().coin == null) return;
 
-        Coin_Scriptable coin = obj.GetComponent<CoinIdentify>().coin; 
+        Coin_Scriptable coin = obj.GetComponent<CoinIdentify>().coin;
 
-        for(int i = 0;i < coinSort.Count ;i++){
-            if(coinSort[i] == coin){
+        for (int i = 0; i < coinSort.Count; i++)
+        {
+            if (coinSort[i] == coin)
+            {
                 coinSort[i] = null;
                 break;
             }
@@ -72,26 +81,33 @@ public class CoinSortPuzzle_Script : MonoBehaviour , IRestartable
         _UpdateCoinForSort();
     }
 
-    public void resetAll(){
+    public void resetAll()
+    {
         coinSort.Clear();
         isWin = false;
         createCoinListSort(coinSortListSize);
     }
 
-    public void createCoinListSort(int listSize){
-        for(int i = 0; i < listSize ; i++){
+    public void createCoinListSort(int listSize)
+    {
+        for (int i = 0; i < listSize; i++)
+        {
             coinSort.Add(null);
         }
     }
 
-    private void _UpdateCoinForSort(){
-        for(int i = 0; i < coinSort.Count;i++){
+    private void _UpdateCoinForSort()
+    {
+        for (int i = 0; i < coinSort.Count; i++)
+        {
             coinSort[i] = listOfCoinSort[i].coin;
         }
     }
 
-    private void checkCoin(){
-        if(coinSort.Count == reqCoinList.Count){
+    private void checkCoin()
+    {
+        if (coinSort.Count == reqCoinList.Count)
+        {
             bool isSame = true;
             for (int i = 0; i < coinSort.Count; i++)
             {
@@ -102,35 +118,39 @@ public class CoinSortPuzzle_Script : MonoBehaviour , IRestartable
                 }
             }
 
-            if(isSame){
+            if (isSame)
+            {
                 isWin = true;
             }
         }
     }
 
-    private void OnTriggerStay(Collider other) {
-        if(!other.gameObject.GetComponent<PlayerController>()) return;
-        if(!canvas.activeSelf) {
+    private void OnTriggerStay(Collider other)
+    {
+        if (!other.gameObject.GetComponent<PlayerController>()) return;
+        if (!canvas.activeSelf)
+        {
             showUI.ShowDescription();
-            if(Input.GetKey(KeyCode.E)){
+            if (Input.GetKey(KeyCode.E))
+            {
                 showUI.CloseDescription();
                 canvas.SetActive(true);
                 _event._StartEvent();
             }
         }
-        else
-        {
-            if(Input.GetKey(KeyCode.Escape)){
-                showUI.ShowDescription();
-                resetAll();
-                canvas.SetActive(false);
-                _event._ExitEvent();
-            }
-        }
     }
 
-    private void OnTriggerExit(Collider other) {
-        if(!other.gameObject.GetComponent<PlayerController>()) return;
+    public void exit()
+    {
+        showUI.ShowDescription();
+        resetAll();
+        canvas.SetActive(false);
+        _event._ExitEvent();
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (!other.gameObject.GetComponent<PlayerController>()) return;
 
         showUI.CloseDescription();
     }

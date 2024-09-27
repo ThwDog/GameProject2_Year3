@@ -16,7 +16,13 @@ namespace HeneGames.DialogueSystem
         public enum TriggerState
         {
             Collision,
-            Input
+            Input ,
+            Call 
+        }
+
+        public enum CollisionType{
+            repeat,
+            oneTime
         }
 
         [Header("References")]
@@ -31,6 +37,8 @@ namespace HeneGames.DialogueSystem
 
         [Header("Dialogue")]
         [SerializeField] private TriggerState triggerState;
+        [SerializeField] private CollisionType _collisionType;
+        bool hasBeenPlay;
         private List<NPC_Centence> sentences = new List<NPC_Centence>();
         [SerializeField] private List<NPC_Centence> NormalSentences = new List<NPC_Centence>(); // normal
         [SerializeField] private List<NPC_Centence> reqSentences = new List<NPC_Centence>(); // requirement  or quest sentence
@@ -48,6 +56,10 @@ namespace HeneGames.DialogueSystem
             {
                 coolDownTimer -= Time.deltaTime;
             }
+
+            // if(DialogueUI.instance.checkSentence()){
+            //     DialogueUI.instance.ShowInteractionUI(false);
+            // }
 
             //Start dialogue by input
             if (Input.GetKeyDown(DialogueUI.instance.actionInput) && dialogueTrigger != null && !dialogueIsOn)
@@ -75,6 +87,7 @@ namespace HeneGames.DialogueSystem
         {
             if (triggerState == TriggerState.Collision && !dialogueIsOn)
             {
+                if(_collisionType == CollisionType.oneTime && hasBeenPlay) return;
                 //Try to find the "DialogueTrigger" component in the crashing collider
                 if (other.gameObject.TryGetComponent<DialogueTrigger>(out DialogueTrigger _trigger))
                 {
@@ -215,6 +228,8 @@ namespace HeneGames.DialogueSystem
             //Remove trigger refence
             dialogueIsOn = false;
             dialogueTrigger = null;
+
+            hasBeenPlay = true;
         }
 
         private void PlaySound(AudioClip _audioClip)
