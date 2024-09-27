@@ -8,6 +8,7 @@ namespace HeneGames.DialogueSystem
     public class DialogueManager : MonoBehaviour
     {
         // TODO : Use sentence event to setActive NPC Sprite When talk to NPC
+        // TODO : Make sentence can change in game
         private int currentSentence;
         private float coolDownTimer;
         private bool dialogueIsOn;
@@ -36,7 +37,7 @@ namespace HeneGames.DialogueSystem
         [Tooltip("Set it if you req item to start dialogue")][SerializeField] private List<CollectableItem_Scriptable> req_item = new List<CollectableItem_Scriptable>();  // check if player inventory and reqment inven is match
 
         [Header("Dialogue")]
-        [SerializeField] private TriggerState triggerState;
+        public TriggerState triggerState;
         [SerializeField] private CollisionType _collisionType;
         bool hasBeenPlay;
         private List<NPC_Centence> sentences = new List<NPC_Centence>();

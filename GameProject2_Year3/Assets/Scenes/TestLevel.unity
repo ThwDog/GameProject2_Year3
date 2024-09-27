@@ -1196,120 +1196,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 515440310}
   m_CullTransparentMesh: 1
---- !u!1 &533816075
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 533816076}
-  - component: {fileID: 533816078}
-  - component: {fileID: 533816077}
-  m_Layer: 0
-  m_Name: Doesn'tHaveItemScene
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &533816076
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 533816075}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.127436, y: 1.3093483, z: -6.5102777}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2147415646}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &533816077
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 533816075}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b89b2c8d34df52d4e89cba040401d38b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
-  startDialogueEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  nextSentenceDialogueEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  endDialogueEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  questIsFinish: 0
-  req_item: []
-  triggerState: 2
-  _collisionType: 0
-  NormalSentences:
-  - dialogueCharacter: {fileID: 0}
-    sentence: You Does'nt Have Item
-    skipDelayTime: 0
-    sentenceSound: {fileID: 0}
-    sentenceEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1105496693}
-          m_TargetAssemblyTypeName: HeneGames.DialogueSystem.DialogueUI, Assembly-CSharp
-          m_MethodName: ShowInteractionUI
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - dialogueCharacter: {fileID: 0}
-    sentence: You Does'nt Have Item
-    skipDelayTime: 0
-    sentenceSound: {fileID: 0}
-    sentenceEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1105496693}
-          m_TargetAssemblyTypeName: HeneGames.DialogueSystem.DialogueUI, Assembly-CSharp
-          m_MethodName: ClearText
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  reqSentences: []
---- !u!114 &533816078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 533816075}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49575414a70960d4b9e7c87e4320c4f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playCutSceneOnStart: 0
-  cutSceneSprite: []
-  cutSceneImage: {fileID: 0}
 --- !u!1 &535944687
 GameObject:
   m_ObjectHideFlags: 0
@@ -1745,6 +1631,443 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coin: {fileID: 11400000, guid: c93d67c3de768cf4cb16583739d84595, type: 2}
+--- !u!1 &645746748
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 645746749}
+  - component: {fileID: 645746751}
+  - component: {fileID: 645746750}
+  m_Layer: 0
+  m_Name: Dialogue 3D Call
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &645746749
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 645746748}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 985867595}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &645746750
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 645746748}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &645746751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 645746748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b89b2c8d34df52d4e89cba040401d38b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 645746750}
+  startDialogueEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  nextSentenceDialogueEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  endDialogueEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  questIsFinish: 0
+  req_item:
+  - {fileID: 11400000, guid: 809b060ba4a25924582cc596860c619f, type: 2}
+  triggerState: 2
+  _collisionType: 1
+  NormalSentences:
+  - dialogueCharacter: {fileID: 0}
+    sentence: You Does'nt Have Item
+    skipDelayTime: 0
+    sentenceSound: {fileID: 0}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  reqSentences:
+  - dialogueCharacter: {fileID: 0}
+    sentence: You Have Flute
+    skipDelayTime: 0
+    sentenceSound: {fileID: 0}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueCharacter: {fileID: 0}
+    sentence: you play the flute
+    skipDelayTime: 0
+    sentenceSound: {fileID: 0}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueCharacter: {fileID: 0}
+    sentence: 
+    skipDelayTime: 0
+    sentenceSound: {fileID: 0}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 985867596}
+          m_TargetAssemblyTypeName: NPC_CheckQuest, Assembly-CSharp
+          m_MethodName: playAnimation
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 645746748}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1105496693}
+          m_TargetAssemblyTypeName: HeneGames.DialogueSystem.DialogueUI, Assembly-CSharp
+          m_MethodName: ClearText
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 985867596}
+          m_TargetAssemblyTypeName: NPC_CheckQuest, Assembly-CSharp
+          m_MethodName: _SetQuest
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+--- !u!1 &655435155
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 655435156}
+  - component: {fileID: 655435158}
+  - component: {fileID: 655435157}
+  m_Layer: 0
+  m_Name: Dialogue 3D Call
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &655435156
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 655435155}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1056737552}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &655435157
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 655435155}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &655435158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 655435155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b89b2c8d34df52d4e89cba040401d38b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 655435157}
+  startDialogueEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  nextSentenceDialogueEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  endDialogueEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  questIsFinish: 0
+  req_item:
+  - {fileID: 11400000, guid: 809b060ba4a25924582cc596860c619f, type: 2}
+  triggerState: 2
+  _collisionType: 1
+  NormalSentences:
+  - dialogueCharacter: {fileID: 0}
+    sentence: You Don't Have "Rod"
+    skipDelayTime: 0
+    sentenceSound: {fileID: 0}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  reqSentences:
+  - dialogueCharacter: {fileID: 0}
+    sentence: You Have fishing rod
+    skipDelayTime: 0
+    sentenceSound: {fileID: 0}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueCharacter: {fileID: 0}
+    sentence: 
+    skipDelayTime: 0
+    sentenceSound: {fileID: 0}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 655435155}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1105496693}
+          m_TargetAssemblyTypeName: HeneGames.DialogueSystem.DialogueUI, Assembly-CSharp
+          m_MethodName: ClearText
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &700805908
 GameObject:
   m_ObjectHideFlags: 0
@@ -2371,6 +2694,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 645746749}
   - {fileID: 8817096239924538030}
   - {fileID: 189562522}
   m_Father: {fileID: 0}
@@ -2622,6 +2946,7 @@ Transform:
   m_LocalScale: {x: 4.7652717, y: 0.5450041, z: 4.7652717}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 655435156}
   - {fileID: 1727452119}
   - {fileID: 759006339}
   m_Father: {fileID: 0}
@@ -5289,10 +5614,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1727452119}
   - component: {fileID: 1727452122}
-  - component: {fileID: 1727452121}
   - component: {fileID: 1727452120}
+  - component: {fileID: 1727452123}
   m_Layer: 0
-  m_Name: Dialogue 3D
+  m_Name: Dialogue 3D Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5409,27 +5734,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!135 &1727452121
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1727452118}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 1.23
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1727452122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5453,9 +5757,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   questIsFinish: 0
-  req_item:
-  - {fileID: 11400000, guid: 809b060ba4a25924582cc596860c619f, type: 2}
-  triggerState: 1
+  req_item: []
+  triggerState: 0
   _collisionType: 1
   NormalSentences:
   - dialogueCharacter: {fileID: 0}
@@ -5464,25 +5767,10 @@ MonoBehaviour:
     sentenceSound: {fileID: 0}
     sentenceEvent:
       m_PersistentCalls:
-        m_Calls: []
-  reqSentences:
-  - dialogueCharacter: {fileID: 0}
-    sentence: You Have fishing rod
-    skipDelayTime: 0
-    sentenceSound: {fileID: 0}
-    sentenceEvent:
-      m_PersistentCalls:
-        m_Calls: []
-  - dialogueCharacter: {fileID: 0}
-    sentence: 
-    skipDelayTime: 0
-    sentenceSound: {fileID: 0}
-    sentenceEvent:
-      m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1727452118}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
+        - m_Target: {fileID: 1727452123}
+          m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+          m_MethodName: set_enabled
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -5492,30 +5780,28 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 1105496693}
-          m_TargetAssemblyTypeName: HeneGames.DialogueSystem.DialogueUI, Assembly-CSharp
-          m_MethodName: ClearText
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: NPC_CheckQuest, Assembly-CSharp
-          m_MethodName: _SetQuest
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
+  reqSentences: []
+--- !u!135 &1727452123
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1727452118}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.77
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1730855388
 GameObject:
   m_ObjectHideFlags: 0
@@ -6484,6 +6770,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1848504622}
   m_CullTransparentMesh: 1
+--- !u!114 &1851395757 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8889793102343117412, guid: e3421b67e1aeea1498bd5cd9b7cf7734, type: 3}
+  m_PrefabInstance: {fileID: 6309617399579485601}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4b6ed2128ff95842a4efd854d556464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1856855626
 GameObject:
   m_ObjectHideFlags: 0
@@ -7309,7 +7606,6 @@ Transform:
   m_Children:
   - {fileID: 382059614}
   - {fileID: 1545385125}
-  - {fileID: 533816076}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &655035620095429922
@@ -7979,6 +8275,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 422819646}
     - target: {fileID: 8889793102343117412, guid: e3421b67e1aeea1498bd5cd9b7cf7734, type: 3}
+      propertyPath: currentQuest
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8889793102343117412, guid: e3421b67e1aeea1498bd5cd9b7cf7734, type: 3}
       propertyPath: questDes_Text
       value: 
       objectReference: {fileID: 926475486}
@@ -8034,9 +8334,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   questIsFinish: 0
-  req_item:
-  - {fileID: 11400000, guid: 809b060ba4a25924582cc596860c619f, type: 2}
-  triggerState: 1
+  req_item: []
+  triggerState: 0
   _collisionType: 1
   NormalSentences:
   - dialogueCharacter: {fileID: 0}
@@ -8045,44 +8344,10 @@ MonoBehaviour:
     sentenceSound: {fileID: 0}
     sentenceEvent:
       m_PersistentCalls:
-        m_Calls: []
-  reqSentences:
-  - dialogueCharacter: {fileID: 0}
-    sentence: You Have Flute
-    skipDelayTime: 0
-    sentenceSound: {fileID: 0}
-    sentenceEvent:
-      m_PersistentCalls:
-        m_Calls: []
-  - dialogueCharacter: {fileID: 0}
-    sentence: you play the flute
-    skipDelayTime: 0
-    sentenceSound: {fileID: 0}
-    sentenceEvent:
-      m_PersistentCalls:
-        m_Calls: []
-  - dialogueCharacter: {fileID: 0}
-    sentence: 
-    skipDelayTime: 0
-    sentenceSound: {fileID: 0}
-    sentenceEvent:
-      m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 985867596}
-          m_TargetAssemblyTypeName: NPC_CheckQuest, Assembly-CSharp
-          m_MethodName: playAnimation
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
-        - m_Target: {fileID: 9103509936543270835}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
+        - m_Target: {fileID: 9103509936543270836}
+          m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+          m_MethodName: set_enabled
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -8092,30 +8357,19 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 1105496693}
-          m_TargetAssemblyTypeName: HeneGames.DialogueSystem.DialogueUI, Assembly-CSharp
-          m_MethodName: ClearText
-          m_Mode: 1
+        - m_Target: {fileID: 1851395757}
+          m_TargetAssemblyTypeName: QuestManager, Assembly-CSharp
+          m_MethodName: ChangeQuest
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 11400000, guid: 8367b8aea800b3c41bd83e556e0d1a13, type: 2}
+            m_ObjectArgumentAssemblyTypeName: Quest_Scriptable, Assembly-CSharp
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 985867596}
-          m_TargetAssemblyTypeName: NPC_CheckQuest, Assembly-CSharp
-          m_MethodName: _SetQuest
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
+  reqSentences: []
 --- !u!1001 &6696919419873243946
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8610,7 +8864,7 @@ GameObject:
   - component: {fileID: 9103509936543270836}
   - component: {fileID: 9084210258465888796}
   m_Layer: 0
-  m_Name: Dialogue 3D
+  m_Name: Dialogue 3D Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

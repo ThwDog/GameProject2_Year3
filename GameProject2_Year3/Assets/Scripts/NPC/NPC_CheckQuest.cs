@@ -19,11 +19,12 @@ public class NPC_CheckQuest : MonoBehaviour
     internal ShowUICollision showUI;
     internal EventScript _event;
     internal PlayerController player;
-    bool canShowDes;
+    // bool canShowDes;
 
     private void Start()
     {
-        if (GetComponentInChildren<DialogueManager>()) dialogue = GetComponentInChildren<DialogueManager>();
+        // get dialogue from call type
+        if (GetComponentInChildren<DialogueManager>().triggerState == DialogueManager.TriggerState.Call) dialogue = GetComponentInChildren<DialogueManager>();
         _event = GetComponent<EventScript>();
     }
 
@@ -36,18 +37,14 @@ public class NPC_CheckQuest : MonoBehaviour
 
         if (other.TryGetComponent<PlayerController>(out PlayerController _player))
         {
-            if(!dialogue.questIsFinish && canShowDes) showUI.ShowDescription();
+            if(!dialogue.questIsFinish) showUI.ShowDescription();
             // player must give item then talk to npc 
             if (Input.GetKey(KeyCode.E))
             {
                 showUI.CloseDescription();
                 dialogue.inventoryCheck(_player.gameObject.GetComponent<InventorySystem>());
                 // if player doesn't have item call dialogue you doesn't have item
-                if(!dialogue.questIsFinish){
-                    PlayCutScene cutScene = GameObject.Find("Doesn'tHaveItemScene").GetComponent<PlayCutScene>();
-                    // dialogue.gameObject.SetActive(false);
-                    cutScene._playCutScene();
-                }
+                dialogue.playDialogue();
                 this.player = _player;
             }
 
@@ -60,9 +57,9 @@ public class NPC_CheckQuest : MonoBehaviour
         if (other.GetComponent<PlayerController>() && !isQuestFinish)
         {
             // if(!dialogue.gameObject.activeSelf) dialogue.gameObject.SetActive(true);
-            if(!canShowDes){
-                canShowDes = true;
-            }
+            // if(!canShowDes){
+            //     canShowDes = true;
+            // }
             showUI.CloseDescription();
         }
     }

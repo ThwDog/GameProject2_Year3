@@ -19,15 +19,15 @@ MonoBehaviour:
     questDescription: Find hammer
     _checkQuestType: 0
     itemReq: {fileID: 11400000, guid: 809b060ba4a25924582cc596860c619f, type: 2}
-  - questTitle: yoyo
+  - questTitle: Test 01
     questDescription: Wat sup
     _checkQuestType: 0
     itemReq: {fileID: 11400000, guid: f637d0625dbf9354c8a68e23e277f7a4, type: 2}
-  - questTitle: Hum
+  - questTitle: Test 02
     questDescription: Wat sup
     _checkQuestType: 1
     itemReq: {fileID: 0}
-  - questTitle: Hum2
+  - questTitle: Test 03
     questDescription: Wat sup
     _checkQuestType: 1
     itemReq: {fileID: 0}
