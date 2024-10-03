@@ -12,6 +12,7 @@ public class CutSceneManager : MonoBehaviour , IEnable
     [SerializeField] GameObject cutSceneObj;
     [SerializeField] PlayCutScene playCutSceneOnstart;
     [SerializeField] bool canPlayOnStart = false;
+    [SerializeField] float waitSecForPlay; // Make IEmulator For wait play 
     bool hasPlay = false;
     [Header("Talk Dialogue")]
     [SerializeField] List<Sprite> playerSprite;
@@ -25,7 +26,7 @@ public class CutSceneManager : MonoBehaviour , IEnable
         if(!canPlayOnStart) return;
         else{
             if(!hasPlay){
-                playCutSceneOnstart._playCutScene();
+                playCutSceneOnstart._playCutScene(); // Make IEmulator For wait play 
                 hasPlay = true;
             }
         }
