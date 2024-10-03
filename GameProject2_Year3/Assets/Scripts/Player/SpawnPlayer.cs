@@ -9,12 +9,16 @@ public class SpawnPlayer : MonoBehaviour
     [SerializeField] GameObject target;
     [SerializeField] Vector3 offset;
     [SerializeField] bool isSpawn = false;
+    [Header("")]
+    [SerializeField] bool CanSpawnOnThis = false;
     PlayerController player;
     EventScript _event;
 
     private void Awake() {
-        if(!_gameObject) return;
         _event = GetComponent<EventScript>();
+
+        if(!CanSpawnOnThis) return;
+        if(!_gameObject) return;
         
         if(_gameObject.GetComponent<PlayerController>()){
             if(!FindAnyObjectByType<PlayerController>()){
@@ -24,9 +28,6 @@ public class SpawnPlayer : MonoBehaviour
                 deSpawn();
             }
         }
-    }
-
-    private void Start() {
     }
 
     void spawn(){
@@ -44,6 +45,7 @@ public class SpawnPlayer : MonoBehaviour
 
     // deSpawn player and Spawn it
     public void deSpawn(){
+        if(!CanSpawnOnThis) return;
         player = FindAnyObjectByType<PlayerController>();
         // player.gameObject.SetActive(false);
         Debug.Log("ReSpawn");

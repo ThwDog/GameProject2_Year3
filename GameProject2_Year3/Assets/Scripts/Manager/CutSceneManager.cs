@@ -4,17 +4,32 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CutSceneManager : MonoBehaviour
+public class CutSceneManager : MonoBehaviour , IEnable
 {
     // TODO : one manager per stage
     // TODO : Run on Unity Event On Player Scene
     [Header("CutScene")]
     [SerializeField] GameObject cutSceneObj;
+    [SerializeField] PlayCutScene playCutSceneOnstart;
+    [SerializeField] bool canPlayOnStart = false;
+    bool hasPlay = false;
     [Header("Talk Dialogue")]
     [SerializeField] List<Sprite> playerSprite;
     [SerializeField] Image playerSpriteRen; 
     [SerializeField] List<NPCSprite> npcSprites;
     [SerializeField] Image npcSpriteRen; 
+
+    private void Update() {
+        if(hasPlay) return;
+        if(!playCutSceneOnstart) return;
+        if(!canPlayOnStart) return;
+        else{
+            if(!hasPlay){
+                playCutSceneOnstart._playCutScene();
+                hasPlay = true;
+            }
+        }
+    }
 
 
     public void _PlayPlayerSprite(string spiteName){
@@ -65,7 +80,10 @@ public class CutSceneManager : MonoBehaviour
         if(obj.gameObject.activeSelf) obj.gameObject.SetActive(false);
     }
 
-
+    public void _enable()
+    {
+        canPlayOnStart = true;
+    }
 }
 
 [Serializable] 

@@ -8,7 +8,7 @@ public class PoolPuzzle : NPC_CheckQuest
     [Header("")]
     [SerializeField] ItemScript[] itemFishing; // item that can get in fishing 
     [SerializeField][Range(0,10)] float finishTimeDelay = 5f;
-    EventScript _event;
+    EventScript _events;
 
     public override void OnTriggerStay(Collider other)
     {

@@ -14,7 +14,7 @@ public class CheatCode : MonoBehaviour
 
     private void OnGUI() {
         if(GUI.Button(new Rect(10, 10, 100, 50),"Next scene")){
-            loadScene._LoadStage();
+            loadScene._LoadScene();
         }
         if(GUI.Button(new Rect(10, 80, 100, 50),"ReSpawn")){
             SpawnPlayer spawn = FindAnyObjectByType<SpawnPlayer>();

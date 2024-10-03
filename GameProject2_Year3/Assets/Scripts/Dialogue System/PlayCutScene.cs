@@ -10,7 +10,7 @@ using UnityEngine.UI;
 public class PlayCutScene : MonoBehaviour
 {
     // TODO : check key from Dialogue UI and run next sprite CutScene
-    [Tooltip("Set it to true if want to play in start")]public bool playCutSceneOnStart = false; // set to true if want to play on start
+    // [Tooltip("Set it to true if want to play in start")]public bool playCutSceneOnStart = false; // set to true if want to play on start
     [SerializeField] Sprite[] cutSceneSprite;
     [SerializeField] Image cutSceneImage;
     bool hasPlayDialogue = false;
@@ -23,16 +23,18 @@ public class PlayCutScene : MonoBehaviour
         cutSceneManager = GetComponentInParent<CutSceneManager>();
 
         // play cut scene on start
-        if(playCutSceneOnStart && !hasPlayDialogue){
-            if(dialogueManager) dialogueManager.playDialogue();
-            hasPlayDialogue = true;
-        }
+        // if(playCutSceneOnStart && !hasPlayDialogue){
+        //     if(dialogueManager) dialogueManager.playDialogue();
+        //     hasPlayDialogue = true;
+        // }
     }
 
     public void _playCutScene() {
-        if(dialogueManager) dialogueManager.playDialogue();
+        if(!dialogueManager) dialogueManager = GetComponent<DialogueManager>();
+        dialogueManager.playDialogue();
     }
 
+    // Set Cut Scene BG
     public void setCutSceneImg(int index){
         cutSceneManager.setSprite(cutSceneImage,cutSceneSprite[index]);
         cutSceneManager.showSpriteRen(cutSceneImage);
