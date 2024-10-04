@@ -58,4 +58,11 @@ public class CamControlAndSetting : MonoBehaviour, Ipauseable
         }
 
     }
+
+    public void camShake(float value) {
+        value = Mathf.Clamp(value,0,1);
+        
+        CinemachineBasicMultiChannelPerlin c_B = c_Cam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+        c_B.m_AmplitudeGain = value;
+    }
 }

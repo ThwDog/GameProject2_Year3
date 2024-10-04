@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour , Ipauseable
     private CharacterController controller;
     private InputManager input;
     [SerializeField] List<string> listOfAnimation;
+    CamControlAndSetting cam;
 
     bool ground()
     {
@@ -60,6 +61,7 @@ public class PlayerController : MonoBehaviour , Ipauseable
 
     private void Start()
     {
+        cam = FindObjectOfType<CamControlAndSetting>();
         current_GValue = gravityValue;
         sprite = anim.gameObject.GetComponent<SpriteRenderer>();
         // Cursor.visible = false;
@@ -87,6 +89,7 @@ public class PlayerController : MonoBehaviour , Ipauseable
         if (move.sqrMagnitude > 1.0f)
             move.Normalize();
 
+        cam.camShake(move.sqrMagnitude);
 
         //Movement
         move += verticalSpeed * Vector3.up;
