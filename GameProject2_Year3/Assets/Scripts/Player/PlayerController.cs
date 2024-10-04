@@ -152,6 +152,13 @@ public class PlayerController : MonoBehaviour , Ipauseable
         //TODO : if fishing end is play get item
     }
 
+    // TODO : For animation doesn't freeze
+    public void setAnimToNormal(){
+        anim.SetFloat("Vertical",0); 
+        anim.SetBool("SideWalk",false); 
+        cam.camShake(0);
+    }
+
     IEnumerator fishing_Finish(float time){
         isFishing = true;
         yield return new WaitForSeconds(time);
