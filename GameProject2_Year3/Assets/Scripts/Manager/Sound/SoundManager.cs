@@ -5,9 +5,24 @@ using System;
 
 public class SoundManager : SingletonClass<SoundManager>
 {
-    public Sound[] musicSound, sfxSound;
-    public AudioSource musicSource, sfxSource;   
+    public Sound[] musicSound, sfxSound , ambientSound;
+    public AudioSource musicSource, sfxSource , ambientSource;   
 
+    public void setVolume(string soundType,float value){
+        switch(soundType){
+            case "music":
+                musicSource.volume = value;
+                break;
+            case "sfx":
+                musicSource.volume = value;
+                break;
+            case "ambient":
+                musicSource.volume = value;
+                break;
+        }
+    }
+
+    #region  Music
     public void PauseMusic()
     {
         musicSource.Pause();
@@ -54,6 +69,9 @@ public class SoundManager : SingletonClass<SoundManager>
         musicSource.Stop();
     }
 
+    #endregion
+
+    #region  SFX
     public void PlaySfx(string nameSfx)
     {
         Sound s = Array.Find(sfxSound, x => x.nameSound == nameSfx);
@@ -97,4 +115,56 @@ public class SoundManager : SingletonClass<SoundManager>
         }
         return sound;
     }
+    #endregion
+
+    #region Ambient
+    public void PauseAmbient()
+    {
+        ambientSource.Pause();
+    }
+
+    public void ResumeAmbient()
+    {
+        ambientSource.Play();
+    }
+
+    public void PlayAmbient(string nameSound)
+    {
+        Sound s = Array.Find(ambientSound, x => x.nameSound == nameSound);
+        if (s == null)
+        {
+            Debug.Log("Not have music");
+        }
+        else
+        {
+            Debug.Log($"Play music {nameSound}");
+            ambientSource.clip = s.clip;
+            ambientSource.Play();
+        }
+    }
+
+    public void StopAmbient(string nameSound)
+    {
+        Sound s = Array.Find(ambientSound, x => x.nameSound == nameSound);
+        if (s == null)
+        {
+            Debug.Log("Not have music");
+        }
+        else
+        {
+            Debug.Log($"Stop music {nameSound}");
+            ambientSource.clip = s.clip;
+            ambientSource.Stop();
+        }
+    }
+
+    public void StopAllAmbient()
+    {
+        Debug.Log("Stop all music");
+        ambientSource.Stop();
+    }
+
+    #endregion
+
+    
 }

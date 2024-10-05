@@ -1012,7 +1012,7 @@ MonoBehaviour:
   m_CustomShadowLayers: 0
   m_ShadowLayerMask: 1
   m_ShadowRenderingLayers: 1
-  m_LightCookieSize: {x: 100, y: 100}
+  m_LightCookieSize: {x: 70, y: 70}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
 --- !u!108 &611618543
@@ -1027,7 +1027,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 0.99039906, g: 0.990566, b: 0.9672036, a: 1}
-  m_Intensity: 3
+  m_Intensity: 0.6
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1071,7 +1071,7 @@ Light:
   m_AreaSize: {x: 0.5, y: 0.5}
   m_BounceIntensity: 1
   m_ColorTemperature: 6500
-  m_UseColorTemperature: 1
+  m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 1.02e-43, y: 7e-45, z: 8.767e-42, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
@@ -1085,13 +1085,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 611618540}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.62749344, y: 0.0575221, z: -0.044860955, w: 0.77519727}
+  m_LocalRotation: {x: 0.516326, y: 0.06308489, z: -0.036627755, w: 0.8532797}
   m_LocalPosition: {x: 4.77, y: 4.79, z: -10.57}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 77.966, y: 9.074, z: 0.725}
+  m_LocalEulerAnglesHint: {x: 62.345, y: 8.654, z: 0.326}
 --- !u!1 &640876659
 GameObject:
   m_ObjectHideFlags: 0
@@ -2044,28 +2044,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1 &876777261 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2433456553064941861, guid: 5e30e0819637ab94f9922b426970ee59, type: 3}
-  m_PrefabInstance: {fileID: 6696919419873243946}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &876777266
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 876777261}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_NoiseProfile: {fileID: 11400000, guid: 554b0ed52734c154eab51f6cedd3a7d7, type: 2}
-  m_PivotOffset: {x: 0, y: 0, z: 0}
-  m_AmplitudeGain: 0
-  m_FrequencyGain: 1
-  mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1 &923285348 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6461981819148202631, guid: d5eb1b2644f77774595eaf932a6cc490, type: 3}
@@ -8239,10 +8217,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cam
       objectReference: {fileID: 0}
-    - target: {fileID: 8700052923412285295, guid: 5e30e0819637ab94f9922b426970ee59, type: 3}
-      propertyPath: m_RendererIndex
-      value: -1
-      objectReference: {fileID: 0}
     - target: {fileID: 8856886612499088727, guid: 5e30e0819637ab94f9922b426970ee59, type: 3}
       propertyPath: m_Follow
       value: 
@@ -8254,10 +8228,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2433456553064941861, guid: 5e30e0819637ab94f9922b426970ee59, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 876777266}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e30e0819637ab94f9922b426970ee59, type: 3}
 --- !u!1 &6872205998859555228
 GameObject:

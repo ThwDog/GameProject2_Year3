@@ -11939,6 +11939,10 @@ PrefabInstance:
       propertyPath: offset.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3215988915142884801, guid: 32ba7f3a05215e24fb59719afb644d60, type: 3}
+      propertyPath: CanSpawnOnThis
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8916857956358259112, guid: 32ba7f3a05215e24fb59719afb644d60, type: 3}
       propertyPath: m_Name
       value: SpawnPlayer
@@ -11990,7 +11994,7 @@ MonoBehaviour:
   m_CustomShadowLayers: 0
   m_ShadowLayerMask: 1
   m_ShadowRenderingLayers: 1
-  m_LightCookieSize: {x: 100, y: 100}
+  m_LightCookieSize: {x: 80, y: 80}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
 --- !u!108 &971774119
@@ -12063,13 +12067,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 971774117}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.5648894, y: 0.11535836, z: -0.022201663, w: 0.8167617}
+  m_LocalRotation: {x: 0.5066662, y: 0.11662397, z: -0.014117965, w: 0.8541013}
   m_LocalPosition: {x: 3.42, y: 4.42, z: -14.49}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 68.107, y: 25.983, z: 14.612}
+  m_LocalEulerAnglesHint: {x: 60.317, y: 21.926, z: 10.95}
 --- !u!1001 &993674400
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -61,11 +61,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: a632e081d36089d49b94a287b6b816b1, type: 3}
+        m_Texture: {fileID: 2800000, guid: bac63b09d55bb9d4496f5d7ed9fdb981, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex2:
-        m_Texture: {fileID: 2800000, guid: fb2532bfbc2e6eb498e342b76748273a, type: 3}
+        m_Texture: {fileID: 2800000, guid: ff34c7e663ec72c45b263bdc827c0e66, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -78,6 +78,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RandomTex:
+        m_Texture: {fileID: 2800000, guid: bac63b09d55bb9d4496f5d7ed9fdb981, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
@@ -134,5 +138,5 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _Speed: {r: 0.1, g: 0, b: 0.1, a: 0}
+    - _Speed: {r: 0.12, g: 0, b: 0.12, a: 0}
   m_BuildTextureStacks: []
