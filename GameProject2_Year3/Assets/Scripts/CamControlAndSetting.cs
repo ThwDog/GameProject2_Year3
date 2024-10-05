@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
 
@@ -11,7 +9,7 @@ public class CamControlAndSetting : MonoBehaviour, Ipauseable
 
     [SerializeField] float fov_len = 60;
     [SerializeField] float scrollScale = 10f;
-    [Header(" ")]
+    [Header("Max up and down cam")]
     [Tooltip("Min value of cam")][SerializeField] float min = 4f;
     [Tooltip("Max value of cam")][SerializeField] float max = 15f; 
 
@@ -43,7 +41,6 @@ public class CamControlAndSetting : MonoBehaviour, Ipauseable
             c_Cam.LookAt = FindAnyObjectByType<PlayerController>().transform;
         }
 
-        c_Cam.m_Lens.FieldOfView = fov_len;
         // c_Cam.m_Lens.FieldOfView = fov_len;
         if(paused) return;
         // float scrollingDelta =Input.GetAxis("Mouse ScrollWheel");
@@ -57,6 +54,11 @@ public class CamControlAndSetting : MonoBehaviour, Ipauseable
             c_tran.m_FollowOffset.y += -scrollScale * Time.deltaTime;
         }
 
+        // mouse scroll 
+        if(fov_len > 60) fov_len = 60;
+        if(fov_len < 15) fov_len = 15;
+        fov_len -= Input.mouseScrollDelta.y * 5;
+        c_Cam.m_Lens.FieldOfView = fov_len;
     }
 
     public void camShake(float value) {
