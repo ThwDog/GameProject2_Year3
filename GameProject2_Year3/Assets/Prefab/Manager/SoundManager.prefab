@@ -159,8 +159,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2125665726862536209}
-  - {fileID: 2917048393930803652}
   - {fileID: 8262106025439914899}
+  - {fileID: 2917048393930803652}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1207568464689222538
@@ -176,7 +176,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSound: []
-  sfxSound: []
+  sfxSound:
+  - nameSound: Press_Key
+    sound: {fileID: 8300000, guid: aee61194365565d44aabbea8bf8de260, type: 3}
+    clip: {fileID: 8300000, guid: aee61194365565d44aabbea8bf8de260, type: 3}
   ambientSound: []
   musicSource: {fileID: 4031980835165256088}
   sfxSource: {fileID: 1227751029723524001}

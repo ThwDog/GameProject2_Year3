@@ -9,7 +9,7 @@ namespace HeneGames.DialogueSystem
     {
         // TODO : Use sentence event to setActive NPC Sprite When talk to NPC
         // TODO : Make sentence can change in game
-        private int currentSentence;
+        private int currentSentence; // current character sentence
         private float coolDownTimer;
         private bool dialogueIsOn;
         private DialogueTrigger dialogueTrigger;
