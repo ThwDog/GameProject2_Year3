@@ -1426,7 +1426,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 985867596}
           m_TargetAssemblyTypeName: NPC_CheckQuest, Assembly-CSharp
-          m_MethodName: playAnimation
+          m_MethodName: playPlayerAnimation
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2207,9 +2207,11 @@ GameObject:
   - component: {fileID: 985867597}
   - component: {fileID: 985867592}
   - component: {fileID: 985867596}
+  - component: {fileID: 985867602}
   - component: {fileID: 985867599}
   - component: {fileID: 985867598}
   - component: {fileID: 985867600}
+  - component: {fileID: 985867601}
   m_Layer: 0
   m_Name: Bear
   m_TagString: Untagged
@@ -2391,6 +2393,33 @@ MonoBehaviour:
   exitEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &985867601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985867591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43fdd43f147ad844cb9e1ff9aa433a18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  closeType: 0
+  target: []
+--- !u!114 &985867602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985867591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44e753cc5d62bfb49b1d8db03c70effc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
 --- !u!1 &1015390932 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2464602053261783579, guid: 6c8740fa98b184b47a89abb11c750496, type: 3}
@@ -2914,7 +2943,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1110527488
 MonoBehaviour:
   m_ObjectHideFlags: 0

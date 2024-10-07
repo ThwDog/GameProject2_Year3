@@ -33,7 +33,7 @@ public class PoolPuzzle : NPC_CheckQuest
 
                 dialogue.playDialogue();
                 this.player = _player;
-                playAnimation();
+                playPlayerAnimation();
                 StartCoroutine(waitCollect(finishTimeDelay,_player));
 
                 // if use have fishing flute is true 

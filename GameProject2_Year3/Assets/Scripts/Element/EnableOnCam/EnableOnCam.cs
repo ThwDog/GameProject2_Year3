@@ -5,15 +5,15 @@ using UnityEngine;
 //TODO : use on every obj that need to close when cam doesn't look 
 public class EnableOnCam : MonoBehaviour
 {
-    enum type{
+    public enum type{
         renderer , obj
     }
 
     [Header("CamDetect")]
     Camera cam;
     MeshRenderer _renderer;
-    [SerializeField] type closeType = type.renderer;
-    [SerializeField] GameObject[] target;
+    public type closeType = type.renderer;
+    public GameObject[] target;
     Collider colliders;
     Plane[] cameraFrustum;
     internal bool _isEnable = false;

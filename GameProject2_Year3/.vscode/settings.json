@@ -51,5 +51,8 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "GameProject2_Year3.sln"
+    "dotnet.defaultSolution": "GameProject2_Year3.sln",
+    "cSpell.words": [
+        "doesnt"
+    ]
 }

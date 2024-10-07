@@ -291,7 +291,7 @@ namespace HeneGames.DialogueSystem
             }
         }
 
-        // use for play dialogue that doesnt need to set trigger
+        // use for play dialogue that doesn't need to set trigger
         public void playDialogue(){
             DialogueUI.instance.StartDialogue(this);
         }

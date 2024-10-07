@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using HeneGames.DialogueSystem;
 using UnityEngine;
 
+// TODO : in dialogue manager use call type
+
 public class NPC_CheckQuest : MonoBehaviour
 {
     enum animationType
@@ -65,7 +67,7 @@ public class NPC_CheckQuest : MonoBehaviour
     }
 
     // normally it working on Dialogue manager
-    public void playAnimation()
+    public void playPlayerAnimation()
     {
         switch (_animationType)
         {
