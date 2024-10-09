@@ -27,6 +27,8 @@ namespace HeneGames.DialogueSystem
             //Hide dialogue and interaction UI at awake
             dialogueWindow.SetActive(false);
             interactionUI.SetActive(false);
+
+            // sound = FindObjectOfType<SoundManager>();
         }
 
         #endregion
@@ -35,7 +37,7 @@ namespace HeneGames.DialogueSystem
         private bool typing;
         private string currentMessage;
         private float startDialogueDelayTimer;
-        [SerializeField] private SoundManager sound;
+        // [SerializeField] private SoundManager sound;
 
         [Header("References")]
         [SerializeField] private Image portrait;
@@ -194,7 +196,7 @@ namespace HeneGames.DialogueSystem
             foreach(char _letter in _letters)
             {
                 // Debug.Log(_letter);
-                sound.PlaySfx("Press_Key");
+                SoundManager.instance.PlaySfx("Press_Key");
                 _textMeshObject.text += _letter;
 
                 if(_textMeshObject.text.Length == _letters.Length)

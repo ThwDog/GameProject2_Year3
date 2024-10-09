@@ -28,6 +28,9 @@ public class PlayerController : MonoBehaviour , Ipauseable
     [SerializeField] List<string> listOfAnimation;
     CamControlAndSetting cam;
 
+    string walkSoundName;
+    bool canPlayWalkSound;
+
     bool ground()
     {
         float distToGround = playerCollider.bounds.extents.y;
@@ -80,14 +83,22 @@ public class PlayerController : MonoBehaviour , Ipauseable
         checkGround();
     }
 
+    private void OnTriggerEnter(Collider other) {
+        if(!other.gameObject.TryGetComponent<GroundEnable>(out GroundEnable ground)) return;
+        if(ground.groundSound != null){
+            walkSoundName = ground.groundSound;
+        }
+    }
+
     private void move()
     {
 
         Vector2 movement = input.GetPlayerMovement();
         Vector3 move = new Vector3(movement.x, 0, movement.y);
 
-        if (move.sqrMagnitude > 1.0f)
+        if (move.sqrMagnitude > 1.0f){
             move.Normalize();
+        }
 
         cam.camShake(move.sqrMagnitude);
 
@@ -109,9 +120,17 @@ public class PlayerController : MonoBehaviour , Ipauseable
         anim.SetBool("SideWalk",move.x > 0  && move.z == 0 || move.x < 0 && move.z == 0); 
         anim.SetFloat("Vertical",move.z); 
 
+        // WalkSound
+        if(move.sqrMagnitude != 0){
+            if(walkSoundName != null){
+                if(canPlayWalkSound) StartCoroutine(walkSound());
+            }
+        }
+
 
         controller.Move(move * Time.deltaTime * speed);
     }
+
     // play by bool
     public void _PlayAnimation(string AnimationName, bool _bool){
         anim.SetBool(AnimationName,_bool);
@@ -166,4 +185,12 @@ public class PlayerController : MonoBehaviour , Ipauseable
         yield return new WaitForSeconds(time);
         isFishing = false;
     }
+
+    IEnumerator walkSound(){
+        SoundManager.instance.PlaySfx(walkSoundName);
+        canPlayWalkSound = false;
+        yield return new WaitForSeconds(speed / 2);
+        canPlayWalkSound = true;
+    }
+
 }

@@ -533,6 +533,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   c_Cam: {fileID: 8856886612499088727}
+  cameraFrustum: {fileID: 821018476456725264}
   fov_len: 40
   scrollScale: 10
   min: 4

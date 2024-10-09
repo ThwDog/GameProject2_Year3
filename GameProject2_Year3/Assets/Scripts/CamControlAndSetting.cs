@@ -6,6 +6,7 @@ public class CamControlAndSetting : MonoBehaviour, Ipauseable
     [Header("setting")]
     [SerializeField] CinemachineVirtualCamera c_Cam;
     CinemachineTransposer c_tran; // to change body offset
+    [SerializeField] Camera cameraFrustum;
 
     [SerializeField] float fov_len = 60;
     [SerializeField] float scrollScale = 10f;
@@ -55,10 +56,11 @@ public class CamControlAndSetting : MonoBehaviour, Ipauseable
         }
 
         // mouse scroll 
-        if(fov_len > 60) fov_len = 60;
+        if(fov_len > 50) fov_len = 50;
         if(fov_len < 15) fov_len = 15;
         fov_len -= Input.mouseScrollDelta.y * 5;
         c_Cam.m_Lens.FieldOfView = fov_len;
+        cameraFrustum.fieldOfView = c_Cam.m_Lens.FieldOfView + 10;
     }
 
     public void camShake(float value) {

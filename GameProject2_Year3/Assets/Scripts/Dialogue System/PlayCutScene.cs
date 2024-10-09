@@ -13,7 +13,7 @@ public class PlayCutScene : MonoBehaviour
     // [Tooltip("Set it to true if want to play in start")]public bool playCutSceneOnStart = false; // set to true if want to play on start
     [SerializeField] Sprite[] cutSceneSprite;
     [SerializeField] Image cutSceneImage;
-    bool hasPlayDialogue = false;
+    // bool hasPlayDialogue = false;
     DialogueManager dialogueManager;
     CutSceneManager cutSceneManager;
 

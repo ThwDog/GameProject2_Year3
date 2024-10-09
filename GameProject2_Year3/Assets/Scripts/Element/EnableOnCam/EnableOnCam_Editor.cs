@@ -13,7 +13,6 @@ public class EnableOnCam_Editor : Editor
     }
 
     public override void OnInspectorGUI() {
-
         serializedObject.Update ();
 
         var enableOnCam = target as EnableOnCam;

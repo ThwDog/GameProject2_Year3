@@ -24,20 +24,18 @@ public class GroundEnable : MonoBehaviour, MapOpenable
     [SerializeField]Collider colliders;
     [SerializeField]EnableOnCam enableOnCam;
     public bool mapOpen = true;
+    [Header("")]
+    public string groundSound; // for store sound of that ground
 
-    private void Start()
+    private void Awake()
     {
-        player = GameObject.FindAnyObjectByType<PlayerController>().GetComponent<Transform>();
-        enableOnCam = GetComponent<EnableOnCam>();
-
-        if (types == type.mesh) colliders = GetComponent<MeshCollider>();
-        else if (types == type.box) colliders = GetComponent<BoxCollider>();
+        assignAllVa();
     }
 
     private void Update()
     {
         if (!mapOpen) return;
-        assignAllVa();
+        // assignAllVa();
         if(!enableOnCam._isEnable) return;
 
         if (Vector3.Distance(player.position, transform.position) < dis && !colliders.enabled)
