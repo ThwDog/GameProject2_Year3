@@ -116,7 +116,6 @@ public class PlayerController : MonoBehaviour , Ipauseable
 
         // WalkSound
         if(move.sqrMagnitude > 0.3 || move.sqrMagnitude < -0.3){
-            Debug.Log(move.sqrMagnitude);
             if(walkSoundName != ""){
                 if(canPlayWalkSound) StartCoroutine(walkSound());
             }

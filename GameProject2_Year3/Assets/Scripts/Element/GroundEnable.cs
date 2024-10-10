@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent (typeof(EnableOnCam))]
 public class GroundEnable : MonoBehaviour, MapOpenable
 {
     public enum type
