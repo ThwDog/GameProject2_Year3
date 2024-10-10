@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour , Ipauseable
     CamControlAndSetting cam;
 
     string walkSoundName;
-    bool canPlayWalkSound;
+    bool canPlayWalkSound = true;
 
     bool ground()
     {
@@ -81,13 +81,7 @@ public class PlayerController : MonoBehaviour , Ipauseable
         isGrounded = ground();
         move();
         checkGround();
-    }
-
-    private void OnTriggerEnter(Collider other) {
-        if(!other.gameObject.TryGetComponent<GroundEnable>(out GroundEnable ground)) return;
-        if(ground.groundSound != null){
-            walkSoundName = ground.groundSound;
-        }
+        groundSoundCheck();
     }
 
     private void move()
@@ -121,8 +115,9 @@ public class PlayerController : MonoBehaviour , Ipauseable
         anim.SetFloat("Vertical",move.z); 
 
         // WalkSound
-        if(move.sqrMagnitude != 0){
-            if(walkSoundName != null){
+        if(move.sqrMagnitude > 0.3 || move.sqrMagnitude < -0.3){
+            Debug.Log(move.sqrMagnitude);
+            if(walkSoundName != ""){
                 if(canPlayWalkSound) StartCoroutine(walkSound());
             }
         }
@@ -186,10 +181,20 @@ public class PlayerController : MonoBehaviour , Ipauseable
         isFishing = false;
     }
 
+    private void groundSoundCheck(){
+        float distToGround = playerCollider.bounds.extents.y;
+        RaycastHit _hit;
+        if(Physics.Raycast(transform.position, Vector3.down, out _hit , distToGround + 0.1f)){
+            if(_hit.collider.gameObject.TryGetComponent<GroundEnable>(out GroundEnable groundEnable)){
+                walkSoundName = groundEnable.groundSound;
+            }
+        }
+    }
+
     IEnumerator walkSound(){
         SoundManager.instance.PlaySfx(walkSoundName);
         canPlayWalkSound = false;
-        yield return new WaitForSeconds(speed / 2);
+        yield return new WaitForSeconds(0.25f);
         canPlayWalkSound = true;
     }
 
