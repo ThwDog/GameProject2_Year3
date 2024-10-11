@@ -140,7 +140,7 @@ MonoBehaviour:
   colliders: {fileID: 0}
   enableOnCam: {fileID: 0}
   mapOpen: 1
-  groundSound: 
+  groundSound: WalkDirt
 --- !u!1 &9131691747760593402
 GameObject:
   m_ObjectHideFlags: 0

@@ -44,7 +44,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2506279615367613439}
-  m_Mesh: {fileID: 1356447935715495246, guid: 4277996aaf7ddd64dbc0d678c317ef47, type: 3}
+  m_Mesh: {fileID: 5027311974940053729, guid: 4277996aaf7ddd64dbc0d678c317ef47, type: 3}
 --- !u!23 &7553208455450122373
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -141,7 +141,7 @@ MonoBehaviour:
   colliders: {fileID: 0}
   enableOnCam: {fileID: 0}
   mapOpen: 1
-  groundSound: 
+  groundSound: WalkGround
 --- !u!114 &4773701469732683333
 MonoBehaviour:
   m_ObjectHideFlags: 0

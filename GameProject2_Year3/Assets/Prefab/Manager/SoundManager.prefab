@@ -180,6 +180,15 @@ MonoBehaviour:
   - nameSound: Press_Key
     sound: {fileID: 8300000, guid: aee61194365565d44aabbea8bf8de260, type: 3}
     clip: {fileID: 8300000, guid: aee61194365565d44aabbea8bf8de260, type: 3}
+  - nameSound: WalkGround
+    sound: {fileID: 8300000, guid: 63e5e897af23bbc4fa1cbb2326e0a2af, type: 3}
+    clip: {fileID: 8300000, guid: 63e5e897af23bbc4fa1cbb2326e0a2af, type: 3}
+  - nameSound: WalkGrass
+    sound: {fileID: 8300000, guid: 4ae513c721882294ea60dce5b958e1b7, type: 3}
+    clip: {fileID: 8300000, guid: 4ae513c721882294ea60dce5b958e1b7, type: 3}
+  - nameSound: WalkDirt
+    sound: {fileID: 8300000, guid: b9c7b50c68ac2d44dafb1411104de468, type: 3}
+    clip: {fileID: 8300000, guid: b9c7b50c68ac2d44dafb1411104de468, type: 3}
   ambientSound: []
   musicSource: {fileID: 4031980835165256088}
   sfxSource: {fileID: 1227751029723524001}

@@ -141,7 +141,7 @@ MonoBehaviour:
   colliders: {fileID: 0}
   enableOnCam: {fileID: 0}
   mapOpen: 1
-  groundSound: 
+  groundSound: WalkGround
 --- !u!114 &5686569134416125091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,6 +157,8 @@ MonoBehaviour:
   meshes:
   - {fileID: -7628854119433043494, guid: 4277996aaf7ddd64dbc0d678c317ef47, type: 3}
   - {fileID: 427432865752810791, guid: 4277996aaf7ddd64dbc0d678c317ef47, type: 3}
+  useMat: 0
+  material: []
 --- !u!1 &2283999157149003067
 GameObject:
   m_ObjectHideFlags: 0
