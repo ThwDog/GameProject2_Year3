@@ -16,7 +16,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7740564169064388826
 Transform:
@@ -94,12 +94,13 @@ GameObject:
   - component: {fileID: 2268568025203467696}
   - component: {fileID: 3714028736564375975}
   - component: {fileID: 3384252220808319138}
+  - component: {fileID: 5958623309392589344}
   m_Layer: 0
   m_Name: House_no2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2268568025203467696
 Transform:
@@ -111,7 +112,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 34.373875, y: 0, z: -22.06}
-  m_LocalScale: {x: 14, y: 14, z: 14}
+  m_LocalScale: {x: 16, y: 16, z: 16}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7740564169064388826}
@@ -153,10 +154,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 1
   outlineColor: {r: 0, g: 0, b: 0, a: 1}
-  outlineWidth: 5
+  outlineWidth: 4
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &5958623309392589344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4503272397831576583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43fdd43f147ad844cb9e1ff9aa433a18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  closeType: 1
+  target:
+  - {fileID: 842047187105471444}
+  - {fileID: 8055433163351569256}
 --- !u!1 &8055433163351569256
 GameObject:
   m_ObjectHideFlags: 0
@@ -173,7 +190,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6427129733973755858
 Transform:

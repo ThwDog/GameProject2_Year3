@@ -6,6 +6,10 @@ using UnityEngine.UI;
 
 public class CutSceneManager : MonoBehaviour , IEnable
 {
+    public enum type{
+        player , npc
+    }
+
     // TODO : one manager per stage
     // TODO : Run on Unity Event On Player Scene
     [Header("CutScene")]
@@ -20,6 +24,10 @@ public class CutSceneManager : MonoBehaviour , IEnable
     [SerializeField] List<NPCSprite> npcSprites;
     [SerializeField] Image npcSpriteRen; 
 
+    int playerSpriteIndex = 0;
+    int npcSpriteIndex = 0;
+    NPCSprite _foundSprite;
+
     private void Update() {
         if(hasPlay) return;
         if(!playCutSceneOnstart) return;
@@ -33,15 +41,15 @@ public class CutSceneManager : MonoBehaviour , IEnable
     }
 
 
-    public void _PlayPlayerSprite(string spiteName){
+    public void _PlayPlayerSprite(){
         if(playerSprite == null) {Debug.Log("yo"); return;}
 
-        Sprite foundSprite = playerSprite.Find(sprite => sprite.name == spiteName); // find sprite name
+        Sprite foundSprite = playerSprite[playerSpriteIndex]; // find sprite name
 
-        if(foundSprite == null) {
-            Debug.LogError("Don't Found : " + spiteName);
-            return;
-        }
+        // if(foundSprite == null) {
+        //     Debug.LogError("Don't Found : " + spiteName);
+        //     return;
+        // }
 
         setSprite(playerSpriteRen,foundSprite);
         showSpriteRen(playerSpriteRen);
@@ -51,8 +59,9 @@ public class CutSceneManager : MonoBehaviour , IEnable
          if(npcSprites == null) return;
 
         // Check in npcSprites that if SpriteName Exist in sprites get it
-        NPCSprite s = npcSprites.Find(npcSprite => npcSprite.sprites.Exists(sprite => sprite.name == spiteName)); 
-        Sprite foundSprite = s.sprites.Find(sprite => sprite.name == spiteName); // get sprite from list
+        NPCSprite _foundSprite = npcSprites.Find(sprite => sprite.spriteName == spiteName); 
+        // Sprite foundSprite = s.sprites.Find(sprite => sprite.name == spiteName); // get sprite from list
+        Sprite foundSprite = _foundSprite.sprites[npcSpriteIndex]; // get sprite from list
 
         if(foundSprite == null) {
             Debug.LogError("Don't Found : " + spiteName);
@@ -61,8 +70,28 @@ public class CutSceneManager : MonoBehaviour , IEnable
 
         setSprite(npcSpriteRen,foundSprite);
         showSpriteRen(npcSpriteRen);
-        
     }
+
+    public void _nextSprite(type _type){
+        if(_type == type.player){
+            if(playerSpriteIndex > playerSprite.Count){
+                playerSpriteIndex = 0;
+            }
+            else playerSpriteIndex++;
+        }
+        else if(_type == type.npc){
+            if(npcSpriteIndex > _foundSprite.sprites.Count){
+                npcSpriteIndex = 0;
+            }
+            else npcSpriteIndex++;
+        }
+    }
+
+    public void resetSprite(){
+        playerSpriteIndex = 0;
+        npcSpriteIndex = 0;
+    }
+
 
     public void setSprite(Image img , Sprite sprite){
         // change sprite and set in location
@@ -76,9 +105,14 @@ public class CutSceneManager : MonoBehaviour , IEnable
     }
 
     // can use in PlayCutScene
-    public void closeSpriteRen(Image obj){
+    private void closeSpriteRen(Image obj){
         // close sprite render
         if(obj.gameObject.activeSelf) obj.gameObject.SetActive(false);
+    }
+
+    public void closeSpriteAll(){
+        closeSpriteRen(playerSpriteRen);
+        closeSpriteRen(npcSpriteRen);
     }
 
     public void _enable()
@@ -89,5 +123,6 @@ public class CutSceneManager : MonoBehaviour , IEnable
 
 [Serializable] 
 public class NPCSprite{
+    public string spriteName;
     public List<Sprite> sprites;
 }

@@ -32,6 +32,8 @@ public class NPC_CheckQuest : MonoBehaviour
 
     public virtual void OnTriggerStay(Collider other)
     {
+        if(!dialogue) return;
+
         if (isQuestFinish) return;
 
         if (GetComponent<ShowUICollision>())
@@ -55,6 +57,7 @@ public class NPC_CheckQuest : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        if(!showUI) return;
         if (isQuestFinish) return;
         if (other.GetComponent<PlayerController>() && !isQuestFinish)
         {

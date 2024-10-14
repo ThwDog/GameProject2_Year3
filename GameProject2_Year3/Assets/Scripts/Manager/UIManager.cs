@@ -7,24 +7,23 @@ public class UIManager : MonoBehaviour , Ipauseable
     [Header("Setting")]
     [Header("Pause Menu")]
     [SerializeField] private GameObject pauseMenuUI;
-    private bool paused = false;
 
     public void pauseMenu(){
-        if(!paused) pause();
+        if(!GameManager.instance.paused) pause();
         else resume();
     }
 
 
     public void pause()
     {
-        paused = true;
+        GameManager.instance.paused = true;
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0;
     }
 
     public void resume()
     {
-        paused = false;
+        GameManager.instance.paused = false;
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1;
     }

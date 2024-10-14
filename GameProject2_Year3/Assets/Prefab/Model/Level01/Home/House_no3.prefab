@@ -16,7 +16,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7419893865023624700
 Transform:
@@ -99,7 +99,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1588739724798092231
 Transform:
@@ -177,12 +177,13 @@ GameObject:
   - component: {fileID: 6912975462202608601}
   - component: {fileID: 3264147931046683879}
   - component: {fileID: 7316068185554346218}
+  - component: {fileID: 4207144078964469334}
   m_Layer: 0
   m_Name: House_no3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6912975462202608601
 Transform:
@@ -194,7 +195,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 11.91, y: 5.4, z: 8.06}
-  m_LocalScale: {x: 16, y: 16, z: 16}
+  m_LocalScale: {x: 18, y: 18, z: 18}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1588739724798092231}
@@ -240,3 +241,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.6256615, y: 0.561903, z: 0.6296929}
   m_Center: {x: -0.00053554773, y: -0.057864904, z: 0.000088989735}
+--- !u!114 &4207144078964469334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8324468365084964013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43fdd43f147ad844cb9e1ff9aa433a18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  closeType: 1
+  target:
+  - {fileID: 7038138479472744294}
+  - {fileID: 4791437761183433461}

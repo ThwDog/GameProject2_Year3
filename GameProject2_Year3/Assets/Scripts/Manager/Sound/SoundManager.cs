@@ -69,6 +69,10 @@ public class SoundManager : SingletonClass<SoundManager>
         musicSource.Stop();
     }
 
+    public bool checkMusic(){
+        return musicSource.isPlaying;
+    }
+
     #endregion
 
     #region  SFX

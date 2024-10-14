@@ -37,13 +37,14 @@ public class GroundEnable : MonoBehaviour, MapOpenable
         // assignAllVa();
         if(!enableOnCam._isEnable) return;
 
-        if (Vector3.Distance(player.position, transform.position) < dis && !colliders.enabled)
-        {
-            colliders.enabled = true;
-        }
-        else if (Vector3.Distance(player.position, transform.position) > dis && colliders.enabled)
+        if (Vector3.Distance(player.position, transform.position) > dis && colliders.enabled)
         {
             colliders.enabled = false;
+            return;
+        }
+        else if (Vector3.Distance(player.position, transform.position) < dis && !colliders.enabled)
+        {
+            colliders.enabled = true;
         }
 
     }

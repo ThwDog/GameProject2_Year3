@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 3214460774242697326}
   - component: {fileID: 5131780679140757749}
   - component: {fileID: 5863041443164425176}
+  - component: {fileID: 7866076482867789348}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -224,6 +225,7 @@ MonoBehaviour:
   stickingGravityPro: 20
   input_Delay: 0
   anim: {fileID: 2872758729705284727}
+  listOfAnimation: []
   paused: 0
 --- !u!114 &6764816931950542762
 MonoBehaviour:
@@ -306,3 +308,23 @@ MonoBehaviour:
   lookAt: {fileID: 0}
   obj: {fileID: 6681699143588539602}
   vec: {x: 0, y: 2, z: 15}
+--- !u!114 &7866076482867789348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6461981819148202631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ceb4e2d7b6a9ec48b834e9096a619d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  terrainSound:
+  - _terrainLayer: {fileID: 8574412962073106934, guid: dcb1ab0b156e228439919dab32caac57, type: 2}
+    soundName: WalkGrass
+  - _terrainLayer: {fileID: 8574412962073106934, guid: b3d5438c8ee35e140aedd8752bf0d78e, type: 2}
+    soundName: WalkGround
+  floorLayer:
+    serializedVersion: 2
+    m_Bits: 256

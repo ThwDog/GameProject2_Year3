@@ -41,7 +41,7 @@ public class QuestManager : MonoBehaviour
         questTitle_Text.text = currentQuest.quests[currentQuestIndex].questTitle;
         questDes_Text.text = currentQuest.quests[currentQuestIndex].questDescription;
 
-        changeQuestList(); // it alway check 
+        nextQuestInListByItem(); // it alway check 
     }
 
     // use most in npc
@@ -53,7 +53,7 @@ public class QuestManager : MonoBehaviour
 
     // if quest type is check type it method will skip to next quest
     // use most in npc
-    public void finishCheckQuest()
+    public void nextQuestInListByCheck()
     {
         if (currentQuest.quests[currentQuestIndex]._checkQuestType != Quest.type.CheckType) return;
 
@@ -65,7 +65,7 @@ public class QuestManager : MonoBehaviour
         else currentQuestIndex++;
     }
 
-    public void changeQuestList()
+    public void nextQuestInListByItem()
     {
         if (currentQuest.quests.Count < 1) return;
         if (currentQuestIndex < currentQuest.quests.Count == false) return;

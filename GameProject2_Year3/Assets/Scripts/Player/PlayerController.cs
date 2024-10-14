@@ -16,19 +16,19 @@ public class PlayerController : MonoBehaviour , Ipauseable
     private float current_GValue;
     [SerializeField] private float stickingGravityPro = 20f;
     [SerializeField][Range(-10.0f, 10.0f)] float input_Delay;
-    private Collider playerCollider;
+    internal Collider playerCollider;
     bool isGrounded;
 
     //Animation
     bool isFishing = false;
     public Animator anim;
     SpriteRenderer sprite;
-    private CharacterController controller;
+    internal CharacterController controller;
     private InputManager input;
     [SerializeField] List<string> listOfAnimation;
     CamControlAndSetting cam;
 
-    string walkSoundName;
+    internal string walkSoundName;
     bool canPlayWalkSound = true;
 
     bool ground()
@@ -81,7 +81,7 @@ public class PlayerController : MonoBehaviour , Ipauseable
         isGrounded = ground();
         move();
         checkGround();
-        groundSoundCheck();
+        // groundSoundCheck();
     }
 
     private void move()
@@ -116,6 +116,7 @@ public class PlayerController : MonoBehaviour , Ipauseable
 
         // WalkSound
         if(move.sqrMagnitude > 0.3 || move.sqrMagnitude < -0.3){
+            GetComponent<TerrainSoundCheck>().groundSoundCheck();
             if(walkSoundName != ""){
                 if(canPlayWalkSound) StartCoroutine(walkSound());
             }
@@ -180,15 +181,8 @@ public class PlayerController : MonoBehaviour , Ipauseable
         isFishing = false;
     }
 
-    private void groundSoundCheck(){
-        float distToGround = playerCollider.bounds.extents.y;
-        RaycastHit _hit;
-        if(Physics.Raycast(transform.position, Vector3.down, out _hit , distToGround + 0.1f)){
-            if(_hit.collider.gameObject.TryGetComponent<GroundEnable>(out GroundEnable groundEnable)){
-                walkSoundName = groundEnable.groundSound;
-            }
-        }
-    }
+    // TODO : need to change
+
 
     IEnumerator walkSound(){
         SoundManager.instance.PlaySfx(walkSoundName);

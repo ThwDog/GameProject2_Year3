@@ -11,7 +11,7 @@ public class QuestManagerEditor : Editor {
         if(questManager.listCanNext){
 
             if(GUILayout.Button("Check Quest")){
-                questManager.finishCheckQuest();
+                questManager.nextQuestInListByCheck();
             }
 
             EditorGUILayout.LabelField("Quest Title",questManager.currentQuestTitle);

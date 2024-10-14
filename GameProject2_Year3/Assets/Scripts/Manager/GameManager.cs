@@ -7,6 +7,8 @@ public class GameManager : SingletonClass<GameManager>
     CutSceneManager cutSceneManager; // getCompo every stage
     UIManager uiManager;
     LoadScene loadScene;
+    public bool paused = false;
+
 
     public override void Awake()
     {
