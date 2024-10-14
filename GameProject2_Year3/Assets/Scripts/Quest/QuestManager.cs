@@ -47,9 +47,15 @@ public class QuestManager : MonoBehaviour
     // use most in npc
     public void ChangeQuest(Quest_Scriptable quest)
     {
+        if(quest == null) {
+            resetIndex();
+            currentQuest = null;
+            return;
+        }
         resetIndex();
         currentQuest = quest;
     }
+
 
     // if quest type is check type it method will skip to next quest
     // use most in npc

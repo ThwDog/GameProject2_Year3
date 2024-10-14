@@ -6,9 +6,6 @@ using UnityEngine.UI;
 
 public class CutSceneManager : MonoBehaviour , IEnable
 {
-    public enum type{
-        player , npc
-    }
 
     // TODO : one manager per stage
     // TODO : Run on Unity Event On Player Scene
@@ -23,6 +20,10 @@ public class CutSceneManager : MonoBehaviour , IEnable
     [SerializeField] Image playerSpriteRen; 
     [SerializeField] List<NPCSprite> npcSprites;
     [SerializeField] Image npcSpriteRen; 
+    [Header("Color Sprite")]
+    [SerializeField] private Color defaultColor;
+    [SerializeField] private Color fadeColor;
+    [SerializeField] private float fadeDuration;
 
     int playerSpriteIndex = 0;
     int npcSpriteIndex = 0;
@@ -42,7 +43,8 @@ public class CutSceneManager : MonoBehaviour , IEnable
 
 
     public void _PlayPlayerSprite(){
-        if(playerSprite == null) {Debug.Log("yo"); return;}
+        // if(playerSprite == null) {Debug.Log("yo"); return;}
+        if(playerSpriteRen.gameObject.activeSelf) playerSpriteIndex++;
 
         Sprite foundSprite = playerSprite[playerSpriteIndex]; // find sprite name
 
@@ -56,7 +58,9 @@ public class CutSceneManager : MonoBehaviour , IEnable
     }
 
     public void _PlayNPCSprite(string spiteName){
-         if(npcSprites == null) return;
+        if(npcSprites == null) return;
+
+        if(npcSpriteRen.gameObject.activeSelf) npcSpriteIndex++;
 
         // Check in npcSprites that if SpriteName Exist in sprites get it
         NPCSprite _foundSprite = npcSprites.Find(sprite => sprite.spriteName == spiteName); 
@@ -72,24 +76,11 @@ public class CutSceneManager : MonoBehaviour , IEnable
         showSpriteRen(npcSpriteRen);
     }
 
-    public void _nextSprite(type _type){
-        if(_type == type.player){
-            if(playerSpriteIndex > playerSprite.Count){
-                playerSpriteIndex = 0;
-            }
-            else playerSpriteIndex++;
-        }
-        else if(_type == type.npc){
-            if(npcSpriteIndex > _foundSprite.sprites.Count){
-                npcSpriteIndex = 0;
-            }
-            else npcSpriteIndex++;
-        }
-    }
-
     public void resetSprite(){
         playerSpriteIndex = 0;
         npcSpriteIndex = 0;
+        npcSpriteRen.color = defaultColor;
+        playerSpriteRen.color = defaultColor;
     }
 
 
@@ -119,6 +110,29 @@ public class CutSceneManager : MonoBehaviour , IEnable
     {
         canPlayOnStart = true;
     }
+
+    public void FadeInNOut(string sprite) {
+        if(sprite == "player") {
+            StartCoroutine(Fade(playerSpriteRen, defaultColor)); // in
+            StartCoroutine(Fade(npcSpriteRen, fadeColor)); // out
+        }
+        else {
+            StartCoroutine(Fade(npcSpriteRen, defaultColor)); // in
+            StartCoroutine(Fade(playerSpriteRen, fadeColor)); // out
+        }
+    }
+
+    private IEnumerator Fade(Image sprite, Color endColor) {
+        float elapsedTime = 0f;
+
+        while (elapsedTime < fadeDuration) {
+            sprite.color = Color.Lerp(sprite.color, endColor, elapsedTime / fadeDuration);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+       sprite.color = endColor;
+    } 
 }
 
 [Serializable] 

@@ -48,6 +48,10 @@ public class ItemScript : MonoBehaviour , Ipauseable , IRestartable
         disableObj();
     }
 
+    public void setCollect(){
+        _inventory.player.anim.SetTrigger("Collect");
+    }
+
     void disableObj(){
         GetComponent<MeshRenderer>().enabled = false;
         GetComponent<Collider>().enabled = false;

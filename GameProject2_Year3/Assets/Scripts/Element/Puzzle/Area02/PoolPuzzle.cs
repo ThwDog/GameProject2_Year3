@@ -19,19 +19,19 @@ public class PoolPuzzle : NPC_CheckQuest
 
         if (other.TryGetComponent<PlayerController>(out PlayerController _player))
         {
-            dialogue.inventoryCheck(_player.gameObject.GetComponent<InventorySystem>());
+            dialogueCall.inventoryCheck(_player.gameObject.GetComponent<InventorySystem>());
             // if (!dialogue.questIsFinish) return;
 
             showUI.ShowDescription();
 
             if (Input.GetKey(KeyCode.E))
             {
-                if (!dialogue.questIsFinish){ 
-                    dialogue.playDialogue();
+                if (!dialogueCall.questIsFinish){ 
+                    dialogueCall.playDialogue();
                     return;
                 }
 
-                dialogue.playDialogue();
+                dialogueCall.playDialogue();
                 this.player = _player;
                 playPlayerAnimation();
                 StartCoroutine(waitCollect(finishTimeDelay,_player));

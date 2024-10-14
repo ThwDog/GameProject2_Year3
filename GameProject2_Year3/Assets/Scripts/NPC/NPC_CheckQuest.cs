@@ -13,7 +13,7 @@ public class NPC_CheckQuest : MonoBehaviour
         Trigger, _bool, none
     }
 
-    internal DialogueManager dialogue;
+    public DialogueManager dialogueCall;
     [Header("Setting")]
     [SerializeField] string playerPlayAnimationName;
     [SerializeField] animationType _animationType;
@@ -21,18 +21,19 @@ public class NPC_CheckQuest : MonoBehaviour
     internal ShowUICollision showUI;
     internal EventScript _event;
     internal PlayerController player;
+    [SerializeField] ItemScript giveItem;
     // bool canShowDes;
 
     private void Start()
     {
         // get dialogue from call type
-        if (GetComponentInChildren<DialogueManager>().triggerState == DialogueManager.TriggerState.Call) dialogue = GetComponentInChildren<DialogueManager>();
+        // if (GetComponentInChildren<DialogueManager>().triggerState == DialogueManager.TriggerState.Call) dialogueCall = GetComponentInChildren<DialogueManager>();
         _event = GetComponent<EventScript>();
     }
 
     public virtual void OnTriggerStay(Collider other)
     {
-        if(!dialogue) return;
+        if(!dialogueCall) return;
 
         if (isQuestFinish) return;
 
@@ -41,14 +42,14 @@ public class NPC_CheckQuest : MonoBehaviour
 
         if (other.TryGetComponent<PlayerController>(out PlayerController _player))
         {
-            if(!dialogue.questIsFinish) showUI.ShowDescription();
+            if(!dialogueCall.questIsFinish) showUI.ShowDescription();
             // player must give item then talk to npc 
             if (Input.GetKey(KeyCode.E))
             {
                 showUI.CloseDescription();
-                dialogue.inventoryCheck(_player.gameObject.GetComponent<InventorySystem>());
+                dialogueCall.inventoryCheck(_player.gameObject.GetComponent<InventorySystem>());
                 // if player doesn't have item call dialogue you doesn't have item
-                dialogue.playDialogue();
+                dialogueCall.playDialogue();
                 this.player = _player;
             }
 
@@ -85,6 +86,14 @@ public class NPC_CheckQuest : MonoBehaviour
             default:
                 break;
         }
+    }
+
+    public void _giveItem(){
+        giveItem.Collect(FindAnyObjectByType<InventorySystem>());
+    }
+
+    public void setCollect(){
+        giveItem.setCollect();
     }
 
     public void _SetQuest(bool _bool)

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7529165984275043446}
   - component: {fileID: 7129169980646929811}
   m_Layer: 0
-  m_Name: item 01
+  m_Name: Hammer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

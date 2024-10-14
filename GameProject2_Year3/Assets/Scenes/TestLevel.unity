@@ -7362,7 +7362,8 @@ MonoBehaviour:
   playerSprite: []
   playerSpriteRen: {fileID: 0}
   npcSprites:
-  - sprites:
+  - spriteName: 
+    sprites:
     - {fileID: 21300000, guid: 666b97d89ea810747bd16d910de1a556, type: 3}
   npcSpriteRen: {fileID: 1737556346}
 --- !u!4 &2147415646
@@ -8201,7 +8202,7 @@ MonoBehaviour:
           m_MethodName: ChangeQuest
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 11400000, guid: 8367b8aea800b3c41bd83e556e0d1a13, type: 2}
+            m_ObjectArgument: {fileID: 11400000, guid: 1419e82911c4cb244bc69b875f243df0, type: 2}
             m_ObjectArgumentAssemblyTypeName: Quest_Scriptable, Assembly-CSharp
             m_IntArgument: 0
             m_FloatArgument: 0
@@ -8217,6 +8218,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3380449536823163769, guid: 5e30e0819637ab94f9922b426970ee59, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3380449536823163769, guid: 5e30e0819637ab94f9922b426970ee59, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.5522518
@@ -8240,6 +8245,10 @@ PrefabInstance:
     - target: {fileID: 3380449536823163769, guid: 5e30e0819637ab94f9922b426970ee59, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.000000027468815
+      objectReference: {fileID: 0}
+    - target: {fileID: 7861291875825225178, guid: 5e30e0819637ab94f9922b426970ee59, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7861291875825225178, guid: 5e30e0819637ab94f9922b426970ee59, type: 3}
       propertyPath: m_LocalPosition.y
