@@ -58,10 +58,10 @@ MonoBehaviour:
     m_Value: 1
   threshold:
     m_OverrideState: 1
-    m_Value: 0.5
+    m_Value: 0.94
   intensity:
     m_OverrideState: 1
-    m_Value: 0.18
+    m_Value: 0.1
   scatter:
     m_OverrideState: 1
     m_Value: 0.7
@@ -129,6 +129,30 @@ MonoBehaviour:
   - {fileID: -6584431135582585532}
   - {fileID: -7973686950645768958}
   - {fileID: -7546984913064659613}
+  - {fileID: 2052679872498154275}
+  - {fileID: 85938217059575321}
+--- !u!114 &85938217059575321
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70afe9e12c7a7ed47911bb608a23a8ff, type: 3}
+  m_Name: SplitToning
+  m_EditorClassIdentifier: 
+  active: 1
+  shadows:
+    m_OverrideState: 1
+    m_Value: {r: 0.31132078, g: 0.31132078, b: 0.31132078, a: 1}
+  highlights:
+    m_OverrideState: 1
+    m_Value: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 1}
+  balance:
+    m_OverrideState: 1
+    m_Value: 7.9
 --- !u!114 &1599456918442226961
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -157,6 +181,40 @@ MonoBehaviour:
   saturation:
     m_OverrideState: 1
     m_Value: 42.1
+--- !u!114 &2052679872498154275
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 558a8e2b6826cf840aae193990ba9f2e, type: 3}
+  m_Name: ShadowsMidtonesHighlights
+  m_EditorClassIdentifier: 
+  active: 1
+  shadows:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 0.93622947, z: 0.9227166, w: 0}
+  midtones:
+    m_OverrideState: 0
+    m_Value: {x: 0.94825685, y: 0.9806993, z: 1, w: 0}
+  highlights:
+    m_OverrideState: 0
+    m_Value: {x: 0.8567106, y: 0.8925334, z: 1, w: 0}
+  shadowsStart:
+    m_OverrideState: 0
+    m_Value: 0
+  shadowsEnd:
+    m_OverrideState: 0
+    m_Value: 0.3
+  highlightsStart:
+    m_OverrideState: 0
+    m_Value: 0.55
+  highlightsEnd:
+    m_OverrideState: 0
+    m_Value: 1
 --- !u!114 &2669217055101999808
 MonoBehaviour:
   m_ObjectHideFlags: 3

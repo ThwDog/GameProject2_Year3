@@ -325,6 +325,10 @@ MonoBehaviour:
     soundName: WalkGrass
   - _terrainLayer: {fileID: 8574412962073106934, guid: b3d5438c8ee35e140aedd8752bf0d78e, type: 2}
     soundName: WalkGround
+  - _terrainLayer: {fileID: 8574412962073106934, guid: 389ced2ce94dca34fb6a91d2150f7bd4, type: 2}
+    soundName: WalkDirt
+  - _terrainLayer: {fileID: 8574412962073106934, guid: cf4fc947471d89e439de8128c99b1b41, type: 2}
+    soundName: WalkDirt
   floorLayer:
     serializedVersion: 2
     m_Bits: 256

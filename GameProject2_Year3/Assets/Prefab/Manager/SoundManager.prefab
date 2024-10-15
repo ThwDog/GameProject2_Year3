@@ -138,7 +138,6 @@ GameObject:
   m_Component:
   - component: {fileID: 247712016295901940}
   - component: {fileID: 1207568464689222538}
-  - component: {fileID: 76535852959739669}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -197,19 +196,6 @@ MonoBehaviour:
   musicSource: {fileID: 4031980835165256088}
   sfxSource: {fileID: 1227751029723524001}
   ambientSource: {fileID: 4337419527480788450}
---- !u!114 &76535852959739669
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2634802889893500554}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6da0e6cff3d94ec4fa11b1f37af96dfd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bgSound: HomeTown
 --- !u!1 &6978034167302114798
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,7 +240,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0

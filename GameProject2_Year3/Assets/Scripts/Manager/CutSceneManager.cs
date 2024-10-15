@@ -44,7 +44,8 @@ public class CutSceneManager : MonoBehaviour , IEnable
 
     public void _PlayPlayerSprite(){
         // if(playerSprite == null) {Debug.Log("yo"); return;}
-        if(playerSpriteRen.gameObject.activeSelf) playerSpriteIndex++;
+        if(playerSpriteRen.gameObject.activeSelf && playerSpriteIndex < playerSprite.Count - 1) playerSpriteIndex++;
+        else if (playerSpriteIndex > playerSprite.Count) playerSpriteIndex = 0;
 
         Sprite foundSprite = playerSprite[playerSpriteIndex]; // find sprite name
 
@@ -58,13 +59,15 @@ public class CutSceneManager : MonoBehaviour , IEnable
     }
 
     public void _PlayNPCSprite(string spiteName){
-        if(npcSprites == null) return;
 
-        if(npcSpriteRen.gameObject.activeSelf) npcSpriteIndex++;
+        if(npcSprites == null) return;
 
         // Check in npcSprites that if SpriteName Exist in sprites get it
         NPCSprite _foundSprite = npcSprites.Find(sprite => sprite.spriteName == spiteName); 
         // Sprite foundSprite = s.sprites.Find(sprite => sprite.name == spiteName); // get sprite from list
+        if(npcSpriteRen.gameObject.activeSelf && npcSpriteIndex < _foundSprite.sprites.Count - 1) npcSpriteIndex++;
+        else if (npcSpriteIndex > _foundSprite.sprites.Count) npcSpriteIndex = 0;
+
         Sprite foundSprite = _foundSprite.sprites[npcSpriteIndex]; // get sprite from list
 
         if(foundSprite == null) {
@@ -74,6 +77,7 @@ public class CutSceneManager : MonoBehaviour , IEnable
 
         setSprite(npcSpriteRen,foundSprite);
         showSpriteRen(npcSpriteRen);
+        npcSpriteRen.SetNativeSize();
     }
 
     public void resetSprite(){

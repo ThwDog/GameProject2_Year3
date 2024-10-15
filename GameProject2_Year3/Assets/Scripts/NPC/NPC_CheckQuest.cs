@@ -50,6 +50,8 @@ public class NPC_CheckQuest : MonoBehaviour
                 dialogueCall.inventoryCheck(_player.gameObject.GetComponent<InventorySystem>());
                 // if player doesn't have item call dialogue you doesn't have item
                 dialogueCall.playDialogue();
+                // if(!dialogueCall.checkStatusQuest() && dialogueCall.checkCanTalk()) dialogueCall.setQuest(true);
+                
                 this.player = _player;
             }
 

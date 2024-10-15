@@ -26,6 +26,9 @@ public class TerrainSoundCheck : MonoBehaviour
                 // player.walkSoundName = groundEnable.groundSound;
                 soundCheckTerrian(terrain, _hit.point);
             }
+            else{
+                player.walkSoundName = "";
+            }
         }
     }
 

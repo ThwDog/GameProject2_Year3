@@ -27,11 +27,11 @@ public class BGSoundPlay : MonoBehaviour , Ipauseable
     }
 
     private void Update() {
-        if(GameManager.instance.paused){
-            pause();
-        }
-        else if(!SoundManager.instance.checkMusic()){
-            resume();
-        }
+        // if(GameManager.instance.paused){
+        //     pause();
+        // }
+        // else if(!SoundManager.instance.checkMusic()){
+        //     resume();
+        // }
     }
 }

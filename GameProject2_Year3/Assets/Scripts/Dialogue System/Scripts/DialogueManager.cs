@@ -34,6 +34,7 @@ namespace HeneGames.DialogueSystem
         public UnityEvent nextSentenceDialogueEvent;
         public UnityEvent endDialogueEvent;
         public bool questIsFinish = false;
+        private bool startQuest;
         [Tooltip("Set it if you req item to start dialogue")][SerializeField] private List<CollectableItem_Scriptable> req_item = new List<CollectableItem_Scriptable>();  // check if player inventory and reqment inven is match
 
         [Header("Dialogue")]
@@ -43,6 +44,9 @@ namespace HeneGames.DialogueSystem
         private List<NPC_Centence> sentences = new List<NPC_Centence>();
         [SerializeField] private List<NPC_Centence> NormalSentences = new List<NPC_Centence>(); // normal
         [SerializeField] private List<NPC_Centence> reqSentences = new List<NPC_Centence>(); // requirement  or quest sentence
+        [SerializeField] private List<NPC_Centence> talkAgainSentences = new List<NPC_Centence>(); // player has spoke to this npc
+        [SerializeField] private bool canTalk = true;
+        [SerializeField] private List<NPC_Centence> cantTalkToSentences = new List<NPC_Centence>(); // player doesnt have something
 
         private void Start() {
             sentences = NormalSentences;
@@ -51,7 +55,12 @@ namespace HeneGames.DialogueSystem
         private void Update()
         {
             if(questIsFinish) sentences = reqSentences;
-            else sentences = NormalSentences;
+            else if(!questIsFinish && startQuest){
+                if(talkAgainSentences.Count <= 0) return;
+                sentences = talkAgainSentences;
+            } 
+            else if(!canTalk) sentences = cantTalkToSentences;
+            else if(canTalk) sentences = NormalSentences;
             //Timer
             if(coolDownTimer > 0f)
             {
@@ -275,6 +284,22 @@ namespace HeneGames.DialogueSystem
                 return 0;
 
             return sentences[currentSentence].sentence.Length;
+        }
+
+        public bool checkStatusQuest(){
+            return startQuest;
+        }
+
+        public bool checkCanTalk(){
+            return canTalk;
+        }
+
+        public void setQuest(bool _bool){
+            startQuest = _bool;
+        }
+
+        public void setCanTalk(bool _bool){
+            canTalk = _bool;
         }
         
         // Check inventory in player

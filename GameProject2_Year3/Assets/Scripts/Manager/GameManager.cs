@@ -20,6 +20,8 @@ public class GameManager : SingletonClass<GameManager>
     private void Update()
     {
         if(loadScene.CheckNextStage() == 1) return;
+
+        uiManager.updateVolume();
         if (Input.GetKeyUp(KeyCode.Escape))
         {
             Debug.Log("Pause");
