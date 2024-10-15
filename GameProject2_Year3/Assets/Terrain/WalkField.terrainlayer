@@ -7,7 +7,7 @@ TerrainLayer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: WalkField
-  m_DiffuseTexture: {fileID: 2800000, guid: a315eb56c29c647499ce965b2a8f2d16, type: 3}
+  m_DiffuseTexture: {fileID: 2800000, guid: bf41c21ed8fae1b4bb518bcc4326e768, type: 3}
   m_NormalMapTexture: {fileID: 0}
   m_MaskMapTexture: {fileID: 0}
   m_TileSize: {x: 2, y: 2}
