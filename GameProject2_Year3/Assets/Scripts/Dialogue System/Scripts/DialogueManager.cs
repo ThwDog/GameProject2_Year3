@@ -159,7 +159,6 @@ namespace HeneGames.DialogueSystem
             {
                 dialogueTrigger.startDialogueEvent.Invoke();
             }
-
             //Reset sentence index
             currentSentence = 0;
 
@@ -219,10 +218,13 @@ namespace HeneGames.DialogueSystem
         public void StopDialogue()
         {
             //Stop dialogue event
-            if (dialogueTrigger != null)
-            {
-                dialogueTrigger.endDialogueEvent.Invoke();
-            }
+            // if (dialogueTrigger != null)
+            // {
+            //     dialogueTrigger.endDialogueEvent.Invoke();
+            // }
+            Debug.Log("End");
+
+            FindObjectOfType<DialogueTrigger>().endDialogueEvent.Invoke();
 
             endDialogueEvent.Invoke();
 
@@ -319,6 +321,7 @@ namespace HeneGames.DialogueSystem
         // use for play dialogue that doesn't need to set trigger
         public void playDialogue(){
             DialogueUI.instance.StartDialogue(this);
+            FindObjectOfType<DialogueTrigger>().startDialogueEvent.Invoke();
         }
     }
 

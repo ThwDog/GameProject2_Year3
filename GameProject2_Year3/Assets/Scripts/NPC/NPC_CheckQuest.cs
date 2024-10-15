@@ -94,8 +94,8 @@ public class NPC_CheckQuest : MonoBehaviour
         giveItem.Collect(FindAnyObjectByType<InventorySystem>());
     }
 
-    public void setCollect(){
-        giveItem.setCollect();
+    public void setCollect(InventorySystem _inventory){
+        giveItem.setCollect(_inventory);
     }
 
     public void _SetQuest(bool _bool)

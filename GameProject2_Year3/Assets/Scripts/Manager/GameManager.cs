@@ -22,7 +22,7 @@ public class GameManager : SingletonClass<GameManager>
         if(loadScene.CheckNextStage() == 1) return;
 
         uiManager.updateVolume();
-        if (Input.GetKeyUp(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             Debug.Log("Pause");
             uiManager.pauseMenu();

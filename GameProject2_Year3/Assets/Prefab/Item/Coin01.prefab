@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Scriptable: {fileID: 11400000, guid: c93d67c3de768cf4cb16583739d84595, type: 2}
-  hasCollect: 1
+  hasCollect: 0
 --- !u!114 &7129169980646929811
 MonoBehaviour:
   m_ObjectHideFlags: 0

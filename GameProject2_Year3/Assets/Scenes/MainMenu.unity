@@ -334,6 +334,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 435397640}
   m_CullTransparentMesh: 1
+--- !u!82 &497196561 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4031980835165256088, guid: 0343d803d5932f94aba48afa635624b1, type: 3}
+  m_PrefabInstance: {fileID: 1269946123}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &680637760
 GameObject:
   m_ObjectHideFlags: 0
@@ -655,6 +660,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4361435837517354584, guid: 4384cd3476e16de468d0d73d550cf670, type: 3}
+      propertyPath: sfx
+      value: 
+      objectReference: {fileID: 2069409411}
+    - target: {fileID: 4361435837517354584, guid: 4384cd3476e16de468d0d73d550cf670, type: 3}
+      propertyPath: music
+      value: 
+      objectReference: {fileID: 497196561}
     - target: {fileID: 6129861827948230722, guid: 4384cd3476e16de468d0d73d550cf670, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1059,6 +1072,11 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!82 &2069409411 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1227751029723524001, guid: 0343d803d5932f94aba48afa635624b1, type: 3}
+  m_PrefabInstance: {fileID: 1269946123}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -49,4 +49,8 @@ public class UIManager : MonoBehaviour , Ipauseable
         musicVolumeSlider.value = music.volume;
         sfxVolumeSlider.value = sfx.volume;
     }
+
+    public void _exit(){
+        Application.Quit();
+    }
 }

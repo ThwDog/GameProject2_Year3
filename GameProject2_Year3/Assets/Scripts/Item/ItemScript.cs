@@ -48,7 +48,7 @@ public class ItemScript : MonoBehaviour , Ipauseable , IRestartable
         disableObj();
     }
 
-    public void setCollect(){
+    public void setCollect(InventorySystem _inventory){
         _inventory.player.anim.SetTrigger("Collect");
     }
 
