@@ -588,38 +588,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
-    - target: {fileID: 2184496965399293774, guid: 4384cd3476e16de468d0d73d550cf670, type: 3}
-      propertyPath: m_Type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2184496965399293774, guid: 4384cd3476e16de468d0d73d550cf670, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-    - target: {fileID: 2184496965399293774, guid: 4384cd3476e16de468d0d73d550cf670, type: 3}
-      propertyPath: m_FillAmount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2184496965399293774, guid: 4384cd3476e16de468d0d73d550cf670, type: 3}
-      propertyPath: m_FillMethod
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2184496965399293774, guid: 4384cd3476e16de468d0d73d550cf670, type: 3}
-      propertyPath: m_FillOrigin
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2184496965399293774, guid: 4384cd3476e16de468d0d73d550cf670, type: 3}
-      propertyPath: m_PreserveAspect
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3076092759938896040, guid: 4384cd3476e16de468d0d73d550cf670, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3076092759938896040, guid: 4384cd3476e16de468d0d73d550cf670, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3592602875213077135, guid: 4384cd3476e16de468d0d73d550cf670, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.187859
@@ -668,18 +636,6 @@ PrefabInstance:
       propertyPath: music
       value: 
       objectReference: {fileID: 497196561}
-    - target: {fileID: 6129861827948230722, guid: 4384cd3476e16de468d0d73d550cf670, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7357426384672882067, guid: 4384cd3476e16de468d0d73d550cf670, type: 3}
-      propertyPath: m_Value
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7357426384672882067, guid: 4384cd3476e16de468d0d73d550cf670, type: 3}
-      propertyPath: m_MaxValue
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

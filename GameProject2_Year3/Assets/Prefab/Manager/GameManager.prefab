@@ -112,6 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0659eced19ac9c4988cf6e549ff5fc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cheatEnable: 1
 --- !u!114 &4361435837517354584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1792,6 +1793,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5680398037103980720, guid: 1cc5c0a8e75baa146b100f3d7451b8d8, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7177647451775440309, guid: 1cc5c0a8e75baa146b100f3d7451b8d8, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8805748454697242454, guid: 1cc5c0a8e75baa146b100f3d7451b8d8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 8805748454697242454, guid: 1cc5c0a8e75baa146b100f3d7451b8d8, type: 3}
+      propertyPath: m_FillMethod
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8805748454697242454, guid: 1cc5c0a8e75baa146b100f3d7451b8d8, type: 3}
+      propertyPath: m_PreserveAspect
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -762,6 +762,9 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   reqSentences: []
+  talkAgainSentences: []
+  canTalk: 1
+  cantTalkToSentences: []
 --- !u!114 &382059613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1472,6 +1475,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
+  talkAgainSentences: []
+  canTalk: 1
+  cantTalkToSentences: []
 --- !u!1 &655435155
 GameObject:
   m_ObjectHideFlags: 0
@@ -1675,6 +1681,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  talkAgainSentences: []
+  canTalk: 1
+  cantTalkToSentences: []
 --- !u!1 &700805908
 GameObject:
   m_ObjectHideFlags: 0
@@ -2320,9 +2329,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea99c65d1794e9448f867aca7b1a93a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueCall: {fileID: 0}
   playerPlayAnimationName: Flute
   _animationType: 0
   isQuestFinish: 0
+  giveItem: {fileID: 0}
 --- !u!135 &985867597
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2372,6 +2383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   description: {fileID: 189562521}
+  canOpen: 0
 --- !u!114 &985867600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2477,6 +2489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   description: {fileID: 759006338}
+  canOpen: 0
 --- !u!65 &1056737548
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2620,9 +2633,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 310b61de2582ac3478388d165475e42c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueCall: {fileID: 0}
   playerPlayAnimationName: Fishing
   _animationType: 0
   isQuestFinish: 0
+  giveItem: {fileID: 0}
   itemFishing:
   - {fileID: 7529165984275043446, guid: cd6efc64f7141b84fb836299c4997dd3, type: 3}
   finishTimeDelay: 5
@@ -4552,6 +4567,9 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   reqSentences: []
+  talkAgainSentences: []
+  canTalk: 1
+  cantTalkToSentences: []
 --- !u!114 &1545385124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5498,6 +5516,9 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   reqSentences: []
+  talkAgainSentences: []
+  canTalk: 1
+  cantTalkToSentences: []
 --- !u!135 &1727452123
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6228,6 +6249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   description: {fileID: 1334614312}
+  canOpen: 0
 --- !u!1 &1753208645
 GameObject:
   m_ObjectHideFlags: 0
@@ -6713,6 +6735,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   description: {fileID: 1735805989}
+  canOpen: 0
 --- !u!1001 &1859243634
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7366,6 +7389,9 @@ MonoBehaviour:
     sprites:
     - {fileID: 21300000, guid: 666b97d89ea810747bd16d910de1a556, type: 3}
   npcSpriteRen: {fileID: 1737556346}
+  defaultColor: {r: 0, g: 0, b: 0, a: 0}
+  fadeColor: {r: 0, g: 0, b: 0, a: 0}
+  fadeDuration: 0
 --- !u!4 &2147415646
 Transform:
   m_ObjectHideFlags: 0
@@ -7754,6 +7780,9 @@ MonoBehaviour:
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
+  talkAgainSentences: []
+  canTalk: 1
+  cantTalkToSentences: []
 --- !u!135 &4953456565162637558
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -8210,6 +8239,9 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   reqSentences: []
+  talkAgainSentences: []
+  canTalk: 1
+  cantTalkToSentences: []
 --- !u!1001 &6696919419873243946
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8560,6 +8592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   description: {fileID: 7303009900330640788}
+  canOpen: 0
 --- !u!1001 &8630786193208186323
 PrefabInstance:
   m_ObjectHideFlags: 0

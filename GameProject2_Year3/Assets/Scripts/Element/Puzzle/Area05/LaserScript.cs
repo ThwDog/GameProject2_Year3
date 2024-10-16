@@ -6,8 +6,8 @@ public class LaserScript : MonoBehaviour
 {
     public enum type{
         output , // laser that can only get laser 
-        input , // can get and shoot laser
-        broken //laser that can't do anything
+        input , // can get and shoot laser and if hit it that win
+        broken, //laser that can't do anything
     }
     [Header("Laser setting")]
     // [Tooltip("If this prism can open check it to true else check to false")][SerializeField] bool canOpen = true; // can open this laser
