@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour , Ipauseable
     //TODO : inventory (reset when next LEVEL) , spite 45 deg player 0 deg 
 
     [Header("Setting")]
-    [SerializeField][Range(0f, 100f)] float speed;
+    [Range(0f, 100f)] public float speed;
     [Header("")]
     private float verticalSpeed;
     [SerializeField] private float gravityValue = 20f;

@@ -50,112 +50,19 @@ MonoBehaviour:
   playCutSceneOnstart: {fileID: 0}
   canPlayOnStart: 0
   waitSecForPlay: 0
-  playerSprite:
-  - {fileID: 21300000, guid: bc0331019d5480b4b91316aba9aa429c, type: 3}
-  - {fileID: 21300000, guid: e8444ad924877f74cae9dc6bfea4a1bf, type: 3}
-  - {fileID: 21300000, guid: 6387e44a4af675246aff0cbd022658f8, type: 3}
-  - {fileID: 21300000, guid: ab0259f9d9852904d83860443260a190, type: 3}
-  - {fileID: 21300000, guid: de5f4f5204b5beb45b670d7bb648c5bd, type: 3}
-  - {fileID: 21300000, guid: fbc57c1eccc8ac146aa1208f1b0aff2b, type: 3}
-  - {fileID: 21300000, guid: 2c8c369ea6f7b7a479031250d59fde1a, type: 3}
-  - {fileID: 21300000, guid: 731c5dd7e508d534f97eaa87773a6d77, type: 3}
-  - {fileID: 21300000, guid: ffa153a35896de44a9fb9e8d8dc79011, type: 3}
-  - {fileID: 21300000, guid: fc7409f09262bae4c9696465e78af817, type: 3}
-  - {fileID: 21300000, guid: 16117ee03a71e1840afa1ad9a9d04c7c, type: 3}
-  - {fileID: 21300000, guid: 946a1af285a2fb546b03977b63b1775b, type: 3}
-  - {fileID: 21300000, guid: a55c056f047c5184aa4d9261e0c530bd, type: 3}
-  - {fileID: 21300000, guid: af66d0f569366aa4f99a6210bf442b32, type: 3}
-  - {fileID: 21300000, guid: dca76b585d47e994692cff6b39089155, type: 3}
-  - {fileID: 21300000, guid: 820f7d9b660fb5649aeb711917fce9f2, type: 3}
-  - {fileID: 21300000, guid: 4aad170db1b535c4c8ac514ddb87c654, type: 3}
-  - {fileID: 21300000, guid: 012d06ccdc9f32d46b2f8f614a9a9623, type: 3}
-  - {fileID: 21300000, guid: 3ad0160e227318041b86a13a9ffcfaea, type: 3}
-  - {fileID: 21300000, guid: 809ac34cf51fb01498e8998cf96fe7d5, type: 3}
-  - {fileID: 21300000, guid: f8cafdc84539d8e4ca33b1e82bda70c8, type: 3}
-  - {fileID: 21300000, guid: 9121aab6b6c724a4e93c4325368dac11, type: 3}
-  - {fileID: 21300000, guid: e24b81fa612794c45a58844d01eb2097, type: 3}
-  - {fileID: 21300000, guid: e713acf5e97f75f4a80f021bbc9ec93c, type: 3}
-  - {fileID: 21300000, guid: a416cb1757f93de45aba984000b58224, type: 3}
-  - {fileID: 21300000, guid: aa72cc96a92b2664a85276fa3ef59c41, type: 3}
-  - {fileID: 21300000, guid: 3ee3a6735e5123a4fac5585dca53a85e, type: 3}
-  - {fileID: 21300000, guid: bf526b400b4ad2d499a807ba26bb9aca, type: 3}
-  - {fileID: 21300000, guid: e99443dfc7bba534dbdfc93c019fee08, type: 3}
-  - {fileID: 21300000, guid: 0f9bb8e0557cfcf47a926bf4bf86d5d1, type: 3}
+  playerAnimator: {fileID: 0}
+  NPCAnimator: {fileID: 0}
   playerSpriteRen: {fileID: 0}
-  npcSprites:
-  - spriteName: Daddy
-    sprites:
-    - {fileID: 21300000, guid: 0343cbaea3ed6914eb230a96247b351f, type: 3}
-    - {fileID: 21300000, guid: 12b2d3443fc25b042b487a5b41631bd2, type: 3}
-    - {fileID: 21300000, guid: c5044ec1c9749744dbb2ba49cec3fe8b, type: 3}
-    - {fileID: 21300000, guid: 5f27bc0a74c550e488d20e16dee94ea6, type: 3}
-    - {fileID: 21300000, guid: 7ae68d832ac11224389262c06fdb4647, type: 3}
-    - {fileID: 21300000, guid: 5cdc5ac2e8b38d04798625e494af478b, type: 3}
-    - {fileID: 21300000, guid: 3950ea2928ff579469022121dd177028, type: 3}
-    - {fileID: 21300000, guid: 48f1c5bca40d1a542965e6fe7cd2a49d, type: 3}
-    - {fileID: 21300000, guid: d209fb5e2e89e6744b697b06ce84bd23, type: 3}
-    - {fileID: 21300000, guid: 5e72a82ae3b0f35468e92a7ee0564ce1, type: 3}
-    - {fileID: 21300000, guid: 179ccdf39df48fd43a0b59933d6f6cf2, type: 3}
-    - {fileID: 21300000, guid: a0e131bb63c34d14b95462647cd6a4dc, type: 3}
-    - {fileID: 21300000, guid: e9982b0f230638b47abc45cb1a1d4521, type: 3}
-    - {fileID: 21300000, guid: 3843971aea124724698c20f5b995bf47, type: 3}
-    - {fileID: 21300000, guid: 31e951514a7104e428dcfbb5b9f74f60, type: 3}
-    - {fileID: 21300000, guid: 8e1848b7586b73d4191a06288e9e711c, type: 3}
-    - {fileID: 21300000, guid: 58030827a7b078f499ab3b5eb16b024d, type: 3}
-    - {fileID: 21300000, guid: e40eb8a9f15f872428a8139c232e0942, type: 3}
-    - {fileID: 21300000, guid: ee0da5249448ac04d982cab2182428c7, type: 3}
-    - {fileID: 21300000, guid: 4167058a36089024b900ff8295547662, type: 3}
-    - {fileID: 21300000, guid: 2a08a12f494b2a54ea5c1a2b6ff5a59e, type: 3}
-    - {fileID: 21300000, guid: a851c9a05ae34784bb5c10524c90b12b, type: 3}
-    - {fileID: 21300000, guid: 64cf09d6a62b7214398051e99541cacb, type: 3}
-    - {fileID: 21300000, guid: b3630a6c1e2724f4b8fdf20f4a011e8e, type: 3}
-    - {fileID: 21300000, guid: ea49a1b01dbbfdb48a2da22e7a581f34, type: 3}
-    - {fileID: 21300000, guid: 69282b4a94315e141a180615c86ecb7f, type: 3}
-    - {fileID: 21300000, guid: 8dfb07ba7ce25434bbe9e2f17e202699, type: 3}
-    - {fileID: 21300000, guid: c7a56a42c07896a4e89ff0a8387873a9, type: 3}
-    - {fileID: 21300000, guid: 55dc6029639223047a54e7b132851712, type: 3}
-    - {fileID: 21300000, guid: 3e417d710aaf1c9479c04507c4622a52, type: 3}
-    - {fileID: 21300000, guid: 42a6d27ccc708ff4dad7a3c1f281201e, type: 3}
-    - {fileID: 21300000, guid: 13492ba991906e14fa7b25bf782f6b9a, type: 3}
-    - {fileID: 21300000, guid: af0d568c147e00e4fbd786748d4e2cad, type: 3}
-    - {fileID: 21300000, guid: 40e02815a82d2de4db8dc9c89fdc8baf, type: 3}
-    - {fileID: 21300000, guid: afd9be79affa30b43a91ebc6624d6d7b, type: 3}
-  - spriteName: Black
-    sprites:
-    - {fileID: 21300000, guid: a7b081d363c314c45947ee9a02ca4967, type: 3}
-    - {fileID: 21300000, guid: 379a46f7f91596e4485ba22aadef2a3a, type: 3}
-    - {fileID: 21300000, guid: 370ae490af3bffb4d99565dbbba0faf6, type: 3}
-    - {fileID: 21300000, guid: c278a47d60d772c44adcf27f5cab8499, type: 3}
-    - {fileID: 21300000, guid: 57a547ffd22d1bf408cf812f6b1b95c7, type: 3}
-    - {fileID: 21300000, guid: 864b18f4477062448a9c06b1da30fb4b, type: 3}
-    - {fileID: 21300000, guid: 597bf199dd327154c9614bcae5aab313, type: 3}
-    - {fileID: 21300000, guid: a54d2a66c1924424b99f1d6839f2aeb6, type: 3}
-    - {fileID: 21300000, guid: 7838e7b919873bf4c99a56a97daf1ce6, type: 3}
-    - {fileID: 21300000, guid: 1d4f95e673ce2c6439ce7f89435b02d6, type: 3}
-    - {fileID: 21300000, guid: ad4936d17d86efc479193aef19f21c0f, type: 3}
-    - {fileID: 21300000, guid: 2d4278479d0edbf48b75c145c3b5a42e, type: 3}
-    - {fileID: 21300000, guid: b2f8f9c4ac1b3724d9d819d5b1a1e723, type: 3}
-    - {fileID: 21300000, guid: 8c64fc089e8140246a3153fb27a0ee44, type: 3}
-    - {fileID: 21300000, guid: a2609353bccd86d408114ac901574b6d, type: 3}
-    - {fileID: 21300000, guid: 480be93f9d739054083c23a0ed10d094, type: 3}
-    - {fileID: 21300000, guid: a5fe850ffe1671b41af3dc5f538680f7, type: 3}
-    - {fileID: 21300000, guid: 0361ea9f969eae34fb75099c59af9e0b, type: 3}
-    - {fileID: 21300000, guid: a3cc905e70073684ab18b2485ed0b61c, type: 3}
-    - {fileID: 21300000, guid: b1ee15947a7c1b44986563f2dce29974, type: 3}
-    - {fileID: 21300000, guid: b392ed04503e14c43838408bc43ce214, type: 3}
-    - {fileID: 21300000, guid: cfdb1c8d16b500844872fdc3ad10461b, type: 3}
-    - {fileID: 21300000, guid: 5f62d0b9fff229549b7248ad91c4101c, type: 3}
-    - {fileID: 21300000, guid: 2c0c1c04a484b9a4ebf213fc72f9c773, type: 3}
-    - {fileID: 21300000, guid: dbe386fa215e9ba4cbfb4654c810746e, type: 3}
-    - {fileID: 21300000, guid: 5602c96f05681b94c87474c730f0a9af, type: 3}
-    - {fileID: 21300000, guid: 2cc8e3fc3f329064d9169a53a4f8cd37, type: 3}
-    - {fileID: 21300000, guid: 74db1fe4c5656ea46a291de24417e0d5, type: 3}
-    - {fileID: 21300000, guid: 4c66a9d1956e3674c9ca783e584e6b41, type: 3}
-    - {fileID: 21300000, guid: e766519e2b9429144950eb83a58607f5, type: 3}
-    - {fileID: 21300000, guid: bf91f11e0853fc840894b04169cf1d9e, type: 3}
-    - {fileID: 21300000, guid: c1591766f6600f74b9336224a15895b3, type: 3}
-    - {fileID: 21300000, guid: 8d4d9730e32095147b86172016107287, type: 3}
-    - {fileID: 21300000, guid: 2d992b04478788042bf981e21e69ff42, type: 3}
+  npcAnimCon:
+  - controllerName: Daddy
+    controller: {fileID: 9100000, guid: 0766076d3715f74499abda478454d8a0, type: 2}
+    startSprite: {fileID: 21300000, guid: 0343cbaea3ed6914eb230a96247b351f, type: 3}
+  - controllerName: Black
+    controller: {fileID: 9100000, guid: 024700aceeeea984b85c636e3d4f0d09, type: 2}
+    startSprite: {fileID: 21300000, guid: a7b081d363c314c45947ee9a02ca4967, type: 3}
+  - controllerName: NPC
+    controller: {fileID: 9100000, guid: 2e3e1e39a5e1ec440b8a6df3172c09f8, type: 2}
+    startSprite: {fileID: 21300000, guid: 14e90ff74257bac4296e332f70781de5, type: 3}
   npcSpriteRen: {fileID: 0}
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
   fadeColor: {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 1}
@@ -335,6 +242,9 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   reqSentences: []
+  talkAgainSentences: []
+  canTalk: 1
+  cantTalkToSentences: []
 --- !u!1 &8214126494346281721
 GameObject:
   m_ObjectHideFlags: 0
@@ -431,3 +341,6 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   reqSentences: []
+  talkAgainSentences: []
+  canTalk: 1
+  cantTalkToSentences: []

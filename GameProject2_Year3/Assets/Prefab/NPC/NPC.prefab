@@ -56,8 +56,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   questIsFinish: 0
-  req_item:
-  - {fileID: 0}
+  req_item: []
   triggerState: 2
   _collisionType: 1
   NormalSentences: []
@@ -384,7 +383,7 @@ MonoBehaviour:
   playerPlayAnimationName: 
   _animationType: 2
   isQuestFinish: 0
-  giveItem: {fileID: 7529165984275043446, guid: 30206c0e8550bad4aa68bc5b5c15cf96, type: 3}
+  giveItem: {fileID: 0}
 --- !u!114 &8305698375493772152
 MonoBehaviour:
   m_ObjectHideFlags: 0
