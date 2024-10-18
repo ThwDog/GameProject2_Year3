@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShowUICollision : MonoBehaviour
 {
     [SerializeField] GameObject description;
-    public bool canOpen;
+    public bool canOpen = true;
 
     public void setOpen(bool _bool){
         canOpen = _bool;

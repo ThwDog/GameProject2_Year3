@@ -52,7 +52,7 @@ Material:
     m_Floats:
     - _Alpha: 360
     - _Alphacilp: 85
-    - _CloudPower: 5.5
+    - _CloudPower: 5.92
     - _CloudScale: 100
     - _DistorScale: 1.03
     - _QueueControl: 0

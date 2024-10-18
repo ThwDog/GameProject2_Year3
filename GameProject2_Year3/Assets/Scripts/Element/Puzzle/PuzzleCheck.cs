@@ -6,6 +6,7 @@ using UnityEngine;
 public class PuzzleCheck : MonoBehaviour
 {
     [SerializeField]List<GameObject> checkBoolObj;
+    [SerializeField] bool allWin;
     List<checkBool> checks = new List<checkBool>();
     EventScript _event;
     
@@ -25,9 +26,11 @@ public class PuzzleCheck : MonoBehaviour
         foreach(checkBool check in checks){
             if(!check._check()){
                 checkBool = false;
+                allWin = false;
                 break;
             }
         }
+        allWin = true;
         _event._FinishEvent();
     } 
 }
