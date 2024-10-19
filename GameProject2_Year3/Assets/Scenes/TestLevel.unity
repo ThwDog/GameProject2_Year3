@@ -514,6 +514,11 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!82 &153594358 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4031980835165256088, guid: 0343d803d5932f94aba48afa635624b1, type: 3}
+  m_PrefabInstance: {fileID: 8630786193208186323}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &189562521
 GameObject:
   m_ObjectHideFlags: 0
@@ -5138,9 +5143,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1646539435}
   - component: {fileID: 1646539436}
-  - component: {fileID: 1646539437}
   - component: {fileID: 1646539439}
   - component: {fileID: 1646539438}
+  - component: {fileID: 1646539437}
   m_Layer: 0
   m_Name: LaserPuzzleManager
   m_TagString: Untagged
@@ -6922,6 +6927,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!82 &2026327464 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1227751029723524001, guid: 0343d803d5932f94aba48afa635624b1, type: 3}
+  m_PrefabInstance: {fileID: 8630786193208186323}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2029170070
 GameObject:
   m_ObjectHideFlags: 0
@@ -7382,12 +7392,10 @@ MonoBehaviour:
   playCutSceneOnstart: {fileID: 382059613}
   canPlayOnStart: 0
   waitSecForPlay: 0
-  playerSprite: []
+  playerAnimator: {fileID: 0}
+  NPCAnimator: {fileID: 0}
   playerSpriteRen: {fileID: 0}
-  npcSprites:
-  - spriteName: 
-    sprites:
-    - {fileID: 21300000, guid: 666b97d89ea810747bd16d910de1a556, type: 3}
+  npcAnimCon: []
   npcSpriteRen: {fileID: 1737556346}
   defaultColor: {r: 0, g: 0, b: 0, a: 0}
   fadeColor: {r: 0, g: 0, b: 0, a: 0}
@@ -7606,6 +7614,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4361435837517354584, guid: 4384cd3476e16de468d0d73d550cf670, type: 3}
+      propertyPath: sfx
+      value: 
+      objectReference: {fileID: 2026327464}
+    - target: {fileID: 4361435837517354584, guid: 4384cd3476e16de468d0d73d550cf670, type: 3}
+      propertyPath: music
+      value: 
+      objectReference: {fileID: 153594358}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8573,12 +8589,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 1
-  outlineColor: {r: 0, g: 0, b: 0, a: 1}
-  outlineWidth: 2
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!114 &7800402368343245573
 MonoBehaviour:
   m_ObjectHideFlags: 0

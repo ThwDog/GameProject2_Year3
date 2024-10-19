@@ -395,7 +395,7 @@ GameObject:
   - component: {fileID: 1824237840544082095}
   - component: {fileID: 9095670944436355207}
   m_Layer: 0
-  m_Name: MusicVolume
+  m_Name: MusicVolumeSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1497,7 +1497,7 @@ GameObject:
   - component: {fileID: 1587491469841558794}
   - component: {fileID: 4847710415492264424}
   m_Layer: 0
-  m_Name: SfxVolume
+  m_Name: SfxVolumeSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

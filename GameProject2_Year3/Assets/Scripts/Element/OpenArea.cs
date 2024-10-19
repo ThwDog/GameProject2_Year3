@@ -32,15 +32,6 @@ public class OpenArea : MonoBehaviour
     CheckCollision checkCollision;
     [SerializeField] PlayerController player;
 
-    // private void Start() {
-    //     // if(callType == _callType.collision) {
-    //     //     checkCollision = gameObject.GetOrAddComponent<CheckCollision>();
-    //     // }
-    //     if(callType == _callType.range){
-    //         player = FindObjectOfType<PlayerController>();
-    //     }
-    // }
-
     private void Update()
     {
         // open scene or area by check range
@@ -106,26 +97,5 @@ public class OpenArea : MonoBehaviour
             isLoad = false;
         }
     }
-
-
-    // bool openFistArea; // just of safe
-
-    // private void Awake() {
-    //     foreach (var area in _Area) {
-    //         area.SetActive(false);
-    //         // Debug.Log("disable"+area.name);
-    //     }
-    //     StartCoroutine(wait());
-    // }
-
-    // // TODO : If load scene is crash check this first
-    // // wait for open scene
-    // IEnumerator wait(){
-    //     yield return new WaitForSeconds(0.01f);
-    //     if(!openFistArea){
-    //     _OpenArea(0); // open first Area
-    //     openFistArea = true;
-    //     }
-    // }
 
 }

@@ -704,12 +704,24 @@ PrefabInstance:
       value: WaterPlane
       objectReference: {fileID: 0}
     - target: {fileID: 3646656060059853540, guid: c0ff4c2fac565ec498f4deb65c8eccb3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8949257
+      objectReference: {fileID: 0}
+    - target: {fileID: 3646656060059853540, guid: c0ff4c2fac565ec498f4deb65c8eccb3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8949257
+      objectReference: {fileID: 0}
+    - target: {fileID: 3646656060059853540, guid: c0ff4c2fac565ec498f4deb65c8eccb3, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8949257
+      objectReference: {fileID: 0}
+    - target: {fileID: 3646656060059853540, guid: c0ff4c2fac565ec498f4deb65c8eccb3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.77
       objectReference: {fileID: 0}
     - target: {fileID: 3646656060059853540, guid: c0ff4c2fac565ec498f4deb65c8eccb3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.74
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: 3646656060059853540, guid: c0ff4c2fac565ec498f4deb65c8eccb3, type: 3}
       propertyPath: m_LocalPosition.z

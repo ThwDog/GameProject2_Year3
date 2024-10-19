@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LaserScript : MonoBehaviour
+public class LaserScript : RotateScript
 {
     public enum type{
         output , // laser that can only get laser 
@@ -19,17 +19,13 @@ public class LaserScript : MonoBehaviour
     LaserScript hitObj; // last obj that been hit
     [Tooltip("If it first to so laser then click in on")]public bool isOpen = false;
     [Header("")]
-    [SerializeField][Range(0f,10f)] private float delayButtonTime = 1.5f;
-    [SerializeField][Range(0f,100f)] private float rotateSpeed = 10f;
     [Header("")]
     [SerializeField] LayerMask targetLayer;
-    bool isPressButton = false;
-    bool isRo = false;
-    Quaternion rotateTarget; // target of rotation
     ShowUICollision showUI;
     LaserScriptManager manager;
 
     private void Start() {
+        _roteType = roteType.y;
         manager = GetComponentInParent<LaserScriptManager>();
         showUI = GetComponent<ShowUICollision>();
         laserUpdate();
@@ -67,13 +63,7 @@ public class LaserScript : MonoBehaviour
         EnableLaser();
 
         // if rotate is true slowly rotate to target
-        if(isRo){
-            transform.rotation = Quaternion.Lerp(transform.rotation, rotateTarget, rotateSpeed * Time.deltaTime);
-            if (Quaternion.Angle(transform.rotation, rotateTarget) < 0.01f)
-            {
-                isRo = false;
-            }
-        }
+        _RotateObj();
         
     }
     
@@ -135,20 +125,13 @@ public class LaserScript : MonoBehaviour
 
     }
 
+    // enable gizmo for test
     private void OnDrawGizmosSelected()
     {
         if(_type != type.output) return;
         Gizmos.matrix = firePoint.transform.localToWorldMatrix;
         Gizmos.color = Color.red;
         Gizmos.DrawLine(Vector3.zero,firePoint.forward * maxLength);
-    }
-
-    private void rotateLaser(float Deg){
-        if(this.gameObject.transform.localRotation == Quaternion.Euler(0,360,0)){
-            this.gameObject.transform.localRotation = Quaternion.Euler(0,0,0);
-        }
-        rotateTarget = transform.rotation * Quaternion.Euler(0, Deg, 0);
-        isRo = true;
     }
 
     private void OnTriggerStay(Collider other) {
@@ -161,13 +144,13 @@ public class LaserScript : MonoBehaviour
         showUI.ShowDescription();
         //rotate left
         if(Input.GetKey(KeyCode.Q) && !isPressButton && !isRo) {
-            rotateLaser(-45f);
+            _SetRotate(-45f);
             isPressButton = true;
             StartCoroutine(resetButton(delayButtonTime));
         }
         //rotate Right
         if(Input.GetKey(KeyCode.E) && !isPressButton && !isRo) {
-            rotateLaser(45f);
+            _SetRotate(45f);
             isPressButton = true;
             StartCoroutine(resetButton(delayButtonTime));
         }
@@ -180,12 +163,6 @@ public class LaserScript : MonoBehaviour
 
         if(!other.gameObject.GetComponent<PlayerController>()) return;
         showUI.CloseDescription();
-    }
-
-    IEnumerator resetButton(float sec){
-        if(!isPressButton) yield break;
-        yield return new WaitForSeconds(sec);
-        isPressButton = false;
     }
 
     private void laserUpdate(){

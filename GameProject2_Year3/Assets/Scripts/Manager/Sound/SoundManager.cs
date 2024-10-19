@@ -85,7 +85,7 @@ public class SoundManager : SingletonClass<SoundManager>
         }
         else
         {
-            Debug.Log($"Play Sfx {nameSfx}");
+            // Debug.Log($"Play Sfx {nameSfx}");
             sfxSource.PlayOneShot(s.clip);
         }
     }  
