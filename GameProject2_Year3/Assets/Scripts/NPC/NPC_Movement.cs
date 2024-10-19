@@ -3,24 +3,44 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class NPC_Movement : MonoBehaviour
+public class NPC_Movement : MonoBehaviour , Ipauseable
 {
     [Header("Setting")]
     [SerializeField] private float speed;
     [SerializeField] private Transform markLeft , markRight ;
-    public bool canMove = false;
+    [SerializeField] private string animatorName;
+    [SerializeField] bool paused = false;
+    private bool canMove = false;
 
     NPC_Animation anim;
+    SpriteRenderer sprite;
     private bool canGoLeft = true; // check if can go to left Dir
 
+    public void pause(){
+        // Debug.Log("Player pause");
+        if(!paused) paused = !paused;
+    }
+
+    public void resume(){
+        // Debug.Log("Player resume");
+        if(paused) paused = !paused;
+    } 
+
     private void Start() {
+        anim = GetComponent<NPC_Animation>();
+        sprite = anim.anim.gameObject.GetComponent<SpriteRenderer>();
         StartCoroutine(NPC_WalkRest());
     }
 
     private void Update() {
-        if(!canMove) return; 
+        if(paused) return;
+        if(!canMove) {
+            anim.playAnimOnBoolFalse(animatorName);
+            return;
+        }
 
         if(canGoLeft){
+            flipX(false);
             moveDir(markLeft);
             if(checkFinish(markLeft)){
                 canGoLeft = false;
@@ -29,6 +49,7 @@ public class NPC_Movement : MonoBehaviour
             else return;
         }    
         else{
+            flipX(true);
             moveDir(markRight);
             if(checkFinish(markRight)){
                 canGoLeft = true;
@@ -38,10 +59,19 @@ public class NPC_Movement : MonoBehaviour
         }
     }
 
+    private void flipX(bool flip){
+        if(flip){
+            sprite.flipX = true;
+        }
+        else{
+            sprite.flipX = false;
+        }
+    }
+
     // rest time
     IEnumerator NPC_WalkRest(){
         float rnd = Random.Range(2f, 5f);
-        Debug.Log(rnd);
+        // Debug.Log(rnd);
         yield return new WaitForSeconds(rnd);
         canMove = !canMove;
         yield return new WaitForSeconds(rnd);
@@ -54,7 +84,7 @@ public class NPC_Movement : MonoBehaviour
         int rnd = Random.Range(0,100);
         rnd = Mathf.Clamp(rnd / 50, 0, 2);
 
-        Debug.Log("Random" + rnd);
+        // Debug.Log("Random" + rnd);
 
         if(rnd == 1) canGoLeft = true;
         else if (rnd == 2)canGoLeft = false;
@@ -65,6 +95,7 @@ public class NPC_Movement : MonoBehaviour
 
     private void moveDir(Transform dir){  
         float _speed = speed * Time.deltaTime;  
+        anim.playAnimOnBoolTrue(animatorName);
         this.transform.position = Vector3.MoveTowards(transform.position,dir.transform.position,_speed);
     }
     // check if NPC move to mark?

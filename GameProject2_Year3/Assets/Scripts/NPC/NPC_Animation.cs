@@ -6,9 +6,9 @@ using UnityEngine;
 public class NPC_Animation : MonoBehaviour
 {
     [Header("Setting")]
-    [SerializeField] Animator anim;
+    public Animator anim;
 
-    public  void playAnimOnTrigger(string name){
+    public void playAnimOnTrigger(string name){
         anim.SetTrigger(name);
     }
 

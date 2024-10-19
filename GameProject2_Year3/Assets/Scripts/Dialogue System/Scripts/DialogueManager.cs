@@ -222,7 +222,6 @@ namespace HeneGames.DialogueSystem
             // {
             //     dialogueTrigger.endDialogueEvent.Invoke();
             // }
-            Debug.Log("End");
 
             FindObjectOfType<DialogueTrigger>().endDialogueEvent.Invoke();
 

@@ -45,7 +45,6 @@ public class LoadScene : MonoBehaviour
 
     public void setEnable(){
         GameObject[] gameObjects = FindObjectsOfType<GameObject>();
-        List<GameObject> objectsWithInterface = new List<GameObject>();
 
         foreach (GameObject gameObject in gameObjects) {
             IEnable myInterface = gameObject.GetComponent<IEnable>();
@@ -57,21 +56,23 @@ public class LoadScene : MonoBehaviour
 
     public int CheckNextStage(){
         int index = SceneManager.GetActiveScene().buildIndex;
-        switch(index){
-            case 0: // main menu
-                return 1;
-            case 1: 
-                return 2;
-            case 2:
-                return 3;
-            case 3:
-                return 4;
-            case 4:
-                return 0;
-        }
-        // should not be here
-        return 0;
+        // switch(index){
+        //     case 0: // main menu
+        //         return 1;
+        //     case 1: 
+        //         return 2;
+        //     case 2:
+        //         return 3;
+        //     case 3:
+        //         return 4;
+        //     case 4:
+        //         return 0;
+        // }
+        // // should not be here
+        return index + 1;
     }
+
+
 }
 
 

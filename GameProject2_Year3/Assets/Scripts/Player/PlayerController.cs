@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour , Ipauseable
     SpriteRenderer sprite;
     internal CharacterController controller;
     private InputManager input;
-    [SerializeField] List<string> listOfAnimation;
+    // [SerializeField] List<string> listOfAnimation;
     CamControlAndSetting cam;
 
     internal string walkSoundName;
@@ -50,10 +50,12 @@ public class PlayerController : MonoBehaviour , Ipauseable
     }
 
     public void pause(){
+        // Debug.Log("Player pause");
         if(!paused) paused = !paused;
     }
 
     public void resume(){
+        // Debug.Log("Player resume");
         if(paused) paused = !paused;
     }    
 

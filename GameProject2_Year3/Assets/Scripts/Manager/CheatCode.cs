@@ -7,6 +7,7 @@ public class CheatCode : MonoBehaviour
 {
     // TODO : Make Cheat code easy to use 
     LoadScene loadScene;
+    PlayerController player; 
     public bool cheatEnable = true;
 
     private void Awake() {
@@ -14,26 +15,39 @@ public class CheatCode : MonoBehaviour
     }
 
     private void OnGUI() {
+        areaFindCanCheat();
+
         if(!cheatEnable) return;
         if(GUI.Button(new Rect(10, 10, 100, 50),"Next scene")){
             loadScene._LoadScene();
         }
-        if(FindAnyObjectByType<PlayerController>())
+        if(player != null)
         {
             if(GUI.Button(new Rect(10, 80, 100, 50),"ReSpawn")){
-                SpawnPlayer spawn = FindAnyObjectByType<SpawnPlayer>();
+                SpawnPlayer spawn = FindObjectOfType<SpawnPlayer>();
                 spawn.deSpawn();
             }
             if(GUI.Button(new Rect(10, 160, 100, 50),"Increase Speed")){
-                PlayerController player = FindAnyObjectByType<PlayerController>();
                 player.speed += 10;
             }
-            if(FindAnyObjectByType<PlayerController>().speed > 5){
+            if(player.speed > 5){
                 if(GUI.Button(new Rect(10, 240, 100, 50),"decrease Speed")){
-                    PlayerController player = FindAnyObjectByType<PlayerController>();
                     player.speed -= 10;
                 }
             }
+        }
+    }
+
+    private void areaFindCanCheat(){
+        if(!player){
+            try{
+                if(loadScene.CheckNextStage() - 1 != 0){
+                    player = FindObjectOfType<PlayerController>();
+                }
+            }
+            catch{
+                return;
+            } 
         }
     }
 }

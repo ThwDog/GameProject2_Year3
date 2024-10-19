@@ -26,9 +26,7 @@ public class NPC_CheckQuest : MonoBehaviour
 
     private void Start()
     {
-        // get dialogue from call type
-        // if (GetComponentInChildren<DialogueManager>().triggerState == DialogueManager.TriggerState.Call) dialogueCall = GetComponentInChildren<DialogueManager>();
-        _event = GetComponent<EventScript>();
+        if(GetComponent<EventScript>()) _event = GetComponent<EventScript>();
     }
 
     public virtual void OnTriggerStay(Collider other)

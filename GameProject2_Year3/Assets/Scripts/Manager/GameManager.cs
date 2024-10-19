@@ -19,7 +19,7 @@ public class GameManager : SingletonClass<GameManager>
 
     private void Update()
     {
-        if(loadScene.CheckNextStage() == 1) return;
+        if(loadScene.CheckNextStage() - 1 == 0) return;
 
         uiManager.updateVolume();
         if (Input.GetKeyDown(KeyCode.Escape))
