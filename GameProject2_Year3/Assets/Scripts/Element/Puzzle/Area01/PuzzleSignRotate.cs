@@ -5,13 +5,14 @@ using UnityEngine;
 public class PuzzleSignRotate : RotateScript ,checkBool
 {
     public enum deg{
-        deg1  = 45, deg2 =  90, deg4 = 135 ,deg5 = 180, deg6 = 225,deg7 = 270,deg8 = 315 , deg9 = 360
+        deg45  = 45, deg90 =  90, deg135 = 135 ,deg180 = 180, deg225 = 225,deg270 = 270,deg315 = 315 , deg360 = 360
     }
     [Header("Setting")]
     [SerializeField] bool isWin = false;
     [Tooltip("deg1  = 45, deg2 =  90, deg4 = 135 ,deg5 = 180, deg6 = 225,deg7 = 270,deg8 = 315 , deg9 = 360")]
     [SerializeField] deg degWin;
     [SerializeField] float tolerance = 0.2f;
+    [SerializeField] private bool canRote = false;
     ShowUICollision showUI;
     EventScript _event;
 
@@ -27,6 +28,8 @@ public class PuzzleSignRotate : RotateScript ,checkBool
 
     public override void _RotateObj()
     {
+        if(!canRote) return;
+
         if(isRo){
             transform.rotation = Quaternion.Lerp(transform.rotation, rotateTarget, rotateSpeed * Time.deltaTime);
             if (Quaternion.Angle(transform.rotation, rotateTarget) < 0.01f)
@@ -38,6 +41,8 @@ public class PuzzleSignRotate : RotateScript ,checkBool
     }
 
     private void OnTriggerStay(Collider other) {
+        if(!canRote) return;
+
         if(!other.gameObject.GetComponent<PlayerController>()) return;
 
         showUI.ShowDescription();
@@ -56,6 +61,11 @@ public class PuzzleSignRotate : RotateScript ,checkBool
     }
 
     private void OnTriggerExit(Collider other) {
+        if(!canRote) {
+            showUI.CloseDescription();
+            return;
+        }
+
         if(!other.gameObject.GetComponent<PlayerController>()) return;
         showUI.CloseDescription();
     }
@@ -63,10 +73,13 @@ public class PuzzleSignRotate : RotateScript ,checkBool
     
 
     private void checkRote(){
-        Debug.Log("Check");
+        float rotate;
         switch(_roteType){
             case roteType.x :
-                if( Mathf.Abs(this.transform.eulerAngles.x - (float)degWin) < tolerance ){
+                rotate = this.transform.eulerAngles.x;
+                if(Mathf.Abs(rotate - 0) < tolerance) rotate = 360; // set id rotate is close to 0 then set rote to 360
+
+                if( Mathf.Abs(rotate - (float)degWin) < tolerance ){
                     isWin = true;
                     _event._FinishEvent();
                 }
@@ -76,7 +89,10 @@ public class PuzzleSignRotate : RotateScript ,checkBool
                 }
                 break;
             case roteType.y :
-                if( Mathf.Abs(this.transform.eulerAngles.y - (float)degWin) < tolerance ){
+                rotate = this.transform.eulerAngles.y;
+                if(Mathf.Abs(rotate - 0) < tolerance) rotate = 360;
+
+                if( Mathf.Abs(rotate - (float)degWin) < tolerance ){
                     isWin = true;
                     _event._FinishEvent();
                 }
@@ -86,7 +102,10 @@ public class PuzzleSignRotate : RotateScript ,checkBool
                 }
                 break;
             case roteType.z :
-                if( Mathf.Abs(this.transform.eulerAngles.z - (float)degWin) < tolerance ){
+                rotate = this.transform.eulerAngles.z;
+                if(Mathf.Abs(rotate - 0) < tolerance) rotate = 360;
+
+                if( Mathf.Abs(rotate - (float)degWin) < tolerance ){
                     isWin = true;
                     _event._FinishEvent();
                 }
@@ -99,10 +118,12 @@ public class PuzzleSignRotate : RotateScript ,checkBool
     }
 
     // Set Rotate deg
-    
-
     public bool _check()
     {
         return isWin;
+    }
+
+    public void setCanRo(bool _bool){
+        canRote = _bool;
     }
 }

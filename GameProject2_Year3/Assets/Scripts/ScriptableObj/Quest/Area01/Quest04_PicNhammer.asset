@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9af4cd7f71d1b5743aa3a3fb04f8ae31, type: 3}
+  m_Name: Quest04_PicNhammer
+  m_EditorClassIdentifier: 
+  itemArea: 0
+  description: Start Area one
+  quests:
+  - questTitle: The missing clue
+    questDescription: Find the clue that can change his mind.
+    _checkQuestType: 0
+    itemReq: {fileID: 11400000, guid: bc7c0f55a4c0e3942a970a7e9f037397, type: 2}
+  - questTitle: The Lover
+    questDescription: Come back to the guy that has black smith hammer.
+    _checkQuestType: 1
+    itemReq: {fileID: 0}
+  - questTitle: Lost one
+    questDescription: Come back to Blacksmith to tell the good new
+    _checkQuestType: 1
+    itemReq: {fileID: 0}

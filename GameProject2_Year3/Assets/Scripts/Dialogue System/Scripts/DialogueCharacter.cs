@@ -8,5 +8,6 @@ namespace HeneGames.DialogueSystem
     {
         public Sprite characterPhoto;
         public string characterName;
+        public Vector2 photoSize;
     }
 }

@@ -295,7 +295,7 @@ namespace HeneGames.DialogueSystem
             return canTalk;
         }
 
-        public void setQuest(bool _bool){
+        public void setStartQuest(bool _bool){
             startQuest = _bool;
         }
 

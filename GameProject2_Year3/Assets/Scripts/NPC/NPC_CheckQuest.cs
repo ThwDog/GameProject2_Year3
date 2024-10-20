@@ -100,4 +100,11 @@ public class NPC_CheckQuest : MonoBehaviour
     {
         isQuestFinish = _bool;
     }
+
+    public void setNewDialogue(DialogueManager dialogue){
+        DialogueManager old = dialogueCall;
+        dialogueCall = dialogue;
+        dialogueCall.gameObject.SetActive(true);
+        old.gameObject.SetActive(false);
+    }
 }

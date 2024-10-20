@@ -10,14 +10,15 @@ public class NPC_Movement : MonoBehaviour , Ipauseable
     [SerializeField] private Transform markLeft , markRight ;
     [SerializeField] private string animatorName;
     [SerializeField] bool paused = false;
-    private bool canMove = false;
+    private bool canMove = true;
 
     NPC_Animation anim;
     SpriteRenderer sprite;
-    private bool canGoLeft = true; // check if can go to left Dir
+    private bool canGoLeft = false; // check if can go to left Dir
 
     public void pause(){
         // Debug.Log("Player pause");
+        anim.playAnimOnBoolFalse(animatorName);
         if(!paused) paused = !paused;
     }
 
@@ -26,9 +27,9 @@ public class NPC_Movement : MonoBehaviour , Ipauseable
         if(paused) paused = !paused;
     } 
 
-    private void Start() {
-        anim = GetComponent<NPC_Animation>();
-        sprite = anim.anim.gameObject.GetComponent<SpriteRenderer>();
+    private void OnEnable() {
+        if(!anim) anim = GetComponent<NPC_Animation>();
+        if(!sprite) sprite = anim.anim.gameObject.GetComponent<SpriteRenderer>();
         StartCoroutine(NPC_WalkRest());
     }
 

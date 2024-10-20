@@ -48,6 +48,7 @@ public class CutSceneManager : MonoBehaviour , IEnable
         NPCAnimator.speed = 0;
         showSpriteRen(playerSpriteRen);
         playAnimationTalk(playerAnimator);
+        FadeInNOut("Player");
     }
 
     // set before play
@@ -64,6 +65,7 @@ public class CutSceneManager : MonoBehaviour , IEnable
         NPCAnimator.speed = 1;
         showSpriteRen(npcSpriteRen);
         playAnimationTalk(NPCAnimator);
+        FadeInNOut("NPC");
     }
 
     private void playAnimationTalk(Animator anim){
@@ -113,7 +115,7 @@ public class CutSceneManager : MonoBehaviour , IEnable
     }
 
     public void FadeInNOut(string sprite) {
-        if(sprite == "player") {
+        if(sprite == "Player") {
             StartCoroutine(Fade(playerSpriteRen, defaultColor)); // in
             StartCoroutine(Fade(npcSpriteRen, fadeColor)); // out
         }

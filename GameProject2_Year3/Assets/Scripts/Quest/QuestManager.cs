@@ -47,13 +47,19 @@ public class QuestManager : MonoBehaviour
     // use most in npc
     public void ChangeQuest(Quest_Scriptable quest)
     {
-        if(quest == null) {
+        try{
             resetIndex();
-            currentQuest = null;
-            return;
+            currentQuest = quest;
         }
-        resetIndex();
-        currentQuest = quest;
+        catch{
+            if(quest == null) {
+                resetIndex();
+                currentQuest = null;
+                return;
+            }
+        }
+        
+        
     }
 
 
@@ -71,7 +77,7 @@ public class QuestManager : MonoBehaviour
         else currentQuestIndex++;
     }
 
-    public void nextQuestInListByItem()
+    private void nextQuestInListByItem()
     {
         if (currentQuest.quests.Count < 1) return;
         if (currentQuestIndex < currentQuest.quests.Count == false) return;

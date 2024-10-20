@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9af4cd7f71d1b5743aa3a3fb04f8ae31, type: 3}
+  m_Name: Quest03_Sign
+  m_EditorClassIdentifier: 
+  itemArea: 0
+  description: Start Area one
+  quests:
+  - questTitle: Wrong Turn
+    questDescription: The guy that has a blacksmith hammer wants us to turn the signpost 
+      in the correct way.
+    _checkQuestType: 1
+    itemReq: {fileID: 0}
+  - questTitle: Wrong Turn
+    questDescription: Come back to talk to the guy that has a blacksmith hammer.
+    _checkQuestType: 1
+    itemReq: {fileID: 0}
