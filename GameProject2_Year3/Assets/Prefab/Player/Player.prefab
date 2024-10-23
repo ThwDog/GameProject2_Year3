@@ -71,7 +71,7 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 3
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 080c909e1b605de448092fd2b39e1d64, type: 2}
@@ -225,7 +225,6 @@ MonoBehaviour:
   stickingGravityPro: 20
   input_Delay: 0
   anim: {fileID: 2872758729705284727}
-  listOfAnimation: []
   paused: 0
 --- !u!114 &6764816931950542762
 MonoBehaviour:

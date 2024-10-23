@@ -52,6 +52,7 @@ public class PlayerController : MonoBehaviour , Ipauseable
     public void pause(){
         // Debug.Log("Player pause");
         if(!paused) paused = !paused;
+        setAnimToNormal();
     }
 
     public void resume(){
@@ -77,6 +78,8 @@ public class PlayerController : MonoBehaviour , Ipauseable
 
     private void FixedUpdate()
     {
+        fishingCheck();
+
         if(paused) return;
         // if(Input.GetKeyDown(KeyCode.Escape))
         //     Cursor.visible = true;
@@ -88,7 +91,6 @@ public class PlayerController : MonoBehaviour , Ipauseable
 
     private void move()
     {
-
         Vector2 movement = input.GetPlayerMovement();
         Vector3 move = new Vector3(movement.x, 0, movement.y);
 
@@ -103,7 +105,7 @@ public class PlayerController : MonoBehaviour , Ipauseable
         // move.y = 0;
         if(Input.GetMouseButton(1))return;
         //Animation
-        fishingCheck();
+        // fishingCheck();
         if(isFishing) return;
         if(isAnimPlaying(0,"CollectItem"))return; // if animation collect item is play return
         if(isAnimPlaying(0,"Flute"))return;
@@ -157,15 +159,16 @@ public class PlayerController : MonoBehaviour , Ipauseable
         }
     }
     // check if start fishing
-    void fishingCheck(){
+    public void fishingCheck(){
         if(isAnimPlaying(0,"Fishing_Start")){
+            Debug.Log("Fishing");
             anim.SetBool("IsFishing",true); //set is fishing is true
-            if(!isFishing){
-                StartCoroutine(fishing_Finish(3f));
-            }
+            _SetFishing(true);
+            // if(!isFishing){
+            //     // StartCoroutine(fishing_Finish(3f));
+            //     _SetFishing(true);
+            // }
         }
-
-        //TODO : if fishing end is play get item
     }
 
     // TODO : For animation doesn't freeze
@@ -175,12 +178,17 @@ public class PlayerController : MonoBehaviour , Ipauseable
         cam.camShake(0);
     }
 
-    IEnumerator fishing_Finish(float time){
-        isFishing = true;
-        yield return new WaitForSeconds(time);
-        anim.SetBool("IsFishing",false); //set is fishing is true
-        yield return new WaitForSeconds(time);
-        isFishing = false;
+    // IEnumerator fishing_Finish(float time){
+    //     isFishing = true;
+    //     yield return new WaitForSeconds(time);
+    //     anim.SetBool("IsFishing",false); //set is fishing is true
+    //     yield return new WaitForSeconds(time);
+    //     isFishing = false;
+    // }
+
+    public void _SetFishing(bool _bool){
+        isFishing = _bool;
+        anim.SetBool("IsFishing",_bool); //set is fishing is true
     }
 
     // TODO : need to change
