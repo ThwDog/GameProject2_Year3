@@ -11,7 +11,6 @@ public class PoolPuzzle : NPC_CheckQuest
     [SerializeField][Range(0, 10)] float finishTimeDelay = 5f;
     bool fishing = false;
     internal bool startPuzzle;
-    EventScript _events;
     FishPull fish;
 
     public override void OnTriggerStay(Collider other)
@@ -66,6 +65,13 @@ public class PoolPuzzle : NPC_CheckQuest
         itemFishing[0].Collect(player.gameObject.GetComponent<InventorySystem>());
         fishing = false;
         isQuestFinish = true;
+        _event._FinishEvent();
+    }
+
+    public void failPool(){
+        player._SetFishing(false);
+        fishing = false;
+        _event._ExitEvent();
     }
 
     IEnumerator waitCollect(float time, PlayerController _player)

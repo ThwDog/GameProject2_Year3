@@ -26,14 +26,14 @@ public class GroundEnable : MonoBehaviour, MapOpenable
     [Header("")]
     public string groundSound; // for store sound of that ground
 
-    private void Awake()
+    private void Start()
     {
-        assignAllVa();
     }
 
     private void Update()
     {
         if (!mapOpen) return;
+        assignAllVa();
         // assignAllVa();
         if(!enableOnCam._isEnable) return;
 
@@ -50,11 +50,16 @@ public class GroundEnable : MonoBehaviour, MapOpenable
     }
 
     void assignAllVa(){
-        if(!player) player = GameObject.FindAnyObjectByType<PlayerController>().GetComponent<Transform>();
-        if(!enableOnCam)enableOnCam = GetComponent<EnableOnCam>();
-
-        if (types == type.mesh) colliders = GetComponent<MeshCollider>();
-        else if (types == type.box) colliders = GetComponent<BoxCollider>();
+        try
+        {
+            if(!player) player = GameObject.FindAnyObjectByType<PlayerController>().GetComponent<Transform>();
+            if(!enableOnCam)enableOnCam = GetComponent<EnableOnCam>();
+            if(!colliders){
+                if (types == type.mesh) colliders = GetComponent<MeshCollider>();
+                else if (types == type.box) colliders = GetComponent<BoxCollider>();
+            }
+        }
+        catch{}
     }
 
     public void Open()
