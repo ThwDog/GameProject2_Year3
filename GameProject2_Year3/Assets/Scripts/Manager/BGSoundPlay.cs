@@ -17,6 +17,7 @@ public class BGSoundPlay : MonoBehaviour , Ipauseable
     }
 
     private void Start() {
+        SoundManager.instance.StopAllMusic();
         SoundManager.instance.PlayMusic(bgSound);
     }
 

@@ -2623,10 +2623,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1227751029723524001, guid: 0343d803d5932f94aba48afa635624b1, type: 3}
-      propertyPath: m_Volume
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 2634802889893500554, guid: 0343d803d5932f94aba48afa635624b1, type: 3}
       propertyPath: m_Name
       value: SoundManager
@@ -3383,7 +3379,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6da0e6cff3d94ec4fa11b1f37af96dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bgSound: HomeTown
+  bgSound: Forest
 --- !u!4 &1923307661
 Transform:
   m_ObjectHideFlags: 0
@@ -5575,12 +5571,12 @@ SceneRoots:
   m_Roots:
   - {fileID: 1311186186}
   - {fileID: 1122497784}
-  - {fileID: 1923307661}
   - {fileID: 311525773}
   - {fileID: 674426297}
   - {fileID: 2016982408}
   - {fileID: 556764461}
   - {fileID: 1704718418}
+  - {fileID: 1923307661}
   - {fileID: 1326063640}
   - {fileID: 1558717263}
   - {fileID: 655888446}

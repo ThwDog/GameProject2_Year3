@@ -179,6 +179,9 @@ MonoBehaviour:
   - nameSound: HomeTown
     sound: {fileID: 8300000, guid: da2d39a4f01778247913b5f842abf3af, type: 3}
     clip: {fileID: 8300000, guid: da2d39a4f01778247913b5f842abf3af, type: 3}
+  - nameSound: Forest
+    sound: {fileID: 8300000, guid: 413439db898ebb8489821a980ada9c4a, type: 3}
+    clip: {fileID: 8300000, guid: 413439db898ebb8489821a980ada9c4a, type: 3}
   sfxSound:
   - nameSound: Press_Key
     sound: {fileID: 8300000, guid: aee61194365565d44aabbea8bf8de260, type: 3}
@@ -240,7 +243,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.1
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -368,7 +371,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
