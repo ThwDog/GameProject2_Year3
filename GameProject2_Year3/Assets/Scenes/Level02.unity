@@ -926,7 +926,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 1f01fe3c06dc48f4ba470f61ef2e1564, type: 2}
     - target: {fileID: 6764816931950542762, guid: d5eb1b2644f77774595eaf932a6cc490, type: 3}
       propertyPath: inventory.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6764816931950542762, guid: d5eb1b2644f77774595eaf932a6cc490, type: 3}
       propertyPath: inventory.Array.data[0]
@@ -1806,7 +1806,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 18086380891038299, guid: 3f650b9914af23f4586381ec4016fd5b, type: 3}
       propertyPath: m_Name
-      value: Bush
+      value: Bush_HasItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 18086380891038299, guid: 3f650b9914af23f4586381ec4016fd5b, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1634044228407372003, guid: 3f650b9914af23f4586381ec4016fd5b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1918,7 +1922,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -8962,15 +8966,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3646656060059853540, guid: c0ff4c2fac565ec498f4deb65c8eccb3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.77
+      value: 5.86
       objectReference: {fileID: 0}
     - target: {fileID: 3646656060059853540, guid: c0ff4c2fac565ec498f4deb65c8eccb3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.07999997
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 3646656060059853540, guid: c0ff4c2fac565ec498f4deb65c8eccb3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 21.4
+      value: 19.54
       objectReference: {fileID: 0}
     - target: {fileID: 3646656060059853540, guid: c0ff4c2fac565ec498f4deb65c8eccb3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9095,7 +9099,26 @@ MonoBehaviour:
   reqSentences: []
   talkAgainSentences: []
   canTalk: 0
-  cantTalkToSentences: []
+  cantTalkToSentences:
+  - dialogueCharacter: {fileID: 11400000, guid: 01a9051a317955f47a67cc9863d03165, type: 2}
+    sentence: The bear's a sleepyhead. Don't wake him up, or you might regret it!
+    skipDelayTime: 0
+    sentenceSound: {fileID: 0}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7131928680818994035}
+          m_TargetAssemblyTypeName: HeneGames.DialogueSystem.DialogueManager, Assembly-CSharp
+          m_MethodName: setCanTalk
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
 --- !u!4 &1213297739834549800
 Transform:
   m_ObjectHideFlags: 0
@@ -9143,7 +9166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   description: {fileID: 1728507195774041129}
-  canOpen: 0
+  canOpen: 1
 --- !u!136 &1437426740537001401
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10278,11 +10301,125 @@ MonoBehaviour:
   req_item: []
   triggerState: 2
   _collisionType: 1
-  NormalSentences: []
+  NormalSentences:
+  - dialogueCharacter: {fileID: 11400000, guid: 30f62b313e9da0f4e9f8217e41aea803, type: 2}
+    sentence: To rouse the slumbering beast, a magical flute is the key. But fear
+      not, for it's lost to the depths of the pool. A fishing rod, though, might
+      just do the trick.
+    skipDelayTime: 0
+    sentenceSound: {fileID: 0}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueCharacter: {fileID: 11400000, guid: 30f62b313e9da0f4e9f8217e41aea803, type: 2}
+    sentence: The fishing rod's whereabouts are a mystery, but a riddle might lead
+      you to its resting place.
+    skipDelayTime: 0
+    sentenceSound: {fileID: 0}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueCharacter: {fileID: 11400000, guid: 30f62b313e9da0f4e9f8217e41aea803, type: 2}
+    sentence: Young adventurers, lend me your ears,The fishing rod you seek is near.
+    skipDelayTime: 0
+    sentenceSound: {fileID: 0}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueCharacter: {fileID: 11400000, guid: 30f62b313e9da0f4e9f8217e41aea803, type: 2}
+    sentence: Deep in the woods, a treasure's in sight,Hidden by bushes, green and
+      bright.
+    skipDelayTime: 0
+    sentenceSound: {fileID: 0}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueCharacter: {fileID: 11400000, guid: 30f62b313e9da0f4e9f8217e41aea803, type: 2}
+    sentence: Look for a tall tree, standing so proud,Beneath its shade, a secret
+      is shroud.
+    skipDelayTime: 0
+    sentenceSound: {fileID: 0}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueCharacter: {fileID: 11400000, guid: 30f62b313e9da0f4e9f8217e41aea803, type: 2}
+    sentence: Large rocks stand tall, like a stone wall,Bushes so dense, they cover
+      it all.
+    skipDelayTime: 0
+    sentenceSound: {fileID: 0}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueCharacter: {fileID: 11400000, guid: 30f62b313e9da0f4e9f8217e41aea803, type: 2}
+    sentence: Flowers bloom, vibrant and gay,But the rod's not there, I must say.
+    skipDelayTime: 0
+    sentenceSound: {fileID: 0}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueCharacter: {fileID: 11400000, guid: 30f62b313e9da0f4e9f8217e41aea803, type: 2}
+    sentence: With mind sharp and eyes keen, you'll see,Hidden well, a mystery
+    skipDelayTime: 0
+    sentenceSound: {fileID: 0}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls: []
   reqSentences: []
-  talkAgainSentences: []
-  canTalk: 1
-  cantTalkToSentences: []
+  talkAgainSentences:
+  - dialogueCharacter: {fileID: 11400000, guid: 30f62b313e9da0f4e9f8217e41aea803, type: 2}
+    sentence: Young adventurers, lend me your ears,The fishing rod you seek is near.
+    skipDelayTime: 0
+    sentenceSound: {fileID: 0}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueCharacter: {fileID: 11400000, guid: 30f62b313e9da0f4e9f8217e41aea803, type: 2}
+    sentence: Deep in the woods, a treasure's in sight,Hidden by bushes, green and
+      bright.
+    skipDelayTime: 0
+    sentenceSound: {fileID: 0}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueCharacter: {fileID: 11400000, guid: 30f62b313e9da0f4e9f8217e41aea803, type: 2}
+    sentence: Look for a tall tree, standing so proud,Beneath its shade, a secret
+      is shroud.
+    skipDelayTime: 0
+    sentenceSound: {fileID: 0}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueCharacter: {fileID: 11400000, guid: 30f62b313e9da0f4e9f8217e41aea803, type: 2}
+    sentence: Large rocks stand tall, like a stone wall,Bushes so dense, they cover
+      it all.
+    skipDelayTime: 0
+    sentenceSound: {fileID: 0}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueCharacter: {fileID: 11400000, guid: 30f62b313e9da0f4e9f8217e41aea803, type: 2}
+    sentence: Flowers bloom, vibrant and gay,But the rod's not there, I must say.
+    skipDelayTime: 0
+    sentenceSound: {fileID: 0}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueCharacter: {fileID: 11400000, guid: 30f62b313e9da0f4e9f8217e41aea803, type: 2}
+    sentence: With mind sharp and eyes keen, you'll see,Hidden well, a mystery
+    skipDelayTime: 0
+    sentenceSound: {fileID: 0}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  canTalk: 0
+  cantTalkToSentences:
+  - dialogueCharacter: {fileID: 11400000, guid: 01a9051a317955f47a67cc9863d03165, type: 2}
+    sentence: You can't talk to this NPC right now.
+    skipDelayTime: 0
+    sentenceSound: {fileID: 0}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!114 &7796590127705530075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10495,11 +10632,11 @@ SceneRoots:
   - {fileID: 996701333}
   - {fileID: 702188122}
   - {fileID: 63109407}
-  - {fileID: 560553945680698032}
   - {fileID: 1911323967}
   - {fileID: 4832942610308578000}
   - {fileID: 4660514198847270557}
   - {fileID: 1668351196}
   - {fileID: 2087503237}
+  - {fileID: 560553945680698032}
   - {fileID: 2122969182}
   - {fileID: 1200302943}
