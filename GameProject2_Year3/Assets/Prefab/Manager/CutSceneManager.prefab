@@ -31,7 +31,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5175588407951086272}
-  - {fileID: 6888479798577357719}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6605945264782136370
@@ -56,13 +55,13 @@ MonoBehaviour:
   npcAnimCon:
   - controllerName: Daddy
     controller: {fileID: 9100000, guid: 0766076d3715f74499abda478454d8a0, type: 2}
-    startSprite: {fileID: 21300000, guid: 0343cbaea3ed6914eb230a96247b351f, type: 3}
+    startSprite: {fileID: 21300000, guid: fdf26793d1c95dd48bcd9d67ecdf46ea, type: 3}
   - controllerName: Black
     controller: {fileID: 9100000, guid: 024700aceeeea984b85c636e3d4f0d09, type: 2}
-    startSprite: {fileID: 21300000, guid: a7b081d363c314c45947ee9a02ca4967, type: 3}
+    startSprite: {fileID: 21300000, guid: 1fd3591a019531843af062355d50d65c, type: 3}
   - controllerName: NPC
-    controller: {fileID: 9100000, guid: 2e3e1e39a5e1ec440b8a6df3172c09f8, type: 2}
-    startSprite: {fileID: 21300000, guid: 14e90ff74257bac4296e332f70781de5, type: 3}
+    controller: {fileID: 9100000, guid: 0719271419eb7e948bec19bc62886906, type: 2}
+    startSprite: {fileID: 21300000, guid: eaa3561b36b1db64fbb3814d4e6afbf4, type: 3}
   npcSpriteRen: {fileID: 0}
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
   fadeColor: {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 1}
@@ -79,7 +78,7 @@ GameObject:
   - component: {fileID: 2168548934975433402}
   - component: {fileID: 1107147103301777557}
   m_Layer: 0
-  m_Name: CutScene 01
+  m_Name: Found Item
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -141,200 +140,8 @@ MonoBehaviour:
   triggerState: 2
   _collisionType: 0
   NormalSentences:
-  - dialogueCharacter: {fileID: 0}
-    sentence: Test CutScene
-    skipDelayTime: 0
-    sentenceSound: {fileID: 0}
-    sentenceEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-          m_MethodName: pause
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-          m_MethodName: setAnimToNormal
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 1
-            m_BoolArgument: 1
-          m_CallState: 2
-        - m_Target: {fileID: 6605945264782136370}
-          m_TargetAssemblyTypeName: CutSceneManager, Assembly-CSharp
-          m_MethodName: _PlayNPCSprite
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 1
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 1
-            m_BoolArgument: 1
-          m_CallState: 2
-  - dialogueCharacter: {fileID: 0}
-    sentence: Test CutScene 2
-    skipDelayTime: 0
-    sentenceSound: {fileID: 0}
-    sentenceEvent:
-      m_PersistentCalls:
-        m_Calls: []
-  - dialogueCharacter: {fileID: 0}
-    sentence: Test CutScene 3
-    skipDelayTime: 0
-    sentenceSound: {fileID: 0}
-    sentenceEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - dialogueCharacter: {fileID: 0}
-    sentence: Test CutScene 3
-    skipDelayTime: 0
-    sentenceSound: {fileID: 0}
-    sentenceEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-          m_MethodName: resume
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  reqSentences: []
-  talkAgainSentences: []
-  canTalk: 1
-  cantTalkToSentences: []
---- !u!1 &8214126494346281721
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6888479798577357719}
-  - component: {fileID: 5679127936646162093}
-  - component: {fileID: 8652750477134384888}
-  m_Layer: 0
-  m_Name: CutScene 02
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6888479798577357719
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8214126494346281721}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.127436, y: 1.3093483, z: -6.5102777}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 940519953383037638}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5679127936646162093
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8214126494346281721}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49575414a70960d4b9e7c87e4320c4f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cutSceneSprite: []
-  cutSceneImage: {fileID: 0}
---- !u!114 &8652750477134384888
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8214126494346281721}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b89b2c8d34df52d4e89cba040401d38b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
-  startDialogueEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  nextSentenceDialogueEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  endDialogueEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  questIsFinish: 0
-  req_item: []
-  triggerState: 2
-  _collisionType: 0
-  NormalSentences:
-  - dialogueCharacter: {fileID: 0}
-    sentence: Test CutScene 4
-    skipDelayTime: 0
-    sentenceSound: {fileID: 0}
-    sentenceEvent:
-      m_PersistentCalls:
-        m_Calls: []
-  - dialogueCharacter: {fileID: 0}
-    sentence: Test CutScene 5
-    skipDelayTime: 0
-    sentenceSound: {fileID: 0}
-    sentenceEvent:
-      m_PersistentCalls:
-        m_Calls: []
-  - dialogueCharacter: {fileID: 0}
-    sentence: Test CutScene 6
+  - dialogueCharacter: {fileID: 11400000, guid: 01a9051a317955f47a67cc9863d03165, type: 2}
+    sentence: You found some picture
     skipDelayTime: 0
     sentenceSound: {fileID: 0}
     sentenceEvent:
