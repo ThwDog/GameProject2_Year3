@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour , Ipauseable
     CamControlAndSetting cam;
 
     internal string walkSoundName;
-    bool canPlayWalkSound = true;
+    internal bool canPlayWalkSound = true;
 
     bool ground()
     {

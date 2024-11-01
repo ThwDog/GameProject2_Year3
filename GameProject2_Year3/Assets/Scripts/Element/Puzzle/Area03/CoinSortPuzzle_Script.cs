@@ -8,7 +8,7 @@ public class CoinSortPuzzle_Script : MonoBehaviour, IRestartable
 {
     [Header("setting")]
     [SerializeField] private GameObject canvas;
-    [SerializeField] List<Coin_Scriptable> reqCoinList; // sort requirement
+    [Tooltip("How should player sort the coin")][SerializeField] List<Coin_Scriptable> reqCoinList; // sort requirement
     [Tooltip("Size of coin that can sort")][SerializeField] private int coinSortListSize = 3;
     [Tooltip("Coin that player sort")] List<Coin_Scriptable> coinSort = new List<Coin_Scriptable>(); // show coin that player sort
 

@@ -47,6 +47,7 @@ public class SpawnPlayer : MonoBehaviour
     public void deSpawn(){
         if(!CanSpawnOnThis) return;
         player = FindAnyObjectByType<PlayerController>();
+        player.canPlayWalkSound = true;
         // player.gameObject.SetActive(false);
         Debug.Log("ReSpawn");
         StartCoroutine(DeSpawnWait(player.gameObject));

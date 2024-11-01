@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9af4cd7f71d1b5743aa3a3fb04f8ae31, type: 3}
   m_Name: Quest01_FindAMan
   m_EditorClassIdentifier: 
-  itemArea: 0
+  itemArea: 1
   description: 
   quests:
-  - questTitle: 
-    questDescription: 
+  - questTitle: The Way
+    questDescription: Find the way that can pass the bear.
     _checkQuestType: 1
     itemReq: {fileID: 0}

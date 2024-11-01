@@ -36,11 +36,11 @@ public class FishPull : MonoBehaviour
         fishPer = Mathf.Clamp(fishPer,0,100);
         
         if(!pool.startPuzzle) return;
-        winCheck();
         playerBar.value = playerPer;
         FishBar.value = fishPer;
         
         if(!IsPlaying) return;
+        winCheck();
         
         if(playerCanPush){
             if(Input.GetKeyUp(KeyCode.Space)){
@@ -57,6 +57,7 @@ public class FishPull : MonoBehaviour
 
     private void winCheck(){
         if(playerPer >= 100 ) {
+            Debug.Log("player Win");
             playerPer = 100;
             IsPlaying = false;
             pool.finishPool();
@@ -85,7 +86,7 @@ public class FishPull : MonoBehaviour
 
     // push is the side who is press space bar 
     private void pushNPull(ref float push,ref float pull, float value){
-        Debug.Log("Push N Pull");
+        // Debug.Log("Push N Pull");
         push += value;
         pull -= value;
     }
