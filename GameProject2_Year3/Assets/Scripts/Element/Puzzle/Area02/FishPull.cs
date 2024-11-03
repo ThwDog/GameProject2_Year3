@@ -11,7 +11,6 @@ public class FishPull : MonoBehaviour
 {
     [SerializeField] private float playerPer = 50 , fishPer = 50; // percentPool Default value
 
-
     [SerializeField] private Slider playerBar , FishBar ;
     [SerializeField] private GameObject pullingBar;
     [Header("setting")]
@@ -28,6 +27,7 @@ public class FishPull : MonoBehaviour
 
     private void OnDisable() {
         pullingBar.SetActive(false);
+        // SoundManager.instance.StopAllGameSound();
         _Reset();
     }
 
@@ -62,6 +62,7 @@ public class FishPull : MonoBehaviour
             IsPlaying = false;
             pool.finishPool();
             GetComponent<FishPull>().enabled = false;
+            SoundManager.instance.StopAllGameSound();
         } 
         else if(fishPer >= 100){
             fishPer = 100;
@@ -69,6 +70,7 @@ public class FishPull : MonoBehaviour
             pool.failPool();
             _Reset();
             GetComponent<FishPull>().enabled = false;
+            SoundManager.instance.StopAllGameSound();
         }
     }
 
@@ -99,5 +101,6 @@ public class FishPull : MonoBehaviour
     public void _SetPlaying(bool _bool){
         pullingBar.SetActive(true);
         IsPlaying = _bool;
+        SoundManager.instance.PlayGameSound("Reeling");
     }
 }

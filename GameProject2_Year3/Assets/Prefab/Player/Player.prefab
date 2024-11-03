@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6681699143588539602}
   - component: {fileID: 2872758729705284727}
   - component: {fileID: 1478442132657947639}
+  - component: {fileID: 5745772886850078808}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -106,6 +107,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5745772886850078808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2012598146375158318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f193e52f9fdb2d44b83c68b662d1621, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6461981819148202631
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,9 +251,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 487f84b575b56a94d9d272a83897ada2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkItemReq: {fileID: 11400000, guid: 6369d83ffac3fe64b9abbaf0adc87200, type: 2}
+  checkItemReq: {fileID: 11400000, guid: 1f01fe3c06dc48f4ba470f61ef2e1564, type: 2}
   itemReq: []
-  inventory: []
+  inventory:
+  - {fileID: 11400000, guid: 564c8044c025fd64ebaabb7f54231270, type: 2}
 --- !u!114 &3214460774242697326
 MonoBehaviour:
   m_ObjectHideFlags: 0

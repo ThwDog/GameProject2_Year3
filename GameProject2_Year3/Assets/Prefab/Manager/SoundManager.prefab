@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2917048393930803652}
   - component: {fileID: 4337419527480788450}
   m_Layer: 0
-  m_Name: Ambient
+  m_Name: GameSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -195,10 +195,16 @@ MonoBehaviour:
   - nameSound: WalkDirt
     sound: {fileID: 8300000, guid: b9c7b50c68ac2d44dafb1411104de468, type: 3}
     clip: {fileID: 8300000, guid: b9c7b50c68ac2d44dafb1411104de468, type: 3}
-  ambientSound: []
+  - nameSound: RodHitWater
+    sound: {fileID: 8300000, guid: 362f6ce5c2a6a5b46ab4638c00826d6c, type: 3}
+    clip: {fileID: 8300000, guid: 362f6ce5c2a6a5b46ab4638c00826d6c, type: 3}
+  ambientSound:
+  - nameSound: Reeling
+    sound: {fileID: 8300000, guid: 20076fc9922735340bb3788c13b7a7c9, type: 3}
+    clip: {fileID: 8300000, guid: 20076fc9922735340bb3788c13b7a7c9, type: 3}
   musicSource: {fileID: 4031980835165256088}
   sfxSource: {fileID: 1227751029723524001}
-  ambientSource: {fileID: 4337419527480788450}
+  gameSoundSource: {fileID: 4337419527480788450}
 --- !u!1 &6978034167302114798
 GameObject:
   m_ObjectHideFlags: 0

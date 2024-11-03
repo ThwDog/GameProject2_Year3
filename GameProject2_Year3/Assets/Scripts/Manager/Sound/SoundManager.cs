@@ -6,7 +6,7 @@ using System;
 public class SoundManager : SingletonClass<SoundManager>
 {
     public Sound[] musicSound, sfxSound , ambientSound;
-    public AudioSource musicSource, sfxSource , ambientSource;   
+    public AudioSource musicSource, sfxSource , gameSoundSource;   
 
     public void setVolume(string soundType,float value){
         switch(soundType){
@@ -122,17 +122,17 @@ public class SoundManager : SingletonClass<SoundManager>
     #endregion
 
     #region Ambient
-    public void PauseAmbient()
+    public void PauseGameSound()
     {
-        ambientSource.Pause();
+        gameSoundSource.Pause();
     }
 
-    public void ResumeAmbient()
+    public void ResumeGameSound()
     {
-        ambientSource.Play();
+        gameSoundSource.Play();
     }
 
-    public void PlayAmbient(string nameSound)
+    public void PlayGameSound(string nameSound)
     {
         Sound s = Array.Find(ambientSound, x => x.nameSound == nameSound);
         if (s == null)
@@ -142,12 +142,12 @@ public class SoundManager : SingletonClass<SoundManager>
         else
         {
             Debug.Log($"Play music {nameSound}");
-            ambientSource.clip = s.clip;
-            ambientSource.Play();
+            gameSoundSource.clip = s.clip;
+            gameSoundSource.Play();
         }
     }
 
-    public void StopAmbient(string nameSound)
+    public void StopGameSound(string nameSound)
     {
         Sound s = Array.Find(ambientSound, x => x.nameSound == nameSound);
         if (s == null)
@@ -157,15 +157,15 @@ public class SoundManager : SingletonClass<SoundManager>
         else
         {
             Debug.Log($"Stop music {nameSound}");
-            ambientSource.clip = s.clip;
-            ambientSource.Stop();
+            gameSoundSource.clip = s.clip;
+            gameSoundSource.Stop();
         }
     }
 
-    public void StopAllAmbient()
+    public void StopAllGameSound()
     {
         Debug.Log("Stop all music");
-        ambientSource.Stop();
+        gameSoundSource.Stop();
     }
 
     #endregion
