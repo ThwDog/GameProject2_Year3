@@ -50,7 +50,7 @@ public class PlatePuzzle : MonoBehaviour , IRestartable
                 }
             }
 
-            if (isSame)
+            if (isSame) // finish
             {
                 resetAllPlate();
                 usePlateLists.Remove(usePlateLists[0]);
