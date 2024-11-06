@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4704587579978620903}
   - component: {fileID: 2928025447266740084}
   - component: {fileID: 1446653183896847909}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Leave_12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 5094111666843332611}
   - component: {fileID: 7208385360793731189}
   - component: {fileID: 799422860913244435}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Leave_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 5391860495633926561}
   - component: {fileID: 7009751299531586792}
   - component: {fileID: 4254004151942013245}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Leave_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 2006185907696808924}
   - component: {fileID: 4731207148709810073}
   - component: {fileID: 1256277929537062076}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Leave_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -343,7 +343,7 @@ GameObject:
   - component: {fileID: 2041906591794674054}
   - component: {fileID: 3022494780687774759}
   - component: {fileID: 1503150906235348957}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Leave_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -426,7 +426,7 @@ GameObject:
   - component: {fileID: 6337563280508175930}
   - component: {fileID: 1204467245697198958}
   - component: {fileID: 6342826913756232788}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Leave_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -509,7 +509,7 @@ GameObject:
   - component: {fileID: 5070088809899609835}
   - component: {fileID: 4489186616212163995}
   - component: {fileID: 8586849471707598465}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Leave_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -592,7 +592,7 @@ GameObject:
   - component: {fileID: 7571329394321213297}
   - component: {fileID: 4258215153498501007}
   - component: {fileID: 9116588954254686004}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Leave_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -675,7 +675,7 @@ GameObject:
   - component: {fileID: 6844933975580893179}
   - component: {fileID: 4625630178999995151}
   - component: {fileID: 5725833778061299438}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Leave_13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -758,7 +758,7 @@ GameObject:
   - component: {fileID: 3154729429465318299}
   - component: {fileID: 24027560780055789}
   - component: {fileID: 7242352510051113644}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tree_leave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -808,7 +808,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ec14f9c9467e2184986999716e2faa35, type: 2}
+  - {fileID: 2100000, guid: 17f81f07b4de55f43a11744088ed051e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -841,7 +841,7 @@ GameObject:
   - component: {fileID: 789288626122068446}
   - component: {fileID: 3789482199758088371}
   - component: {fileID: 364697060202747541}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Leave_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -924,7 +924,7 @@ GameObject:
   - component: {fileID: 3481458143246466709}
   - component: {fileID: 6519874932612107224}
   - component: {fileID: 3371043628032533771}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Leave_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1007,7 +1007,7 @@ GameObject:
   - component: {fileID: 123564794858490690}
   - component: {fileID: 164548653202667956}
   - component: {fileID: 6919064161140449707}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Leave_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1090,7 +1090,7 @@ GameObject:
   - component: {fileID: 4528319343109900644}
   - component: {fileID: 3527036101295796342}
   - component: {fileID: 2132994955397763457}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1145,7 +1145,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.027431516, y: 0.5443211, z: 0.029358301}
+  m_Size: {x: 0.06, y: 0.5443211, z: 0.06}
   m_Center: {x: 0.0011333163, y: 0.26411295, z: 0.00017067064}
 --- !u!205 &2132994955397763457
 LODGroup:
@@ -1224,7 +1224,7 @@ GameObject:
   - component: {fileID: 3821880245483775084}
   - component: {fileID: 3114792345380155266}
   - component: {fileID: 8848600319604049898}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Leave_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
