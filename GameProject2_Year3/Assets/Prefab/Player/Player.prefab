@@ -381,8 +381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97e93923f7281bd4ea545987f698b054, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WallMat: {fileID: 2100000, guid: 17f81f07b4de55f43a11744088ed051e, type: 2}
   cam: {fileID: 0}
   mask:
     serializedVersion: 2
-    m_Bits: 384
+    m_Bits: 128

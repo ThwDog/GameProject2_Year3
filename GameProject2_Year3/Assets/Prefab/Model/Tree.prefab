@@ -808,7 +808,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 17f81f07b4de55f43a11744088ed051e, type: 2}
+  - {fileID: 2100000, guid: ec14f9c9467e2184986999716e2faa35, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1090,6 +1090,7 @@ GameObject:
   - component: {fileID: 4528319343109900644}
   - component: {fileID: 3527036101295796342}
   - component: {fileID: 2132994955397763457}
+  - component: {fileID: 4809883732228910471}
   m_Layer: 7
   m_Name: Tree
   m_TagString: Untagged
@@ -1157,11 +1158,11 @@ LODGroup:
   serializedVersion: 2
   m_LocalReferencePoint: {x: -0.0017192066, y: 0.26078132, z: -0.005406499}
   m_Size: 0.53461164
-  m_FadeMode: 0
-  m_AnimateCrossFading: 0
+  m_FadeMode: 2
+  m_AnimateCrossFading: 1
   m_LastLODIsBillboard: 0
   m_LODs:
-  - screenRelativeHeight: 0.6
+  - screenRelativeHeight: 0.6669329
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 1503150906235348957}
@@ -1195,7 +1196,7 @@ LODGroup:
     - renderer: {fileID: 1446653183896847909}
     - renderer: {fileID: 5725833778061299438}
     - renderer: {fileID: 7242352510051113644}
-  - screenRelativeHeight: 0.1
+  - screenRelativeHeight: 0.2336002
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 1503150906235348957}
@@ -1213,6 +1214,33 @@ LODGroup:
     - renderer: {fileID: 5725833778061299438}
     - renderer: {fileID: 7242352510051113644}
   m_Enabled: 1
+--- !u!114 &4809883732228910471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8223137289045787477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a850e30c84c8d0645970c9e9644d6274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objRenderer:
+  - {fileID: 1503150906235348957}
+  - {fileID: 1256277929537062076}
+  - {fileID: 8848600319604049898}
+  - {fileID: 6342826913756232788}
+  - {fileID: 8586849471707598465}
+  - {fileID: 799422860913244435}
+  - {fileID: 6919064161140449707}
+  - {fileID: 364697060202747541}
+  - {fileID: 9116588954254686004}
+  - {fileID: 3371043628032533771}
+  - {fileID: 4254004151942013245}
+  - {fileID: 1446653183896847909}
+  - {fileID: 5725833778061299438}
+  - {fileID: 7242352510051113644}
 --- !u!1 &8388864123346959786
 GameObject:
   m_ObjectHideFlags: 0
