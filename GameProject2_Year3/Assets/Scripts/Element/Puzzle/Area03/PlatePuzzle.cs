@@ -10,12 +10,17 @@ public class PlatePuzzle : MonoBehaviour , IRestartable
     // TODO : use signal that player know is it win or need to start again 
 
     [Header("Setting")]
+    [SerializeField][Tooltip("ForCheck")] int stage = 1;
     [SerializeField] private GameObject winCheck; // for player to know that win or lose
+    [SerializeField] [Range(0,20)] private float delay;
     [SerializeField] private List<plateList> originalPlateLists; // list of plate pattern
     internal List<plateList> usePlateLists; // list of plate pattern but it use
     [SerializeField] private List<string> plateName = new List<string>(); // list of plate that player has step
-    [SerializeField] private bool isWin = false;
     public bool canStep;
+    private bool canDelay = true;
+    private bool canCheck = true;
+    [Header("Only for check")]
+    [SerializeField] private bool isWin = false;
 
     private EventScript _event;
 
@@ -38,7 +43,7 @@ public class PlatePuzzle : MonoBehaviour , IRestartable
         }
 
         // Check if plate is same
-        if (usePlateLists[0].plateNum.Length == plateName.Count)
+        if (usePlateLists[0].plateNum.Length == plateName.Count && canCheck)
         {
             bool isSame = true;
             for (int i = 0; i < usePlateLists[0].plateNum.Length; i++)
@@ -52,15 +57,27 @@ public class PlatePuzzle : MonoBehaviour , IRestartable
 
             if (isSame) // finish
             {
-                resetAllPlate();
+                Debug.Log("Win");
+                stage++;
+                // resetAllPlate();
+                if(canDelay) {
+                    canDelay = false;
+                    StartCoroutine(resetDelay());
+                }
                 usePlateLists.Remove(usePlateLists[0]);
-                StartCoroutine(chageColor(2,Color.green));
+                StartCoroutine(changeColor(2,Color.green));
             }
             else // fail
             {
-                resetAllPlate();
+                Debug.Log("lose");
+                stage = 1;
+                // resetAllPlate();
+                if(canDelay) {
+                    canDelay = false;
+                    StartCoroutine(resetDelay());
+                }
                 mirrorList();
-                StartCoroutine(chageColor(2,Color.red));
+                StartCoroutine(changeColor(2,Color.red));
             }
         }
         
@@ -68,6 +85,19 @@ public class PlatePuzzle : MonoBehaviour , IRestartable
 
     private void mirrorList(){
         usePlateLists = originalPlateLists.ToList();
+    }
+
+    IEnumerator resetDelay(){
+        canCheck = false;
+        canStep = false;
+
+        yield return new WaitForSeconds(delay);
+        resetAllPlate();
+
+        canStep = true;
+        canDelay = true;
+        canCheck = true;
+        yield break;
     }
 
     // usee when ever player win or lose
@@ -97,7 +127,7 @@ public class PlatePuzzle : MonoBehaviour , IRestartable
 
 
     #region just for check
-    IEnumerator chageColor(float time ,Color color){
+    IEnumerator changeColor(float time ,Color color){
         MeshRenderer mesh = winCheck.GetComponent<MeshRenderer>();
         mesh.material.color = color;
         yield return new WaitForSeconds(time);

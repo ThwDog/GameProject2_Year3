@@ -14863,7 +14863,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ad38c29ca649874c8b1a9ea2da1a512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stage: 0
   winCheck: {fileID: 1345655390960538186}
+  delay: 1
   originalPlateLists:
   - plateNum:
     - {fileID: 1395232383964614747}
