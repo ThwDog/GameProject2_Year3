@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 5131780679140757749}
   - component: {fileID: 5863041443164425176}
   - component: {fileID: 7866076482867789348}
-  - component: {fileID: 8726485855738178758}
+  - component: {fileID: 8685195273215669931}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -369,7 +369,7 @@ MonoBehaviour:
   floorLayer:
     serializedVersion: 2
     m_Bits: 256
---- !u!114 &8726485855738178758
+--- !u!114 &8685195273215669931
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -378,10 +378,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 6461981819148202631}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97e93923f7281bd4ea545987f698b054, type: 3}
+  m_Script: {fileID: 11500000, guid: 35e2bbeb4768fe94c8ce8af7603d7ec8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
-  mask:
+  LayerMask:
     serializedVersion: 2
     m_Bits: 128
+  Target: {fileID: 846701806657894281}
+  Camera: {fileID: 0}
+  FadedAlpha: 0.33
+  RetainShadows: 1
+  TargetPositionOffset: {x: 0, y: 1, z: 0}
+  FadeSpeed: 1
+  ObjectsBlockingView: []

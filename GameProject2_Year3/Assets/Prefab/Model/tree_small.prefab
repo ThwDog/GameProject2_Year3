@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 8743999089340406703}
   - component: {fileID: 7134198886529977239}
   - component: {fileID: 728263660524390719}
-  m_Layer: 0
+  - component: {fileID: 5976407945495557251}
+  m_Layer: 7
   m_Name: tree_small
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,7 +82,24 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.23398331, y: 2.649431, z: 0.2578522}
-  m_Center: {x: -0.27656955, y: -0.08949363, z: -0.011319622}
+  m_Center: {x: -0.27656955, y: 1.34, z: -0.011319622}
+--- !u!114 &5976407945495557251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440844946194867903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f1d7caa13522f44da5eec0d21745b5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Renderers:
+  - {fileID: 9026179081110154023}
+  Position: {x: 0, y: 0, z: 0}
+  Materials: []
+  InitialAlpha: 0
 --- !u!1 &4156126264799049088
 GameObject:
   m_ObjectHideFlags: 0
@@ -93,7 +111,7 @@ GameObject:
   - component: {fileID: 553965153985633703}
   - component: {fileID: 616012180471848948}
   - component: {fileID: 9026179081110154023}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tree_small
   m_TagString: Untagged
   m_Icon: {fileID: 0}

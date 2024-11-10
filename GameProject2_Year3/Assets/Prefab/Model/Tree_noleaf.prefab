@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 8309649185341453005}
   - component: {fileID: 6930312004254476681}
   - component: {fileID: 5905643435053460931}
-  m_Layer: 0
+  - component: {fileID: 3665524424244557848}
+  m_Layer: 7
   m_Name: Tree_noleaf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82,6 +83,23 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.7811304, y: 8.97309, z: 0.8959321}
   m_Center: {x: 0.2501363, y: 4.4242835, z: 0.38815433}
+--- !u!114 &3665524424244557848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118720556851779736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f1d7caa13522f44da5eec0d21745b5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Renderers:
+  - {fileID: 4090834023131799351}
+  Position: {x: 0, y: 0, z: 0}
+  Materials: []
+  InitialAlpha: 0
 --- !u!1 &2813869377167769795
 GameObject:
   m_ObjectHideFlags: 0
@@ -93,7 +111,7 @@ GameObject:
   - component: {fileID: 5123009757337431982}
   - component: {fileID: 9169981630107840454}
   - component: {fileID: 4090834023131799351}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tree_Lonlon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
