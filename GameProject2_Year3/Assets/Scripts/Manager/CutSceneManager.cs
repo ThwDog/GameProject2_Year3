@@ -137,6 +137,16 @@ public class CutSceneManager : MonoBehaviour , IEnable
        sprite.color = endColor;
     } 
 
+    // fade in to default color
+    public void fadeInOtherImg(Image sprite){
+        StartCoroutine(Fade(sprite, defaultColor));
+    }
+
+    // fade out of default color
+    public void fadeOutOtherImg(Image sprite){
+        StartCoroutine(Fade(sprite, fadeColor));
+    }
+
 
     // public void _PlayPlayerSprite(){
     //     // if(playerSprite == null) {Debug.Log("yo"); return;}

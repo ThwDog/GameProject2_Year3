@@ -176,6 +176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3043884347582294897}
   - component: {fileID: 5722915981453792124}
+  - component: {fileID: 8534985863905677772}
   m_Layer: 0
   m_Name: house_no7
   m_TagString: Untagged
@@ -221,3 +222,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.13732088, y: 0.17615186, z: 0.17104782}
   m_Center: {x: -0.00091509026, y: 0.08693451, z: -0.10294875}
+--- !u!205 &8534985863905677772
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6083205708097479222}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.6
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 5243882800654704818}
+    - renderer: {fileID: 5794163884476580868}
+  - screenRelativeHeight: 0.3
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 5243882800654704818}
+    - renderer: {fileID: 5794163884476580868}
+  - screenRelativeHeight: 0.1
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 5243882800654704818}
+    - renderer: {fileID: 5794163884476580868}
+  m_Enabled: 1

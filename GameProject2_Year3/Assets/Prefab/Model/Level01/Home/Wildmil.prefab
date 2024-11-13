@@ -177,6 +177,7 @@ GameObject:
   - component: {fileID: 4388551769214154055}
   - component: {fileID: 761216053015374244}
   - component: {fileID: 2376033077994033400}
+  - component: {fileID: 1176508227112621372}
   m_Layer: 0
   m_Name: Wildmil
   m_TagString: Untagged
@@ -238,3 +239,33 @@ MonoBehaviour:
   target:
   - {fileID: 7431239996394461038}
   - {fileID: 8291388052224038247}
+--- !u!205 &1176508227112621372
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8775883165924790489}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.6
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 3499401899777945402}
+    - renderer: {fileID: 4683099298221852044}
+  - screenRelativeHeight: 0.3
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 3499401899777945402}
+    - renderer: {fileID: 4683099298221852044}
+  - screenRelativeHeight: 0.1
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 3499401899777945402}
+    - renderer: {fileID: 4683099298221852044}
+  m_Enabled: 1

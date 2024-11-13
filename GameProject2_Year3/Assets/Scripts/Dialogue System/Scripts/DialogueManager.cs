@@ -320,7 +320,12 @@ namespace HeneGames.DialogueSystem
         // use for play dialogue that doesn't need to set trigger
         public void playDialogue(){
             DialogueUI.instance.StartDialogue(this);
-            FindObjectOfType<DialogueTrigger>().startDialogueEvent.Invoke();
+            try{
+                FindObjectOfType<DialogueTrigger>().startDialogueEvent.Invoke();
+            }
+            catch{
+
+            }
         }
     }
 

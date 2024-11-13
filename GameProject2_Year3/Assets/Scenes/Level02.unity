@@ -800,6 +800,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1725021869}
     - target: {fileID: 6605945264782136370, guid: da8df9475cd8b3b43a1bec8d78daa47b, type: 3}
+      propertyPath: canPlayOnStart
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6605945264782136370, guid: da8df9475cd8b3b43a1bec8d78daa47b, type: 3}
       propertyPath: playerAnimator
       value: 
       objectReference: {fileID: 1725021866}
@@ -807,6 +811,10 @@ PrefabInstance:
       propertyPath: playerSpriteRen
       value: 
       objectReference: {fileID: 1725021868}
+    - target: {fileID: 6605945264782136370, guid: da8df9475cd8b3b43a1bec8d78daa47b, type: 3}
+      propertyPath: playCutSceneOnstart
+      value: 
+      objectReference: {fileID: 584147628}
     - target: {fileID: 6605945264782136370, guid: da8df9475cd8b3b43a1bec8d78daa47b, type: 3}
       propertyPath: npcAnimCon.Array.data[2].controller
       value: 
@@ -3127,6 +3135,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1207568464689222538, guid: 0343d803d5932f94aba48afa635624b1, type: 3}
+      propertyPath: sfxSound.Array.data[5].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: d8fc5410c23e41d4b99ddd4c6ac6ecfd, type: 3}
     - target: {fileID: 2634802889893500554, guid: 0343d803d5932f94aba48afa635624b1, type: 3}
       propertyPath: m_Name
       value: SoundManager
@@ -4865,9 +4877,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 584147627}
-        m_TargetAssemblyTypeName: HeneGames.DialogueSystem.DialogueManager, Assembly-CSharp
-        m_MethodName: playDialogue
+      - m_Target: {fileID: 562622534}
+        m_TargetAssemblyTypeName: AmbientPlay, Assembly-CSharp
+        m_MethodName: stop
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4877,9 +4889,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 562622534}
-        m_TargetAssemblyTypeName: AmbientPlay, Assembly-CSharp
-        m_MethodName: stop
+      - m_Target: {fileID: 584147627}
+        m_TargetAssemblyTypeName: HeneGames.DialogueSystem.DialogueManager, Assembly-CSharp
+        m_MethodName: playDialogue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

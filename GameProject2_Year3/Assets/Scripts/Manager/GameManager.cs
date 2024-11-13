@@ -27,5 +27,8 @@ public class GameManager : SingletonClass<GameManager>
             Debug.Log("Pause");
             uiManager.pauseMenu();
         }
+        if(Input.GetMouseButtonDown(0)){
+            SoundManager.instance.PlaySfx("Click");
+        }
     }
 }

@@ -675,6 +675,7 @@ GameObject:
   - component: {fileID: 5446407461758724395}
   - component: {fileID: 7956319079172065755}
   - component: {fileID: 6326316983382557614}
+  - component: {fileID: 4076736069104249642}
   m_Layer: 0
   m_Name: Balk_smith_all 1
   m_TagString: Untagged
@@ -752,6 +753,46 @@ MonoBehaviour:
   - {fileID: 2821277916473375008}
   - {fileID: 7494281010842672458}
   - {fileID: 536426581505893803}
+--- !u!205 &4076736069104249642
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8611060447698779551}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: -0.2198646, y: 0.31262505, z: 0.036530018}
+  m_Size: 0.92321837
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.3736284
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 1370702870978352071}
+    - renderer: {fileID: 3031701124530268191}
+    - renderer: {fileID: 3751213443760821738}
+    - renderer: {fileID: 4079637366419493685}
+    - renderer: {fileID: 8028606143269857392}
+    - renderer: {fileID: 5711942589839518091}
+    - renderer: {fileID: 6549078747520172348}
+    - renderer: {fileID: 228658228015538252}
+    - renderer: {fileID: 3344428367783286333}
+    - renderer: {fileID: 7930302119676622818}
+  - screenRelativeHeight: 0.2966428
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 3751213443760821738}
+    - renderer: {fileID: 4079637366419493685}
+    - renderer: {fileID: 6549078747520172348}
+  - screenRelativeHeight: 0.22850236
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 3751213443760821738}
+    - renderer: {fileID: 4079637366419493685}
+    - renderer: {fileID: 6549078747520172348}
+  m_Enabled: 1
 --- !u!1 &8683875758812177749
 GameObject:
   m_ObjectHideFlags: 0
