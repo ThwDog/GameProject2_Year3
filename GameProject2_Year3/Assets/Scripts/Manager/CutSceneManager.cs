@@ -98,7 +98,7 @@ public class CutSceneManager : MonoBehaviour , IEnable
     }
 
     // can use in PlayCutScene
-    private void closeSpriteRen(Image obj){
+    public void closeSpriteRen(Image obj){
         // close sprite render
         if(obj.gameObject.activeSelf) obj.gameObject.SetActive(false);
     }

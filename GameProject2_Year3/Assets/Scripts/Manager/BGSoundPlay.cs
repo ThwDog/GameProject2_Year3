@@ -5,6 +5,7 @@ using UnityEngine;
 public class BGSoundPlay : MonoBehaviour , Ipauseable
 {
     [SerializeField] string bgSound;
+    [SerializeField] bool playOnStart = true;
 
     public void pause()
     {
@@ -18,6 +19,14 @@ public class BGSoundPlay : MonoBehaviour , Ipauseable
 
     private void Start() {
         SoundManager.instance.StopAllMusic();
+        if(playOnStart) {
+            Debug.Log("Play Sound");
+            SoundManager.instance.PlayMusic(bgSound);
+        }
+    }
+
+    public void playNormal(){
+        SoundManager.instance.StopAllMusic();
         SoundManager.instance.PlayMusic(bgSound);
     }
 
@@ -27,12 +36,12 @@ public class BGSoundPlay : MonoBehaviour , Ipauseable
         SoundManager.instance.PlayMusic(sound);
     }
 
-    private void Update() {
-        // if(GameManager.instance.paused){
-        //     pause();
-        // }
-        // else if(!SoundManager.instance.checkMusic()){
-        //     resume();
-        // }
-    }
+    // private void Update() {
+    //     if(GameManager.instance.paused){
+    //         pause();
+    //     }
+    //     else if(!SoundManager.instance.checkMusic()){
+    //         resume();
+    //     }
+    // }
 }

@@ -200,7 +200,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 362f6ce5c2a6a5b46ab4638c00826d6c, type: 3}
   - nameSound: Click
     sound: {fileID: 8300000, guid: d8fc5410c23e41d4b99ddd4c6ac6ecfd, type: 3}
-    clip: {fileID: 8300000, guid: da2d39a4f01778247913b5f842abf3af, type: 3}
+    clip: {fileID: 8300000, guid: d8fc5410c23e41d4b99ddd4c6ac6ecfd, type: 3}
   ambientSound:
   - nameSound: Reeling
     sound: {fileID: 8300000, guid: 20076fc9922735340bb3788c13b7a7c9, type: 3}
