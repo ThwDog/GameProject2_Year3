@@ -831,6 +831,10 @@ PrefabInstance:
       propertyPath: npcAnimCon.Array.data[2].startSprite
       value: 
       objectReference: {fileID: 21300000, guid: eaa3561b36b1db64fbb3814d4e6afbf4, type: 3}
+    - target: {fileID: 6910818708839464946, guid: da8df9475cd8b3b43a1bec8d78daa47b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6928273805097294889, guid: da8df9475cd8b3b43a1bec8d78daa47b, type: 3}
       propertyPath: m_Name
       value: Found Fishing Rod
@@ -1299,7 +1303,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cutSceneSprite: []
-  cutSceneImage: {fileID: 0}
+  cutSceneImageUI: {fileID: 0}
+  cutSceneDelay: 0
+  playCutSceneWithDialogue: 0
 --- !u!1 &618024746
 GameObject:
   m_ObjectHideFlags: 0
@@ -3912,6 +3918,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bgSound: Forest
+  playOnStart: 1
 --- !u!4 &1923307661
 Transform:
   m_ObjectHideFlags: 0
