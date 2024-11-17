@@ -801,7 +801,7 @@ PrefabInstance:
       objectReference: {fileID: 1725021869}
     - target: {fileID: 6605945264782136370, guid: da8df9475cd8b3b43a1bec8d78daa47b, type: 3}
       propertyPath: canPlayOnStart
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6605945264782136370, guid: da8df9475cd8b3b43a1bec8d78daa47b, type: 3}
       propertyPath: playerAnimator
@@ -814,7 +814,7 @@ PrefabInstance:
     - target: {fileID: 6605945264782136370, guid: da8df9475cd8b3b43a1bec8d78daa47b, type: 3}
       propertyPath: playCutSceneOnstart
       value: 
-      objectReference: {fileID: 584147628}
+      objectReference: {fileID: 0}
     - target: {fileID: 6605945264782136370, guid: da8df9475cd8b3b43a1bec8d78daa47b, type: 3}
       propertyPath: npcAnimCon.Array.data[2].controller
       value: 
@@ -1670,7 +1670,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4528319343109900644, guid: cf86cef775e65994fb7ed5489e22e395, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 255.69
+      value: 262.99
       objectReference: {fileID: 0}
     - target: {fileID: 4528319343109900644, guid: cf86cef775e65994fb7ed5489e22e395, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1678,7 +1678,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4528319343109900644, guid: cf86cef775e65994fb7ed5489e22e395, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 49.22
+      value: 41.34
       objectReference: {fileID: 0}
     - target: {fileID: 4528319343109900644, guid: cf86cef775e65994fb7ed5489e22e395, type: 3}
       propertyPath: m_LocalRotation.w

@@ -11,7 +11,7 @@ public class CutSceneManager : MonoBehaviour , IEnable
     // TODO : one manager per stage
     // TODO : Run on Unity Event On Player Scene
     [Header("CutScene On Start")]
-    [SerializeField] PlayCutScene playCutSceneOnstart;
+    [SerializeField] PlayCutScene playCutSceneOnstart; // Cant use Cut Scene With dialogue
     [SerializeField] bool canPlayOnStart = false;
     [SerializeField] float waitSecForPlay; // Make IEmulator For wait play 
     bool hasPlay = false;

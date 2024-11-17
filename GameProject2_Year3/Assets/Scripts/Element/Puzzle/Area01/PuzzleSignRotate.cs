@@ -17,7 +17,7 @@ public class PuzzleSignRotate : RotateScript ,checkBool
     EventScript _event;
 
 
-    private void Start() {
+    private void OnEnable() {
         _event = GetComponent<EventScript>();
         showUI = GetComponent<ShowUICollision>();
     }
@@ -81,11 +81,12 @@ public class PuzzleSignRotate : RotateScript ,checkBool
 
                 if( Mathf.Abs(rotate - (float)degWin) < tolerance ){
                     isWin = true;
+                    canRote = !canRote;
+                    showUI.CloseDescription();
                     _event._FinishEvent();
                 }
                 else{
                     isWin = false;
-                    _event._FinishEvent();
                 }
                 break;
             case roteType.y :
@@ -94,11 +95,12 @@ public class PuzzleSignRotate : RotateScript ,checkBool
 
                 if( Mathf.Abs(rotate - (float)degWin) < tolerance ){
                     isWin = true;
+                    canRote = !canRote;
+                    showUI.CloseDescription();
                     _event._FinishEvent();
                 }
                 else{
                     isWin = false;
-                    _event._FinishEvent();
                 }
                 break;
             case roteType.z :
@@ -107,11 +109,12 @@ public class PuzzleSignRotate : RotateScript ,checkBool
 
                 if( Mathf.Abs(rotate - (float)degWin) < tolerance ){
                     isWin = true;
+                    canRote = !canRote;
+                    showUI.CloseDescription();
                     _event._FinishEvent();
                 }
                 else{
                     isWin = false;
-                    _event._FinishEvent();
                 }
                 break;
         }
