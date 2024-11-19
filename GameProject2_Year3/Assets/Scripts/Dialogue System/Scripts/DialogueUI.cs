@@ -45,7 +45,7 @@ namespace HeneGames.DialogueSystem
         [SerializeField] private TextMeshProUGUI messageText;
         [SerializeField] private GameObject dialogueWindow;
         [SerializeField] private GameObject interactionUI;
-
+        [SerializeField] Image dialogueBG; // use for change dialogue bg
         [Header("Settings")]
         [SerializeField] private bool animateText = true;
 
@@ -54,6 +54,9 @@ namespace HeneGames.DialogueSystem
 
         [Header("Next sentence input")]
         public KeyCode actionInput = KeyCode.Space;
+        [Header("Dialogue Bg Sprite")]
+        [SerializeField] Sprite cutSceneBG , normalBG; // use for change dialogue bg
+
 
         private void Update()
         {
@@ -209,5 +212,17 @@ namespace HeneGames.DialogueSystem
                 yield return new WaitForSeconds(0.1f * _speed);
             }
         }
+
+        public void useCutSceneBg(){
+            dialogueBG.sprite = cutSceneBG;
+        }
+
+        public void useNormalBg(){
+            dialogueBG.sprite = normalBG;
+        }
+
+        // public void textColor(Color _color){
+        //     messageText.color = _color;
+        // }
     }
 }

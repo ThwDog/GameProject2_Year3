@@ -13,8 +13,9 @@ public class PlayCutScene : MonoBehaviour
     // [Tooltip("Set it to true if want to play in start")]public bool playCutSceneOnStart = false; // set to true if want to play on start
     [SerializeField] Sprite[] cutSceneSprite;
     [SerializeField] Image cutSceneImageUI;
-    [SerializeField] float cutSceneDelay;
     [SerializeField] bool playCutSceneWithDialogue = false;
+    [Header("With out dialogue")]
+    [SerializeField] float cutSceneDelay;
     // bool hasPlayDialogue = false;
     DialogueManager dialogueManager;
     CutSceneManager cutSceneManager;
@@ -26,11 +27,7 @@ public class PlayCutScene : MonoBehaviour
         dialogueManager = GetComponent<DialogueManager>();
         cutSceneManager = GetComponentInParent<CutSceneManager>();
         _event = GetComponent<EventScript>();
-        // play cut scene on start
-        // if(playCutSceneOnStart && !hasPlayDialogue){
-        //     if(dialogueManager) dialogueManager.playDialogue();
-        //     hasPlayDialogue = true;
-        // }
+        
     }
 
     public void _playCutScene() {

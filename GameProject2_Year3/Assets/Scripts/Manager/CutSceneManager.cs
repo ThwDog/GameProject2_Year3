@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Animations;
+using HeneGames.DialogueSystem;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,7 +11,7 @@ public class CutSceneManager : MonoBehaviour , IEnable
     // TODO : one manager per stage
     // TODO : Run on Unity Event On Player Scene
     [Header("CutScene On Start")]
-    [SerializeField] PlayCutScene playCutSceneOnstart; // Cant use Cut Scene With dialogue
+    [SerializeField] PlayCutScene playCutSceneOnStart; // Cant use Cut Scene With dialogue
     [SerializeField] bool canPlayOnStart = false;
     [SerializeField] float waitSecForPlay; // Make IEmulator For wait play 
     bool hasPlay = false;
@@ -32,11 +32,12 @@ public class CutSceneManager : MonoBehaviour , IEnable
 
     private void Update() {
         if(hasPlay) return;
-        if(!playCutSceneOnstart) return;
+        if(!playCutSceneOnStart) return;
         if(!canPlayOnStart) return;
         else{
             if(!hasPlay){
-                playCutSceneOnstart._playCutScene(); // Make IEmulator For wait play 
+                DialogueUI.instance.useCutSceneBg();
+                playCutSceneOnStart._playCutScene(); // Make IEmulator For wait play 
                 hasPlay = true;
             }
         }
