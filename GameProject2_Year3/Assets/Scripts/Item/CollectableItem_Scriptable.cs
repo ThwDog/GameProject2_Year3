@@ -8,6 +8,7 @@ public class CollectableItem_Scriptable : ScriptableObject {
     public enum level{
         one , two, three , four 
     }
+    public Sprite _sprite;
     
     public string objNam;
     public string disc;// discription of item

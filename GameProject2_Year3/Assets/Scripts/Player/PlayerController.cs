@@ -16,13 +16,18 @@ public class PlayerController : MonoBehaviour , Ipauseable
     private float current_GValue;
     [SerializeField] private float stickingGravityPro = 20f;
     [SerializeField][Range(-10.0f, 10.0f)] float input_Delay;
-    internal Collider playerCollider;
-    bool isGrounded;
 
     //Animation
     bool isFishing = false;
+    [Header("Animation")]
     public Animator anim;
+    [SerializeField] GameObject showItemSprite;
+    [SerializeField] bool paused = false;
+
     SpriteRenderer sprite;
+    bool isGrounded;
+
+    internal Collider playerCollider;
     internal CharacterController controller;
     private InputManager input;
     // [SerializeField] List<string> listOfAnimation;
@@ -37,7 +42,6 @@ public class PlayerController : MonoBehaviour , Ipauseable
         return Physics.Raycast(transform.position, Vector3.down, distToGround + 0.1f);
     }
 
-    [SerializeField] bool paused = false;
 
     //check if animation is play
     bool isAnimPlaying(int animLayer, string stateName)
@@ -201,4 +205,15 @@ public class PlayerController : MonoBehaviour , Ipauseable
         canPlayWalkSound = true;
     }
 
+    public void enabledShowItemSprite(){
+        showItemSprite.SetActive(true);
+    }
+
+    public void disableShowItemSprite(){
+        showItemSprite.SetActive(false);
+    }
+
+    public void setShowItemSprite(Sprite _sprite){
+        showItemSprite.GetComponent<SpriteRenderer>().sprite = _sprite;
+    }
 }

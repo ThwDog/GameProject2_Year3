@@ -36,6 +36,7 @@ public class ItemScript : MonoBehaviour , Ipauseable , IRestartable
     public void Collect(InventorySystem _inventory){
         if(_inventory.inventory.Contains(_Scriptable)) return;
         _inventory.player.anim.SetTrigger("Collect");
+        if(_Scriptable._sprite != null) _inventory.player.setShowItemSprite(_Scriptable._sprite);
         _inventory.inventory.Add(_Scriptable);
         // if(!quest) quest = FindAnyObjectByType<QuestManager>();
         // quest.changeQuestList();
