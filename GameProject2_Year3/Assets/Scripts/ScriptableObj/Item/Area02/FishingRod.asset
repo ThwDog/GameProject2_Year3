@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5e65e7fc4e62584f9c924c340c881a6, type: 3}
   m_Name: FishingRod
   m_EditorClassIdentifier: 
+  _sprite: {fileID: 21300000, guid: 3ac3a70be2d1a0a41834e3eb692ee356, type: 3}
   objNam: FishingRod
   disc: 
   obj: {fileID: 0}

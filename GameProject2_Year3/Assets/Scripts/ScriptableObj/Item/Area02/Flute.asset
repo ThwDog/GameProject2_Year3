@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5e65e7fc4e62584f9c924c340c881a6, type: 3}
   m_Name: Flute
   m_EditorClassIdentifier: 
+  _sprite: {fileID: 21300000, guid: e39e007362c23c84183be52bb2146aa5, type: 3}
   objNam: Flute
   disc: 
   obj: {fileID: 0}

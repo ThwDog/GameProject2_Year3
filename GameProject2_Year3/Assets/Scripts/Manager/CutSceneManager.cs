@@ -36,7 +36,7 @@ public class CutSceneManager : MonoBehaviour , IEnable
         if(!canPlayOnStart) return;
         else{
             if(!hasPlay){
-                DialogueUI.instance.useCutSceneBg();
+                // DialogueUI.instance.useCutSceneBg();
                 playCutSceneOnStart._playCutScene(); // Make IEmulator For wait play 
                 hasPlay = true;
             }

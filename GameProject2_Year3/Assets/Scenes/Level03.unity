@@ -660,7 +660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f7ed4639bd336f4d9936cea391adabf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
+  cam: {fileID: 1626387700}
 --- !u!4 &456891849
 Transform:
   m_ObjectHideFlags: 0

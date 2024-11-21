@@ -29,8 +29,10 @@ public class DetectMouseClick : MonoBehaviour , Ipauseable
             }
             else{
                 if(!spawn || spawn.isSpawn) return;
-                spawn.CloseDescription();
-                spawn = null;
+                else{
+                    spawn.CloseDescription();
+                    spawn = null;
+                }
             }
         }
     }

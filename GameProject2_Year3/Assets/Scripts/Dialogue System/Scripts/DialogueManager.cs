@@ -33,6 +33,8 @@ namespace HeneGames.DialogueSystem
         public UnityEvent startDialogueEvent;
         public UnityEvent nextSentenceDialogueEvent;
         public UnityEvent endDialogueEvent;
+        [Header("")]
+        [SerializeField] bool useCutSceneBG = false;
         public bool questIsFinish = false;
         private bool startQuest;
         [Tooltip("Set it if you req item to start dialogue")][SerializeField] private List<CollectableItem_Scriptable> req_item = new List<CollectableItem_Scriptable>();  // check if player inventory and reqment inven is match
@@ -47,7 +49,6 @@ namespace HeneGames.DialogueSystem
         [SerializeField] private List<NPC_Centence> talkAgainSentences = new List<NPC_Centence>(); // player has spoke to this npc
         [SerializeField] private bool canTalk = true;
         [SerializeField] private List<NPC_Centence> cantTalkToSentences = new List<NPC_Centence>(); // player doesnt have something
-
         private void Start() {
             sentences = NormalSentences;
         }
@@ -82,6 +83,8 @@ namespace HeneGames.DialogueSystem
 
                 startDialogueEvent.Invoke();
 
+                if(useCutSceneBG) DialogueUI.instance.useCutSceneBg();
+                else DialogueUI.instance.useNormalBg();
                 //If component found start dialogue
                 DialogueUI.instance.StartDialogue(this);
 
@@ -107,6 +110,8 @@ namespace HeneGames.DialogueSystem
 
                     startDialogueEvent.Invoke();
 
+                    if(useCutSceneBG) DialogueUI.instance.useCutSceneBg();
+                    else DialogueUI.instance.useNormalBg();        
                     //If component found start dialogue
                     DialogueUI.instance.StartDialogue(this);
 
@@ -319,6 +324,8 @@ namespace HeneGames.DialogueSystem
 
         // use for play dialogue that doesn't need to set trigger
         public void playDialogue(){
+            if(useCutSceneBG) DialogueUI.instance.useCutSceneBg();
+            else DialogueUI.instance.useNormalBg();
             DialogueUI.instance.StartDialogue(this);
             try{
                 FindObjectOfType<DialogueTrigger>().startDialogueEvent.Invoke();

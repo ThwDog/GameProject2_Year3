@@ -206,7 +206,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 312.8, y: -59.985}
+  m_AnchoredPosition: {x: 312.8, y: -55.24}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5297935178409787650
@@ -671,7 +671,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 17
+  m_fontSize: 10
   m_fontSizeBase: 19.6
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -984,7 +984,7 @@ MonoBehaviour:
   animateText: 1
   textAnimationSpeed: 0.5
   actionInput: 32
-  cutSceneBG: {fileID: 21300000, guid: d04dbcb750b05d74e9ecc8007af8860f, type: 3}
+  cutSceneBG: {fileID: 21300000, guid: 2440612dbb9b6c042923e60c9bd03803, type: 3}
   normalBG: {fileID: 21300000, guid: d04dbcb750b05d74e9ecc8007af8860f, type: 3}
 --- !u!223 &6449296285829880522
 Canvas:
@@ -1007,7 +1007,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!114 &6449296285829880523
 MonoBehaviour:

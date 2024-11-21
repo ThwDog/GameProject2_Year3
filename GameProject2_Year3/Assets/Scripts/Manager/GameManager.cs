@@ -30,5 +30,8 @@ public class GameManager : SingletonClass<GameManager>
         if(Input.GetMouseButtonDown(0)){
             SoundManager.instance.PlaySfx("Click");
         }
+        if(Input.GetKeyUp(KeyCode.F1)){
+            GetComponent<CheatCode>().cheatEnable = !GetComponent<CheatCode>().cheatEnable;
+        }
     }
 }
