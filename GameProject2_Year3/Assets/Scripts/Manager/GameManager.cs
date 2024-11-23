@@ -34,4 +34,8 @@ public class GameManager : SingletonClass<GameManager>
             GetComponent<CheatCode>().cheatEnable = !GetComponent<CheatCode>().cheatEnable;
         }
     }
+
+    public void NextChapter(){
+        loadScene._LoadScene();
+    }
 }
