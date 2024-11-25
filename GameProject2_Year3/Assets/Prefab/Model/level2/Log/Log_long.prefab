@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3322299184987064845}
   - component: {fileID: 3811315186952638074}
   - component: {fileID: 5934997144532982033}
+  - component: {fileID: 2819796163280901275}
   m_Layer: 0
   m_Name: Log_long
   m_TagString: Untagged
@@ -105,3 +106,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.24342239, y: 0.033964563, z: 0.030485159}
   m_Center: {x: 0.013186647, y: 0.01695252, z: 0.0048414213}
+--- !u!205 &2819796163280901275
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3722312423666770071}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0.0131866485, y: 0.016952518, z: 0.011828873}
+  m_Size: 0.24342221
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.6
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 3811315186952638074}
+  - screenRelativeHeight: 0.29784447
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 3811315186952638074}
+  - screenRelativeHeight: 0.13052711
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 3811315186952638074}
+  m_Enabled: 1

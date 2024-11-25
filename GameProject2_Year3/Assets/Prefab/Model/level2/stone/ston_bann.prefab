@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1991881376991986204}
   - component: {fileID: 9072498603575135588}
   - component: {fileID: 6117336816051249102}
+  - component: {fileID: 3397644106089109540}
   m_Layer: 0
   m_Name: ston_bann
   m_TagString: Untagged
@@ -105,3 +106,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.037791707, y: 0.010989185, z: 0.02826841}
   m_Center: {x: -0.00033388752, y: 0.001260217, z: 0}
+--- !u!205 &3397644106089109540
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484002749235986392}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: -0.0003338866, y: 0.0012602173, z: 0}
+  m_Size: 0.037791707
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.6
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 9072498603575135588}
+  - screenRelativeHeight: 0.3
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 9072498603575135588}
+  - screenRelativeHeight: 0.046815116
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 9072498603575135588}
+  m_Enabled: 1

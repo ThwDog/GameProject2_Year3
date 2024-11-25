@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 461118483276978074}
   - component: {fileID: 298635809752410944}
   - component: {fileID: 8833778308719428062}
+  - component: {fileID: 3655719616290747880}
   m_Layer: 0
   m_Name: stone_normal_no1
   m_TagString: Untagged
@@ -105,3 +106,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.04957331, y: 0.030430075, z: 0.045020625}
   m_Center: {x: 0.001171709, y: 0.0152150355, z: 0.0014651138}
+--- !u!205 &3655719616290747880
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5009406465521134412}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0.0011717081, y: 0.0152150355, z: 0.0014651138}
+  m_Size: 0.04957331
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.6
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 298635809752410944}
+  - screenRelativeHeight: 0.3
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 298635809752410944}
+  - screenRelativeHeight: 0.0774
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 298635809752410944}
+  m_Enabled: 1

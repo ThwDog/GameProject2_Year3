@@ -280,6 +280,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6242931843680573930}
+  - component: {fileID: 8685532791010984519}
   m_Layer: 0
   m_Name: Wood_log_mushroom
   m_TagString: Untagged
@@ -297,7 +298,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.0040838886, y: 0.8020059, z: 0.00086699286, w: -0.5973015}
   m_LocalPosition: {x: 17.997, y: -2.884, z: 97.198}
-  m_LocalScale: {x: 25, y: 25, z: 25}
+  m_LocalScale: {x: 30.000002, y: 30.000002, z: 30.000002}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1565306365478113228}
@@ -307,6 +308,45 @@ Transform:
   - {fileID: 4366402793880323135}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0.2, y: 253.354, z: -0.435}
+--- !u!205 &8685532791010984519
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6628921440099148434}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: -0.0000009536743, y: 0.033537194, z: 0.007992312}
+  m_Size: 0.14387666
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.6
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 7987174409009091510}
+    - renderer: {fileID: 1513890480955095589}
+    - renderer: {fileID: 8872063892595862799}
+    - renderer: {fileID: 7670516270168736458}
+    - renderer: {fileID: 3923955654975318381}
+  - screenRelativeHeight: 0.3
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 7987174409009091510}
+    - renderer: {fileID: 1513890480955095589}
+    - renderer: {fileID: 8872063892595862799}
+    - renderer: {fileID: 7670516270168736458}
+    - renderer: {fileID: 3923955654975318381}
+  - screenRelativeHeight: 0.07011112
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 7987174409009091510}
+    - renderer: {fileID: 1513890480955095589}
+    - renderer: {fileID: 8872063892595862799}
+    - renderer: {fileID: 7670516270168736458}
+    - renderer: {fileID: 3923955654975318381}
+  m_Enabled: 1
 --- !u!1 &6744543648578095013
 GameObject:
   m_ObjectHideFlags: 0

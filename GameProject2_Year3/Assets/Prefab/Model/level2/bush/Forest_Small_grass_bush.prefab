@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4898613683321292975}
   - component: {fileID: 4123525540331169448}
   - component: {fileID: 3795249094720337531}
+  - component: {fileID: 4873938318865825755}
   m_Layer: 0
   m_Name: Forest_Small_grass_bush
   m_TagString: Untagged
@@ -83,3 +84,30 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!205 &4873938318865825755
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5454595773584386230}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0.0024467837, y: 0.009593936, z: 0.002573166}
+  m_Size: 0.061949037
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.6
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 3795249094720337531}
+  - screenRelativeHeight: 0.3
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 3795249094720337531}
+  - screenRelativeHeight: 0.146456
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 0}
+  m_Enabled: 1

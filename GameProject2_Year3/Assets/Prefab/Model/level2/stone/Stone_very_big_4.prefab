@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1827432567936841561}
   - component: {fileID: 1174306458659848798}
   - component: {fileID: 7401732408028524505}
+  - component: {fileID: 6661228965850784462}
   m_Layer: 0
   m_Name: Stone_very_big_4
   m_TagString: Untagged
@@ -105,3 +106,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.22956474, y: 0.14947143, z: 0.14278612}
   m_Center: {x: -0.006295003, y: 0.074735716, z: -0.0017702244}
+--- !u!205 &6661228965850784462
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101298090164807034}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: -0.006295003, y: 0.074735716, z: -0.0017702281}
+  m_Size: 0.22956474
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.6
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 1174306458659848798}
+  - screenRelativeHeight: 0.3
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 1174306458659848798}
+  - screenRelativeHeight: 0.0774
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 1174306458659848798}
+  m_Enabled: 1
