@@ -11,6 +11,7 @@ public class PuzzleSignRotate : RotateScript ,checkBool
     [SerializeField] bool isWin = false;
     [Tooltip("deg1  = 45, deg2 =  90, deg4 = 135 ,deg5 = 180, deg6 = 225,deg7 = 270,deg8 = 315 , deg9 = 360")]
     [SerializeField] roteType typeWin;
+    [SerializeField] roteType _roteType2;
     [SerializeField] deg degWin;
     [SerializeField] float tolerance = 0.2f;
     [SerializeField] private bool canRote = false;
@@ -66,8 +67,8 @@ public class PuzzleSignRotate : RotateScript ,checkBool
     }
 
     private void switchType(){
-        if(_roteType == roteType.y) _roteType = roteType.z;
-        else if(_roteType == roteType.z) _roteType = roteType.y;
+        if(_roteType != _roteType2) _roteType = _roteType2;
+        else if(_roteType == _roteType2) _roteType = roteType.z;
     } 
 
     private void OnTriggerExit(Collider other) {

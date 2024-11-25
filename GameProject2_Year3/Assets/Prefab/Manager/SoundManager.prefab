@@ -195,6 +195,9 @@ MonoBehaviour:
   - nameSound: WalkDirt
     sound: {fileID: 8300000, guid: b9c7b50c68ac2d44dafb1411104de468, type: 3}
     clip: {fileID: 8300000, guid: b9c7b50c68ac2d44dafb1411104de468, type: 3}
+  - nameSound: WalkRock
+    sound: {fileID: 8300000, guid: 49ef9adbec2e4024eae3bac0de48a0fd, type: 3}
+    clip: {fileID: 8300000, guid: 49ef9adbec2e4024eae3bac0de48a0fd, type: 3}
   - nameSound: RodHitWater
     sound: {fileID: 8300000, guid: 362f6ce5c2a6a5b46ab4638c00826d6c, type: 3}
     clip: {fileID: 8300000, guid: 362f6ce5c2a6a5b46ab4638c00826d6c, type: 3}

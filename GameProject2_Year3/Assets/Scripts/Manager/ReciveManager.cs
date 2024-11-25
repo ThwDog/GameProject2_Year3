@@ -10,4 +10,14 @@ public class ReciveManager : MonoBehaviour
 
         }
     }
+
+    public void pauseMenu(){
+        try{
+            FindObjectOfType<UIManager>().pauseMenu();
+        }
+        catch{
+
+        }
+    }
 }
+

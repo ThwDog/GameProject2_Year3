@@ -15,6 +15,7 @@ public class CoinSortPuzzle_Script : MonoBehaviour, IRestartable
     [Header("")]
     [SerializeField] List<CoinIdentify> listOfCoinSort;
     [SerializeField] bool isWin = false;
+    [SerializeField] bool canPlay = false;
 
     private ShowUICollision showUI;
     private EventScript _event;
@@ -30,9 +31,11 @@ public class CoinSortPuzzle_Script : MonoBehaviour, IRestartable
 
     private void Update()
     {
+        if(!canPlay) return;
         if (isWin)
         {
             _event._FinishEvent();
+            canPlay = false;
             return;
         }
 
@@ -127,6 +130,7 @@ public class CoinSortPuzzle_Script : MonoBehaviour, IRestartable
 
     private void OnTriggerStay(Collider other)
     {
+        if(!canPlay) return;
         if (!other.gameObject.GetComponent<PlayerController>()) return;
         if (!canvas.activeSelf)
         {
@@ -150,6 +154,7 @@ public class CoinSortPuzzle_Script : MonoBehaviour, IRestartable
 
     private void OnTriggerExit(Collider other)
     {
+        if(!canPlay) return;
         if (!other.gameObject.GetComponent<PlayerController>()) return;
 
         showUI.CloseDescription();
@@ -158,5 +163,9 @@ public class CoinSortPuzzle_Script : MonoBehaviour, IRestartable
     public void _Restart()
     {
         resetAll();
+    }
+    
+    public void canPlaySet(bool _bool){
+        canPlay = _bool;
     }
 }

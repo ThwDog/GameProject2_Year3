@@ -7,6 +7,7 @@ public class CoinIdentify : MonoBehaviour , IRestartable
 {
     public Coin_Scriptable coin;
     internal Image image;
+    [SerializeField] Sprite nullImg;
 
     public void changeIden(Coin_Scriptable coin){
         this.coin = coin;
@@ -21,7 +22,7 @@ public class CoinIdentify : MonoBehaviour , IRestartable
     }
 
     public void _Reset(){
-        image.sprite = null ;
+        image.sprite = nullImg ;
         coin = null ;
     }
 

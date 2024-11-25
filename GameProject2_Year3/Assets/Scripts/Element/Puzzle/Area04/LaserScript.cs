@@ -21,6 +21,9 @@ public class LaserScript : RotateScript
     [Header("")]
     [Header("")]
     [SerializeField] LayerMask targetLayer;
+    [SerializeField] float spaceCap = 1.6f;
+    public Material HitMat , defaultMat;
+    public MeshRenderer _renderer;
     ShowUICollision showUI;
     LaserScriptManager manager;
 
@@ -46,6 +49,7 @@ public class LaserScript : RotateScript
         if(!isOpen){
             if(hitObj != null) {
                 hitObj.isOpen = false;
+                if(hitObj._type != type.input && hitObj.defaultMat != null) hitObj._renderer.material = hitObj.defaultMat;
                 hitObj = null;
             }
             DisableLaser();
@@ -82,10 +86,12 @@ public class LaserScript : RotateScript
                     StartCoroutine(winDelay(1.5f));
                 }
                 hitObj.isOpen = true;
+                if(hitObj._type != type.input && hitObj.HitMat != null) hitObj._renderer.material = hitObj.HitMat;
             }
             else if(hit.transform.gameObject.layer == 3){
                 if(hitObj != null) {
                     hitObj.isOpen = false;
+                    if(hitObj._type != type.input && hitObj.defaultMat != null) hitObj._renderer.material = hitObj.defaultMat;
                     hitObj = null;
                 }
                 return;
@@ -115,7 +121,7 @@ public class LaserScript : RotateScript
         if(Physics.Raycast(firePoint.position, firePoint.forward,out hit,maxLength,targetLayer)){
             // TODO : Here
             if(hit.transform.gameObject.layer == 6 && hit.transform.gameObject.GetComponent<LaserScript>()._type != type.broken){
-                lineR.SetPosition(1, new Vector3(0,0,hit.distance * 1.6f));              
+                lineR.SetPosition(1, new Vector3(0,0,hit.distance * spaceCap));              
             }
             else lineR.SetPosition(1, new Vector3(0,0,hit.distance + 0.4f));              
         }
@@ -176,6 +182,12 @@ public class LaserScript : RotateScript
     } 
 
     public void DisableLaser(){
-        lineR.enabled = false;
+        try{
+            _renderer.material = defaultMat;
+            lineR.enabled = false;
+        }
+        catch{
+            
+        }
     }
 }

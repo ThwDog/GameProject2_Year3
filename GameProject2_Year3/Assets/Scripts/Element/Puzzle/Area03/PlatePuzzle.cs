@@ -12,6 +12,7 @@ public class PlatePuzzle : MonoBehaviour , IRestartable
     [Header("Setting")]
     [SerializeField][Tooltip("ForCheck")] int stage = 1;
     [SerializeField] private GameObject winCheck; // for player to know that win or lose
+    [SerializeField] private Material winMat , loseMat , defaultMat;
     [SerializeField] [Range(0,20)] private float delay;
     [SerializeField] private List<plateList> originalPlateLists; // list of plate pattern
     internal List<plateList> usePlateLists; // list of plate pattern but it use
@@ -65,7 +66,7 @@ public class PlatePuzzle : MonoBehaviour , IRestartable
                     StartCoroutine(resetDelay());
                 }
                 usePlateLists.Remove(usePlateLists[0]);
-                StartCoroutine(changeColor(2,Color.green));
+                StartCoroutine(changeColor(2,winMat));
             }
             else // fail
             {
@@ -77,7 +78,7 @@ public class PlatePuzzle : MonoBehaviour , IRestartable
                     StartCoroutine(resetDelay());
                 }
                 mirrorList();
-                StartCoroutine(changeColor(2,Color.red));
+                StartCoroutine(changeColor(2,loseMat));
             }
         }
         
@@ -125,13 +126,18 @@ public class PlatePuzzle : MonoBehaviour , IRestartable
         isWin = false;
     }
 
+    public void setCanStep(bool _bool){
+        canStep = _bool;
+    }
+
 
     #region just for check
-    IEnumerator changeColor(float time ,Color color){
+    IEnumerator changeColor(float time , Material mat){
         MeshRenderer mesh = winCheck.GetComponent<MeshRenderer>();
-        mesh.material.color = color;
+        mesh.material = mat;
         yield return new WaitForSeconds(time);
-        mesh.material.color = Color.white;
+        mesh.material = defaultMat;
+
     }
     #endregion
 }

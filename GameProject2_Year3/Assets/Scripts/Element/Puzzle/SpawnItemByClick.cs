@@ -28,7 +28,10 @@ public class SpawnItemByClick : MonoBehaviour , Ipauseable , IRestartable
         if(!isSpawn){
             Debug.Log("Spawn Item : "  + spawnObj.name);
             isSpawn = true;
-            if(!spawnObj) return;
+            if(!spawnObj) {
+                if(_event) _event._FinishEvent();
+                return;
+            }
             spawnObj.Collect(FindAnyObjectByType<InventorySystem>());
             if(_event) _event._FinishEvent();
             CloseDescription();
