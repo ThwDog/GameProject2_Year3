@@ -55,7 +55,7 @@ namespace HeneGames.DialogueSystem
         [Header("Next sentence input")]
         public KeyCode actionInput = KeyCode.Space;
         [Header("Dialogue Bg Sprite")]
-        [SerializeField] Sprite cutSceneBG , normalBG; // use for change dialogue bg
+        [SerializeField] GameObject cutSceneBG , normalBG; // use for change dialogue bg
 
 
         private void Update()
@@ -214,11 +214,13 @@ namespace HeneGames.DialogueSystem
         }
 
         public void useCutSceneBg(){
-            dialogueBG.sprite = cutSceneBG;
+            if(normalBG.activeSelf) normalBG.SetActive(false);
+            cutSceneBG.SetActive(true);
         }
 
         public void useNormalBg(){
-            dialogueBG.sprite = normalBG;
+            if(cutSceneBG.activeSelf) cutSceneBG.SetActive(false);
+            normalBG.SetActive(true);
         }
 
         // public void textColor(Color _color){

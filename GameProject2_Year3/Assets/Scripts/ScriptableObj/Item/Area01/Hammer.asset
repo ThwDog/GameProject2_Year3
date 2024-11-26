@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5e65e7fc4e62584f9c924c340c881a6, type: 3}
   m_Name: Hammer
   m_EditorClassIdentifier: 
+  _sprite: {fileID: 21300000, guid: 7faea946e25ae3b4d8599a6b4b7e68ba, type: 3}
   objNam: Hammer
   disc: BlackSmith Hammer
   obj: {fileID: 0}

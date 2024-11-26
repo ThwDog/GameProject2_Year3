@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5e65e7fc4e62584f9c924c340c881a6, type: 3}
   m_Name: Pic
   m_EditorClassIdentifier: 
+  _sprite: {fileID: 21300000, guid: 08f68a8397380e042a0b9355563b5a62, type: 3}
   objNam: Pic
   disc: for myterious man that took hammer
   obj: {fileID: 0}

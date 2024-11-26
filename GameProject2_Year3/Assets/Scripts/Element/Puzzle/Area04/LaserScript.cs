@@ -82,6 +82,7 @@ public class LaserScript : RotateScript
             hit.transform.gameObject.GetComponent<LaserScript>()._type != type.broken){
 
                 hitObj = hit.transform.gameObject.GetComponent<LaserScript>();
+                // if it final hit
                 if(hitObj._type == type.input){
                     StartCoroutine(winDelay(1.5f));
                 }
@@ -123,7 +124,7 @@ public class LaserScript : RotateScript
             if(hit.transform.gameObject.layer == 6 && hit.transform.gameObject.GetComponent<LaserScript>()._type != type.broken){
                 lineR.SetPosition(1, new Vector3(0,0,hit.distance * spaceCap));              
             }
-            else lineR.SetPosition(1, new Vector3(0,0,hit.distance + 0.4f));              
+            else lineR.SetPosition(1, new Vector3(0,0,hit.distance * spaceCap));              
         }
         else {
             lineR.SetPosition(1,new Vector3(0,0,maxLength));
