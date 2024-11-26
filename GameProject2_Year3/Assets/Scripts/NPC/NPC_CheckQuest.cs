@@ -22,6 +22,7 @@ public class NPC_CheckQuest : MonoBehaviour
     internal EventScript _event;
     internal PlayerController player;
     [SerializeField] ItemScript giveItem;
+    [SerializeField] CollectableItem_Scriptable Item;
     // bool canShowDes;
 
     private void Start()
@@ -93,6 +94,7 @@ public class NPC_CheckQuest : MonoBehaviour
     }
 
     public void setCollect(InventorySystem _inventory){
+        if(Item._sprite != null) _inventory.player.setShowItemSprite(Item._sprite);
         giveItem.setCollect(_inventory);
     }
 
