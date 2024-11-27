@@ -43,6 +43,7 @@ namespace HeneGames.DialogueSystem
         [SerializeField] private Image portrait;
         [SerializeField] private TextMeshProUGUI nameText;
         [SerializeField] private TextMeshProUGUI messageText;
+        [SerializeField] private Color highLightColor;
         [SerializeField] private GameObject dialogueWindow;
         [SerializeField] private GameObject interactionUI;
         [SerializeField] Image dialogueBG; // use for change dialogue bg
@@ -221,6 +222,14 @@ namespace HeneGames.DialogueSystem
         public void useNormalBg(){
             if(cutSceneBG.activeSelf) cutSceneBG.SetActive(false);
             normalBG.SetActive(true);
+        }
+
+        public void highLightText(){
+            messageText.color = highLightColor;
+        }
+
+        public void normalTextColor(){
+            messageText.color = Color.white;
         }
 
         // public void textColor(Color _color){

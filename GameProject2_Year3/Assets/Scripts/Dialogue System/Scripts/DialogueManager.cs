@@ -266,6 +266,8 @@ namespace HeneGames.DialogueSystem
             if (sentences[currentSentence].dialogueCharacter != null)
             {
                 //Show sentence on the screen
+                if(sentences[currentSentence].highLightColor) DialogueUI.instance.highLightText();
+                else DialogueUI.instance.normalTextColor();
                 DialogueUI.instance.ShowSentence(sentences[currentSentence].dialogueCharacter, sentences[currentSentence].sentence);
 
                 //Invoke sentence event
@@ -276,6 +278,9 @@ namespace HeneGames.DialogueSystem
                 DialogueCharacter _dialogueCharacter = new DialogueCharacter();
                 _dialogueCharacter.characterName = "";
                 _dialogueCharacter.characterPhoto = null;
+
+                if(sentences[currentSentence].highLightColor) DialogueUI.instance.highLightText();
+                else DialogueUI.instance.normalTextColor();
 
                 DialogueUI.instance.ShowSentence(_dialogueCharacter, sentences[currentSentence].sentence);
 
@@ -352,5 +357,6 @@ namespace HeneGames.DialogueSystem
         public AudioClip sentenceSound;
 
         public UnityEvent sentenceEvent;
+        public bool highLightColor;
     }
 }
