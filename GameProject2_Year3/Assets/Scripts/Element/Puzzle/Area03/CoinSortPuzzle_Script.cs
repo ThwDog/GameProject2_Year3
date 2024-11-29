@@ -49,6 +49,7 @@ public class CoinSortPuzzle_Script : MonoBehaviour, IRestartable
         Coin_Scriptable coin = obj.GetComponent<CoinIdentify>().coin;
 
         if (coinSort.Contains(coin)) return;
+        SoundManager.instance.PlaySfx("CoinInsert");
 
 
         foreach (var coins in listOfCoinSort)
@@ -71,6 +72,8 @@ public class CoinSortPuzzle_Script : MonoBehaviour, IRestartable
 
         Coin_Scriptable coin = obj.GetComponent<CoinIdentify>().coin;
 
+        SoundManager.instance.PlaySfx("CoinInsert");
+        
         for (int i = 0; i < coinSort.Count; i++)
         {
             if (coinSort[i] == coin)

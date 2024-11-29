@@ -89,6 +89,16 @@ public class NPC_CheckQuest : MonoBehaviour
         }
     }
 
+    public void setBoolPlayerAnimation_True(string name)
+    {
+        player._PlayAnimation(name, true);         
+    }
+
+    public void setBoolPlayerAnimation_False(string name)
+    {
+        player._PlayAnimation(name, false);         
+    }
+
     public void _giveItem(){
         giveItem.Collect(FindAnyObjectByType<InventorySystem>());
     }

@@ -979,6 +979,7 @@ MonoBehaviour:
   portrait: {fileID: 6449296285444158431}
   nameText: {fileID: 6449296285614807723}
   messageText: {fileID: 6449296285419502213}
+  highLightColor: {r: 0.5566038, g: 0.44038504, b: 0.30193132, a: 1}
   dialogueWindow: {fileID: 6449296285370776052}
   interactionUI: {fileID: 7386985446916643908}
   dialogueBG: {fileID: 7769598977077526281}

@@ -12,6 +12,7 @@ public class PlateScript : MonoBehaviour
             
             if(!platePuzzle.canStep) return;
             platePuzzle.StepOnPlate(this.gameObject.name);
+            SoundManager.instance.PlaySfx("Plate");
             particle.gameObject.SetActive(true);
             hasStep = true;
         }

@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CheatCode : MonoBehaviour
@@ -8,6 +5,7 @@ public class CheatCode : MonoBehaviour
     // TODO : Make Cheat code easy to use 
     LoadScene loadScene;
     PlayerController player; 
+    CheatForStage cheat;
     public bool cheatEnable = true;
 
     private void Awake() {
@@ -36,6 +34,9 @@ public class CheatCode : MonoBehaviour
                 }
             }
         }
+        if(cheat != null){
+            cheat.cheatStage();
+        }
     }
 
     private void areaFindCanCheat(){
@@ -43,6 +44,16 @@ public class CheatCode : MonoBehaviour
             try{
                 if(loadScene.CheckNextStage() - 1 != 0){
                     player = FindObjectOfType<PlayerController>();
+                }
+            }
+            catch{
+                return;
+            } 
+        }
+        if(!cheat){
+            try{
+                if(loadScene.CheckNextStage() - 1 != 0){
+                    cheat = FindObjectOfType<CheatForStage>();
                 }
             }
             catch{

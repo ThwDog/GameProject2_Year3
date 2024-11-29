@@ -200,10 +200,28 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 49ef9adbec2e4024eae3bac0de48a0fd, type: 3}
   - nameSound: RodHitWater
     sound: {fileID: 8300000, guid: 362f6ce5c2a6a5b46ab4638c00826d6c, type: 3}
-    clip: {fileID: 8300000, guid: 362f6ce5c2a6a5b46ab4638c00826d6c, type: 3}
+    clip: {fileID: 8300000, guid: d8fc5410c23e41d4b99ddd4c6ac6ecfd, type: 3}
   - nameSound: Click
     sound: {fileID: 8300000, guid: d8fc5410c23e41d4b99ddd4c6ac6ecfd, type: 3}
     clip: {fileID: 8300000, guid: d8fc5410c23e41d4b99ddd4c6ac6ecfd, type: 3}
+  - nameSound: CoinInsert
+    sound: {fileID: 8300000, guid: e8d5d8823feeede418b0adda782bcf12, type: 3}
+    clip: {fileID: 8300000, guid: e8d5d8823feeede418b0adda782bcf12, type: 3}
+  - nameSound: Plate
+    sound: {fileID: 8300000, guid: 18934ba5fb47bae469e93140e1f1ed93, type: 3}
+    clip: {fileID: 8300000, guid: 18934ba5fb47bae469e93140e1f1ed93, type: 3}
+  - nameSound: Bush
+    sound: {fileID: 8300000, guid: a0337c2f0cd84e5478614065c27be97c, type: 3}
+    clip: {fileID: 8300000, guid: a0337c2f0cd84e5478614065c27be97c, type: 3}
+  - nameSound: Dig
+    sound: {fileID: 8300000, guid: 03ab0c1f78bee2443be8f1d656ff9a1f, type: 3}
+    clip: {fileID: 8300000, guid: 03ab0c1f78bee2443be8f1d656ff9a1f, type: 3}
+  - nameSound: fireWork_Born
+    sound: {fileID: 8300000, guid: 8716f31e5ac93ea4cb0727f77ed4b6c4, type: 3}
+    clip: {fileID: 8300000, guid: 8716f31e5ac93ea4cb0727f77ed4b6c4, type: 3}
+  - nameSound: fireWork_Blast
+    sound: {fileID: 8300000, guid: 34790f6b1da6f8f4db8fbce1392b7e69, type: 3}
+    clip: {fileID: 8300000, guid: 34790f6b1da6f8f4db8fbce1392b7e69, type: 3}
   ambientSound:
   - nameSound: Reeling
     sound: {fileID: 8300000, guid: 20076fc9922735340bb3788c13b7a7c9, type: 3}

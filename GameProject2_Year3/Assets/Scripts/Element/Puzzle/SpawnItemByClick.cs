@@ -8,6 +8,7 @@ public class SpawnItemByClick : MonoBehaviour , Ipauseable , IRestartable
     [SerializeField] ItemScript spawnObj;
     ShowUICollision showUI;
     [SerializeField] EventScript _event;
+    [SerializeField] string soundName;
     public bool isSpawn = false;
 
     public void ShowDescription(){
@@ -33,9 +34,14 @@ public class SpawnItemByClick : MonoBehaviour , Ipauseable , IRestartable
                 return;
             }
             spawnObj.Collect(FindAnyObjectByType<InventorySystem>());
+            playSound();
             if(_event) _event._FinishEvent();
             CloseDescription();
         }
+    }
+
+    private void playSound(){
+        if(soundName != null) SoundManager.instance.PlaySfx(soundName);
     }
 
     public void pause(){
