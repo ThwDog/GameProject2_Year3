@@ -10,6 +10,10 @@ public class SpawnItemByClick : MonoBehaviour , Ipauseable , IRestartable
     [SerializeField] EventScript _event;
     [SerializeField] string soundName;
     public bool isSpawn = false;
+    [SerializeField] bool giveRealItem = true;
+    [Header("For fake Spawn")]
+    [SerializeField] CollectableItem_Scriptable item;
+
 
     public void ShowDescription(){
         if(GetComponent<ShowUICollision>()){
@@ -33,7 +37,11 @@ public class SpawnItemByClick : MonoBehaviour , Ipauseable , IRestartable
                 if(_event) _event._FinishEvent();
                 return;
             }
-            spawnObj.Collect(FindAnyObjectByType<InventorySystem>());
+            if(giveRealItem) spawnObj.Collect(FindAnyObjectByType<InventorySystem>());
+            else {
+                if(item._sprite != null) FindAnyObjectByType<InventorySystem>().player.setShowItemSprite(item._sprite);
+                spawnObj.setCollect(FindAnyObjectByType<InventorySystem>());
+            }
             playSound();
             if(_event) _event._FinishEvent();
             CloseDescription();

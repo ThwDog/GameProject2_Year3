@@ -28,6 +28,9 @@ public class Quest{
 
     [Header("Item Requirement Type")] // go to next Quest by checking player inventory
     public CollectableItem_Scriptable itemReq; 
+
+    [Header("Item Requirement Type List")] // go to next Quest by checking player inventory
+    public List<CollectableItem_Scriptable> itemReqList;  // use CheckType
     // public int itemAmountReq;
 
     // [Header("Check Type")] // go to next quest by bool

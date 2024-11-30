@@ -14,6 +14,7 @@ public class LaserScript : RotateScript
     public type _type = type.output;
     public LineRenderer lineR;
     [SerializeField] Transform firePoint;
+    [SerializeField] Animator anim;
     [Tooltip("Max length of laser")][SerializeField] float maxLength = 3;
     [Header("")]
     LaserScript hitObj; // last obj that been hit
@@ -45,11 +46,13 @@ public class LaserScript : RotateScript
 
         if(_type == type.broken) return;
 
+        _animation();
+
         // if is open is false disable laser and disable sphere collider that can get receive laser hit
         if(!isOpen){
             if(hitObj != null) {
                 hitObj.isOpen = false;
-                if(hitObj._type != type.input && hitObj.defaultMat != null) hitObj._renderer.material = hitObj.defaultMat;
+                if(hitObj.defaultMat != null) hitObj._renderer.material = hitObj.defaultMat;
                 hitObj = null;
             }
             DisableLaser();
@@ -87,12 +90,12 @@ public class LaserScript : RotateScript
                     StartCoroutine(winDelay(1.5f));
                 }
                 hitObj.isOpen = true;
-                if(hitObj._type != type.input && hitObj.HitMat != null) hitObj._renderer.material = hitObj.HitMat;
+                if(hitObj.HitMat != null) hitObj._renderer.material = hitObj.HitMat;
             }
             else if(hit.transform.gameObject.layer == 3){
                 if(hitObj != null) {
                     hitObj.isOpen = false;
-                    if(hitObj._type != type.input && hitObj.defaultMat != null) hitObj._renderer.material = hitObj.defaultMat;
+                    if(hitObj.defaultMat != null) hitObj._renderer.material = hitObj.defaultMat;
                     hitObj = null;
                 }
                 return;
@@ -189,6 +192,20 @@ public class LaserScript : RotateScript
         }
         catch{
             
+        }
+    }
+
+    public void _animation(){
+        switch(_type){
+            case type.output:
+                anim.SetBool("Open",isOpen);
+                break;
+            case type.input:
+                anim.SetBool("Open",true);
+                break;
+             case type.broken:
+                anim.SetBool("Open",false);
+                break;
         }
     }
 }

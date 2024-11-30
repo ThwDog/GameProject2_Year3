@@ -58,4 +58,14 @@ public class RotateScript : MonoBehaviour
             }
         }
     }
+
+    public virtual void _RotateObj(Transform target){
+        if(isRo){
+            target.localRotation = Quaternion.Lerp(target.localRotation, rotateTarget, rotateSpeed * Time.deltaTime);
+            if (Quaternion.Angle(target.localRotation, rotateTarget) < 0.01f)
+            {
+                isRo = false;
+            }
+        }
+    }
 }

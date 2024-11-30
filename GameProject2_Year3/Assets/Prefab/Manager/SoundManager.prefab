@@ -193,8 +193,8 @@ MonoBehaviour:
     sound: {fileID: 8300000, guid: 4ae513c721882294ea60dce5b958e1b7, type: 3}
     clip: {fileID: 8300000, guid: 4ae513c721882294ea60dce5b958e1b7, type: 3}
   - nameSound: WalkDirt
-    sound: {fileID: 8300000, guid: b9c7b50c68ac2d44dafb1411104de468, type: 3}
-    clip: {fileID: 8300000, guid: b9c7b50c68ac2d44dafb1411104de468, type: 3}
+    sound: {fileID: 8300000, guid: 9add606726c5e394480ec87a4603a521, type: 3}
+    clip: {fileID: 8300000, guid: 9add606726c5e394480ec87a4603a521, type: 3}
   - nameSound: WalkRock
     sound: {fileID: 8300000, guid: 49ef9adbec2e4024eae3bac0de48a0fd, type: 3}
     clip: {fileID: 8300000, guid: 49ef9adbec2e4024eae3bac0de48a0fd, type: 3}
@@ -222,6 +222,9 @@ MonoBehaviour:
   - nameSound: fireWork_Blast
     sound: {fileID: 8300000, guid: 34790f6b1da6f8f4db8fbce1392b7e69, type: 3}
     clip: {fileID: 8300000, guid: 34790f6b1da6f8f4db8fbce1392b7e69, type: 3}
+  - nameSound: RockGateOpen
+    sound: {fileID: 8300000, guid: fcac30fda79019f4e939c3f19a3e0719, type: 3}
+    clip: {fileID: 8300000, guid: fcac30fda79019f4e939c3f19a3e0719, type: 3}
   ambientSound:
   - nameSound: Reeling
     sound: {fileID: 8300000, guid: 20076fc9922735340bb3788c13b7a7c9, type: 3}

@@ -11,8 +11,8 @@ public class PlatePuzzle : MonoBehaviour , IRestartable
 
     [Header("Setting")]
     [SerializeField][Tooltip("ForCheck")] int stage = 1;
-    [SerializeField] private GameObject winCheck; // for player to know that win or lose
-    [SerializeField] private Material winMat , loseMat , defaultMat;
+    [SerializeField] private GameObject crystal; // for player to know that win or lose
+    [SerializeField] private Material loseMat;
     [SerializeField] [Range(0,20)] private float delay;
     [SerializeField] private List<plateList> originalPlateLists; // list of plate pattern
     internal List<plateList> usePlateLists; // list of plate pattern but it use
@@ -22,6 +22,8 @@ public class PlatePuzzle : MonoBehaviour , IRestartable
     private bool canCheck = true;
     [Header("Only for check")]
     [SerializeField] private bool isWin = false;
+    [SerializeField] ItemScript reward;
+    [SerializeField] CollectableItem_Scriptable reward_Sprite;
 
     private EventScript _event;
 
@@ -41,6 +43,12 @@ public class PlatePuzzle : MonoBehaviour , IRestartable
             isWin = true;
             _event._FinishEvent();
             return;
+        }
+
+        if(canStep){
+            if(crystal.GetComponent<MeshRenderer>().material != usePlateLists[0].stageColor){
+                StartCoroutine(changeColor(1,usePlateLists[0].stageColor));
+            }
         }
 
         // Check if plate is same
@@ -66,7 +74,7 @@ public class PlatePuzzle : MonoBehaviour , IRestartable
                     StartCoroutine(resetDelay());
                 }
                 usePlateLists.Remove(usePlateLists[0]);
-                StartCoroutine(changeColor(2,winMat));
+                // StartCoroutine(changeColor(2,winMat));
             }
             else // fail
             {
@@ -78,6 +86,7 @@ public class PlatePuzzle : MonoBehaviour , IRestartable
                     StartCoroutine(resetDelay());
                 }
                 mirrorList();
+                _event._ExitEvent();
                 StartCoroutine(changeColor(2,loseMat));
             }
         }
@@ -133,18 +142,24 @@ public class PlatePuzzle : MonoBehaviour , IRestartable
 
     #region just for check
     IEnumerator changeColor(float time , Material mat){
-        MeshRenderer mesh = winCheck.GetComponent<MeshRenderer>();
-        mesh.material = mat;
+        MeshRenderer mesh = crystal.GetComponent<MeshRenderer>();
         yield return new WaitForSeconds(time);
-        mesh.material = defaultMat;
+        mesh.material = mat;
+        // mesh.material = defaultMat;
 
     }
     #endregion
+
+    public void setCollect(InventorySystem _inventory){
+        if(reward_Sprite._sprite != null) _inventory.player.setShowItemSprite(reward_Sprite._sprite);
+        reward.setCollect(_inventory);
+    }
 }
 
 
 [Serializable]
 public class plateList
 {
+    public Material stageColor;
     public GameObject[] plateNum; // list of plate num
 }

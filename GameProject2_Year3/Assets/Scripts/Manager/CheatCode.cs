@@ -21,6 +21,10 @@ public class CheatCode : MonoBehaviour
         }
         if(player != null)
         {
+            if(GUI.Button(new Rect(10, 400, 110, 50),"ItemCheat")){
+                InventorySystem inventory = player.gameObject.GetComponent<InventorySystem>();
+                inventory.cheat();
+            }
             if(GUI.Button(new Rect(10, 880, 110, 50),"ReSpawn")){
                 SpawnPlayer spawn = FindObjectOfType<SpawnPlayer>();
                 spawn.deSpawn();

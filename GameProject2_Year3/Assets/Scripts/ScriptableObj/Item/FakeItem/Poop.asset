@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5e65e7fc4e62584f9c924c340c881a6, type: 3}
+  m_Name: Poop
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: 21300000, guid: 6e8e9e80676537f4fbec57d8ff3cc4bf, type: 3}
+  objNam: 
+  disc: 
+  obj: {fileID: 0}
+  itemArea: 0

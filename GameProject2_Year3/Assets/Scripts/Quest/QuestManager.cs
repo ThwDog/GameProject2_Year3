@@ -32,7 +32,7 @@ public class QuestManager : MonoBehaviour
 
 
         // currentQuestIndex will alway smaller than currentQuest.quests.Count
-        if (currentQuestIndex < currentQuest.quests.Count == false){
+        if (currentQuestIndex < currentQuest.quests.Count == false && currentQuestIndex > 0){
             currentQuestIndex--;
             Debug.Log("There are no more quest");
             return;
@@ -47,6 +47,7 @@ public class QuestManager : MonoBehaviour
     // use most in npc
     public void ChangeQuest(Quest_Scriptable quest)
     {
+        currentQuestIndex = 0;
         try{
             resetIndex();
             currentQuest = quest;
@@ -58,7 +59,12 @@ public class QuestManager : MonoBehaviour
                 return;
             }
         }
-        
+    }
+
+    public void ChangeQuest()
+    {
+            resetIndex();
+            currentQuest = null;
         
     }
 
@@ -77,13 +83,39 @@ public class QuestManager : MonoBehaviour
         else currentQuestIndex++;
     }
 
+    public void nextQuestInListByCheckList()
+    {
+        var req = currentQuest.quests[currentQuestIndex].itemReqList;
+
+        if (currentQuest.quests[currentQuestIndex]._checkQuestType != Quest.type.CheckType) return;
+
+        if (currentQuestIndex < currentQuest.quests.Count == false)
+        {
+            currentQuestIndex--;
+            return;
+        }
+        else {
+            if(req == null || req.Count > inventory.inventory.Count == true) return;
+
+            for(int i = 0; i < req.Count ;i++){
+                if(inventory._CheckItemReq(req[i])){
+                }
+                else {
+                    break;
+                }
+            }
+
+            currentQuestIndex++;
+        }
+    }
+
     private void nextQuestInListByItem()
     {
         if (currentQuest.quests.Count < 1) return;
         if (currentQuestIndex < currentQuest.quests.Count == false) return;
 
         if (currentQuest.quests[currentQuestIndex]._checkQuestType != Quest.type.itemReqType) return;
-
+    
         if (inventory._CheckItemReq(currentQuest.quests[currentQuestIndex].itemReq))
         {
             currentQuestIndex++;
