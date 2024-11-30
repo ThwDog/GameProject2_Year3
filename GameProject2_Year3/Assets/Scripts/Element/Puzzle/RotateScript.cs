@@ -14,6 +14,8 @@ public class RotateScript : MonoBehaviour
     public float delayButtonTime;
     internal bool isPressButton = false;
     [Range(0f,100f)]public float rotateSpeed = 10f;
+    [SerializeField] private string soundName;
+    private bool canPlaySound = true;
 
     //Set rotation
     public void _SetRotate(float Deg){
@@ -51,9 +53,14 @@ public class RotateScript : MonoBehaviour
     // rotation OBJ
     public virtual void _RotateObj(){
         if(isRo){
+            if(canPlaySound){
+                if(soundName != null) SoundManager.instance.PlaySfx(soundName);
+                canPlaySound = false;
+            }
             transform.rotation = Quaternion.Lerp(transform.rotation, rotateTarget, rotateSpeed * Time.deltaTime);
             if (Quaternion.Angle(transform.rotation, rotateTarget) < 0.01f)
             {
+                canPlaySound = true;
                 isRo = false;
             }
         }

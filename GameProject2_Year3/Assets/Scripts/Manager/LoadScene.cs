@@ -13,8 +13,12 @@ public class LoadScene : MonoBehaviour
     [SerializeField] Slider progressBar; 
     List<AsyncOperation> sceneLoad = new List<AsyncOperation>();
 
+    [Header("load Scene")]
+    [SerializeField] private Sprite[] loadSceneSprite;
+    [SerializeField] private Image image;
     // for go to next scene
     public void _LoadScene(){
+        randomLoadScene();
         loadScene.gameObject.SetActive(true);
         // sceneLoad.Add(SceneManager.LoadSceneAsync(CheckNextStage(),LoadSceneMode.Additive)); // for load multiple scene add once
         sceneLoad.Add(SceneManager.LoadSceneAsync(CheckNextStage(),LoadSceneMode.Single));
@@ -52,6 +56,11 @@ public class LoadScene : MonoBehaviour
                 myInterface._enable();
             }
         }
+    }
+
+    private void randomLoadScene(){
+        int rnd = Random.Range(0, loadSceneSprite.Length - 1);
+        image. sprite = loadSceneSprite[rnd];
     }
 
     public int CheckNextStage(){

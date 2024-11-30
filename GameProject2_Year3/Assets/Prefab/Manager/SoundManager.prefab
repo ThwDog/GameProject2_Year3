@@ -225,6 +225,9 @@ MonoBehaviour:
   - nameSound: RockGateOpen
     sound: {fileID: 8300000, guid: fcac30fda79019f4e939c3f19a3e0719, type: 3}
     clip: {fileID: 8300000, guid: fcac30fda79019f4e939c3f19a3e0719, type: 3}
+  - nameSound: Wood
+    sound: {fileID: 8300000, guid: a8f94180c8d78fd41871300a2bdfbb2d, type: 3}
+    clip: {fileID: 8300000, guid: a8f94180c8d78fd41871300a2bdfbb2d, type: 3}
   ambientSound:
   - nameSound: Reeling
     sound: {fileID: 8300000, guid: 20076fc9922735340bb3788c13b7a7c9, type: 3}

@@ -109,6 +109,7 @@ MonoBehaviour:
   _roteType: 1
   delayButtonTime: 0.5
   rotateSpeed: 10
+  soundName: RockGateOpen
   _type: 0
   lineR: {fileID: 1106435291497230473}
   firePoint: {fileID: 5419014802370618368}

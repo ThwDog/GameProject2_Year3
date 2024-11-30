@@ -85,7 +85,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cada66dac8fa704daca746e847313f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paused: 0
+  paused: 1
 --- !u!114 &2358219903701350712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100,6 +100,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadScene: {fileID: 6129861827948230722}
   progressBar: {fileID: 7357426384672882067}
+  loadSceneSprite:
+  - {fileID: 21300000, guid: a94a8d84f3e694a40a3194dc3164d413, type: 3}
+  - {fileID: 21300000, guid: db2da3d4afd635a44aa1bf42304c73ea, type: 3}
+  - {fileID: 21300000, guid: 87d8543474f1f074798a3d6f4b11c9b1, type: 3}
+  image: {fileID: 8733350784177587126}
 --- !u!114 &974706231692819906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1793,7 +1798,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5680398037103980720, guid: 1cc5c0a8e75baa146b100f3d7451b8d8, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7177647451775440309, guid: 1cc5c0a8e75baa146b100f3d7451b8d8, type: 3}
       propertyPath: m_SortingOrder
@@ -1803,6 +1808,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 8805748454697242454, guid: 1cc5c0a8e75baa146b100f3d7451b8d8, type: 3}
+      propertyPath: m_Color.b
+      value: 0.39417946
+      objectReference: {fileID: 0}
+    - target: {fileID: 8805748454697242454, guid: 1cc5c0a8e75baa146b100f3d7451b8d8, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6537989
+      objectReference: {fileID: 0}
+    - target: {fileID: 8805748454697242454, guid: 1cc5c0a8e75baa146b100f3d7451b8d8, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8113208
+      objectReference: {fileID: 0}
     - target: {fileID: 8805748454697242454, guid: 1cc5c0a8e75baa146b100f3d7451b8d8, type: 3}
       propertyPath: m_FillMethod
       value: 0
@@ -1835,5 +1852,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8733350784177587126 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2114353981184500654, guid: 1cc5c0a8e75baa146b100f3d7451b8d8, type: 3}
+  m_PrefabInstance: {fileID: 7234093792874700824}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
