@@ -239,8 +239,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Continue "Space"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4b469894ba46a81489de12260a7ab2a4, type: 2}
-  m_sharedMaterial: {fileID: 3495881522878035568, guid: 4b469894ba46a81489de12260a7ab2a4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0b9676aa3e5298e47bbac21f1f1da533, type: 2}
+  m_sharedMaterial: {fileID: -4343504410524481699, guid: 0b9676aa3e5298e47bbac21f1f1da533, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -647,8 +647,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Message...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ed51a5865471b8e429e1768807e1c0be, type: 2}
-  m_sharedMaterial: {fileID: 7224431721844106196, guid: ed51a5865471b8e429e1768807e1c0be, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0b9676aa3e5298e47bbac21f1f1da533, type: 2}
+  m_sharedMaterial: {fileID: -4343504410524481699, guid: 0b9676aa3e5298e47bbac21f1f1da533, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

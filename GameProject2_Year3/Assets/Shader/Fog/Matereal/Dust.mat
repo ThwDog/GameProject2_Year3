@@ -102,7 +102,7 @@ Material:
     - _DstBlend: 1
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
-    - _Fog_Density: 0.0001
+    - _Fog_Density: 0.4
     - _Fog_Fade_In_Dis: 10
     - _Fog_Fade_Power: 0.001
     - _Fog_Fade_in_distance: 8.72
