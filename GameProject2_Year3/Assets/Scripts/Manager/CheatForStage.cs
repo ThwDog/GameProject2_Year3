@@ -5,7 +5,7 @@ using UnityEngine;
 public class CheatForStage : MonoBehaviour
 {
     enum stage{
-        one , two , three
+        one , two , three , none
     }
 
     [SerializeField] stage _stage;
@@ -21,12 +21,15 @@ public class CheatForStage : MonoBehaviour
                 break;
             case stage.three:
                 break;
+            case stage.none :
+                break;
         }
     }
 
     public void stageTwo(){
         if(GUI.Button(new Rect(10, 700, 110, 50),"Open Area")){
-            wall.SetActive(false);
+            wall.GetComponent<MeshRenderer>().enabled = false;
+            wall.GetComponent<BoxCollider>().isTrigger = true;
         }
     }
 }

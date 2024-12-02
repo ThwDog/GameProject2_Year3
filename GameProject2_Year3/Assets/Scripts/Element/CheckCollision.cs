@@ -19,9 +19,9 @@ public class CheckCollision : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         if(triggerType != type.triggerEnter) return;
-            Debug.Log("Enter");
+            // Debug.Log("Enter");
         if(other.gameObject.GetComponent<PlayerController>()) {
-            Debug.Log("Enter");
+            // Debug.Log("Enter");
             _event._StartEvent();
         }
     }
@@ -35,7 +35,7 @@ public class CheckCollision : MonoBehaviour
     private void OnTriggerStay(Collider other) {
         if(triggerType != type.triggerStay) return;
         if(other.gameObject.GetComponent<PlayerController>()) {
-            Debug.Log("stay");
+            // Debug.Log("stay");
             _event._StartEvent();
         }
     }

@@ -30,6 +30,15 @@ public class LoadScene : MonoBehaviour
         sceneLoad.Add(SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex));
     }
 
+    public void toMainMenu(){
+        randomLoadScene();
+        loadScene.gameObject.SetActive(true);
+        // sceneLoad.Add(SceneManager.LoadSceneAsync(CheckNextStage(),LoadSceneMode.Additive)); // for load multiple scene add once
+        sceneLoad.Add(SceneManager.LoadSceneAsync(0,LoadSceneMode.Single));
+
+        StartCoroutine(LoadingScene());
+    }
+
     IEnumerator LoadingScene(){
         float totalProgress = 0;
         for(int i = 0;i < sceneLoad.Count; i++){

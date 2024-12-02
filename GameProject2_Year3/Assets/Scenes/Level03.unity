@@ -169,100 +169,46 @@ MonoBehaviour:
   triggerState: 0
   _collisionType: 1
   NormalSentences:
-  - dialogueCharacter: {fileID: 11400000, guid: 30f62b313e9da0f4e9f8217e41aea803, type: 2}
-    sentence: To rouse the slumbering beast, a magical flute is the key. But fear
-      not, for it's lost to the depths of the pool. A fishing rod, though, might
-      just do the trick.
+  - dialogueCharacter: {fileID: 11400000, guid: c4dab45419c1cd54bbb0fbd2ce31faba, type: 2}
+    sentence: Who's stuck in the tree?
     skipDelayTime: 0
-    sentenceSound: {fileID: 0}
+    sentenceSound: {fileID: 8300000, guid: 17853ba62f4fcbc46ada2d5679c4386d, type: 3}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    highLightColor: 0
+  - dialogueCharacter: {fileID: 11400000, guid: c4dab45419c1cd54bbb0fbd2ce31faba, type: 2}
+    sentence: 
+    skipDelayTime: 0
+    sentenceSound: {fileID: 8300000, guid: 17853ba62f4fcbc46ada2d5679c4386d, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: QuestManager, Assembly-CSharp
-          m_MethodName: ChangeQuest
-          m_Mode: 2
+        - m_Target: {fileID: 547780645}
+          m_TargetAssemblyTypeName: HeneGames.DialogueSystem.DialogueUI, Assembly-CSharp
+          m_MethodName: ClearText
+          m_Mode: 1
           m_Arguments:
-            m_ObjectArgument: {fileID: 11400000, guid: f165b28ea87253d4a9be44bd3261e074, type: 2}
-            m_ObjectArgumentAssemblyTypeName: Quest_Scriptable, Assembly-CSharp
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-    highLightColor: 1
-  - dialogueCharacter: {fileID: 11400000, guid: 30f62b313e9da0f4e9f8217e41aea803, type: 2}
-    sentence: The fishing rod's whereabouts are a mystery, but a riddle might lead
-      you to its resting place.
-    skipDelayTime: 0
-    sentenceSound: {fileID: 0}
-    sentenceEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    highLightColor: 1
-  - dialogueCharacter: {fileID: 11400000, guid: 30f62b313e9da0f4e9f8217e41aea803, type: 2}
-    sentence: Young adventurers, lend me your ears,The fishing rod you seek is near.
-    skipDelayTime: 0
-    sentenceSound: {fileID: 0}
-    sentenceEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    highLightColor: 1
-  - dialogueCharacter: {fileID: 11400000, guid: 30f62b313e9da0f4e9f8217e41aea803, type: 2}
-    sentence: Deep in the woods, a treasure's in sight,Hidden by bushes, green and
-      bright.
-    skipDelayTime: 0
-    sentenceSound: {fileID: 0}
-    sentenceEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    highLightColor: 1
-  - dialogueCharacter: {fileID: 11400000, guid: 30f62b313e9da0f4e9f8217e41aea803, type: 2}
-    sentence: Look for a tall tree, standing so proud,Beneath its shade, a secret
-      is shroud.
-    skipDelayTime: 0
-    sentenceSound: {fileID: 0}
-    sentenceEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    highLightColor: 1
-  - dialogueCharacter: {fileID: 11400000, guid: 30f62b313e9da0f4e9f8217e41aea803, type: 2}
-    sentence: Large rocks stand tall, like a stone wall,Bushes so dense, they cover
-      it all.
-    skipDelayTime: 0
-    sentenceSound: {fileID: 0}
-    sentenceEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    highLightColor: 1
-  - dialogueCharacter: {fileID: 11400000, guid: 30f62b313e9da0f4e9f8217e41aea803, type: 2}
-    sentence: Flowers bloom, vibrant and gay,But the rod's not there, I must say.
-    skipDelayTime: 0
-    sentenceSound: {fileID: 0}
-    sentenceEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    highLightColor: 1
-  - dialogueCharacter: {fileID: 11400000, guid: 30f62b313e9da0f4e9f8217e41aea803, type: 2}
-    sentence: With mind sharp and eyes keen, you'll see,Hidden well, a mystery
-    skipDelayTime: 0
-    sentenceSound: {fileID: 0}
-    sentenceEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: QuestManager, Assembly-CSharp
-          m_MethodName: ChangeQuest
-          m_Mode: 2
+        - m_Target: {fileID: 78140738}
+          m_TargetAssemblyTypeName: PlayCutScene, Assembly-CSharp
+          m_MethodName: _playCutScene
+          m_Mode: 1
           m_Arguments:
-            m_ObjectArgument: {fileID: 11400000, guid: b917ab32fbda2fe40b112d07e7ea08cf, type: 2}
-            m_ObjectArgumentAssemblyTypeName: Quest_Scriptable, Assembly-CSharp
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-    highLightColor: 1
+    highLightColor: 0
   reqSentences: []
   talkAgainSentences:
   - dialogueCharacter: {fileID: 11400000, guid: 30f62b313e9da0f4e9f8217e41aea803, type: 2}
@@ -316,7 +262,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     highLightColor: 1
-  canTalk: 0
+  canTalk: 1
   cantTalkToSentences:
   - dialogueCharacter: {fileID: 11400000, guid: 01a9051a317955f47a67cc9863d03165, type: 2}
     sentence: You can't talk to this NPC right now.
@@ -452,11 +398,11 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 4.9
+  m_Radius: 8.37
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &55343464
 PrefabInstance:
@@ -805,6 +751,233 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &78140735
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 78140736}
+  - component: {fileID: 78140738}
+  - component: {fileID: 78140737}
+  m_Layer: 0
+  m_Name: Final
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &78140736
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78140735}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 8.127436, y: 1.3093483, z: -6.5102777}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1727362394}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &78140737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78140735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b89b2c8d34df52d4e89cba040401d38b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  startDialogueEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  nextSentenceDialogueEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  endDialogueEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  useCutSceneBG: 0
+  questIsFinish: 0
+  req_item: []
+  triggerState: 2
+  _collisionType: 0
+  NormalSentences:
+  - dialogueCharacter: {fileID: 11400000, guid: c4dab45419c1cd54bbb0fbd2ce31faba, type: 2}
+    sentence: Who are you?
+    skipDelayTime: 0
+    sentenceSound: {fileID: 0}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 78140738}
+          m_TargetAssemblyTypeName: PlayCutScene, Assembly-CSharp
+          m_MethodName: setCutSceneImg
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1744338299}
+          m_TargetAssemblyTypeName: BGSoundPlay, Assembly-CSharp
+          m_MethodName: changeSound
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Flute
+            m_BoolArgument: 0
+          m_CallState: 2
+    highLightColor: 0
+  - dialogueCharacter: {fileID: 11400000, guid: 050dd92d89fb514438528ff19770b972, type: 2}
+    sentence: C..Cecilia?
+    skipDelayTime: 0
+    sentenceSound: {fileID: 0}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    highLightColor: 0
+  - dialogueCharacter: {fileID: 11400000, guid: c4dab45419c1cd54bbb0fbd2ce31faba, type: 2}
+    sentence: How did you end up trapped in that tree? And how do you know my name?
+    skipDelayTime: 0
+    sentenceSound: {fileID: 0}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    highLightColor: 0
+  - dialogueCharacter: {fileID: 11400000, guid: 050dd92d89fb514438528ff19770b972, type: 2}
+    sentence: No, no, no! Cecilia, this is a grave mistake!
+    skipDelayTime: 0
+    sentenceSound: {fileID: 0}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    highLightColor: 0
+  - dialogueCharacter: {fileID: 11400000, guid: 050dd92d89fb514438528ff19770b972, type: 2}
+    sentence: Leave now and don't return!
+    skipDelayTime: 0
+    sentenceSound: {fileID: 0}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    highLightColor: 0
+  - dialogueCharacter: {fileID: 11400000, guid: 01a9051a317955f47a67cc9863d03165, type: 2}
+    sentence: The tree twisted and turned, ensnaring Cecilia in its grasp.
+    skipDelayTime: 0
+    sentenceSound: {fileID: 0}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    highLightColor: 0
+  - dialogueCharacter: {fileID: 11400000, guid: c4dab45419c1cd54bbb0fbd2ce31faba, type: 2}
+    sentence: What.....What happen?
+    skipDelayTime: 0
+    sentenceSound: {fileID: 0}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    highLightColor: 0
+  - dialogueCharacter: {fileID: 11400000, guid: 050dd92d89fb514438528ff19770b972, type: 2}
+    sentence: "We\u2019ve been misled! This sacrifice is a futile attempt to delay
+      the inevitable. The demons will break free, no matter what we do!"
+    skipDelayTime: 0
+    sentenceSound: {fileID: 0}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    highLightColor: 0
+  - dialogueCharacter: {fileID: 11400000, guid: 01a9051a317955f47a67cc9863d03165, type: 2}
+    sentence: '"Crack"'
+    skipDelayTime: 0
+    sentenceSound: {fileID: 0}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    highLightColor: 1
+  - dialogueCharacter: {fileID: 11400000, guid: 01a9051a317955f47a67cc9863d03165, type: 2}
+    sentence: A thunderous crack echoed through the cavernous space.
+    skipDelayTime: 0
+    sentenceSound: {fileID: 0}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    highLightColor: 0
+  - dialogueCharacter: {fileID: 11400000, guid: 01a9051a317955f47a67cc9863d03165, type: 2}
+    sentence: The End.........
+    skipDelayTime: 0
+    sentenceSound: {fileID: 0}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    highLightColor: 0
+  - dialogueCharacter: {fileID: 11400000, guid: abb1818021b772b47a6487f3db0c2ec0, type: 2}
+    sentence: 
+    skipDelayTime: 0
+    sentenceSound: {fileID: 0}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 547780645}
+          m_TargetAssemblyTypeName: HeneGames.DialogueSystem.DialogueUI, Assembly-CSharp
+          m_MethodName: ClearText
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1755605072}
+          m_TargetAssemblyTypeName: ReciveManager, Assembly-CSharp
+          m_MethodName: toMainMenu
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    highLightColor: 0
+  reqSentences: []
+  talkAgainSentences: []
+  canTalk: 1
+  cantTalkToSentences: []
+--- !u!114 &78140738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78140735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49575414a70960d4b9e7c87e4320c4f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cutSceneSprite:
+  - {fileID: 21300000, guid: 3e5f931c57e15b045b6d34e243f9c174, type: 3}
+  cutSceneImageUI: {fileID: 1727362395}
+  playCutSceneWithDialogue: 1
+  cutSceneDelay: 0
 --- !u!1001 &81293204
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -962,6 +1135,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: fdf26793d1c95dd48bcd9d67ecdf46ea, type: 3}
+    - target: {fileID: 6189244950716697368, guid: 66a0aba2ba55058439c92574558222ac, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 165
+      objectReference: {fileID: 0}
     - target: {fileID: 6449296285370776052, guid: 66a0aba2ba55058439c92574558222ac, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -988,11 +1165,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6449296285444158424, guid: 66a0aba2ba55058439c92574558222ac, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -43.5
+      value: -55.5
       objectReference: {fileID: 0}
     - target: {fileID: 6449296285444158424, guid: 66a0aba2ba55058439c92574558222ac, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 56.4
+      value: 67.4
       objectReference: {fileID: 0}
     - target: {fileID: 6449296285444158425, guid: 66a0aba2ba55058439c92574558222ac, type: 3}
       propertyPath: m_IsActive
@@ -1002,13 +1179,21 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: c469d2d078188de4b9f2d00c2d175e05, type: 3}
+    - target: {fileID: 6449296285614807723, guid: 66a0aba2ba55058439c92574558222ac, type: 3}
+      propertyPath: m_margin.y
+      value: -17.33256
+      objectReference: {fileID: 0}
+    - target: {fileID: 6449296285614807723, guid: 66a0aba2ba55058439c92574558222ac, type: 3}
+      propertyPath: m_margin.z
+      value: 115.16661
+      objectReference: {fileID: 0}
     - target: {fileID: 6449296285614807732, guid: 66a0aba2ba55058439c92574558222ac, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 85.3
+      value: 73.30002
       objectReference: {fileID: 0}
     - target: {fileID: 6449296285614807732, guid: 66a0aba2ba55058439c92574558222ac, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 30.7
+      value: 41.69999
       objectReference: {fileID: 0}
     - target: {fileID: 6449296285829880521, guid: 66a0aba2ba55058439c92574558222ac, type: 3}
       propertyPath: m_Pivot.x
@@ -1093,6 +1278,10 @@ PrefabInstance:
     - target: {fileID: 6449296285829880533, guid: 66a0aba2ba55058439c92574558222ac, type: 3}
       propertyPath: m_Name
       value: Dialogue UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 7446588615067801714, guid: 66a0aba2ba55058439c92574558222ac, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9108682509438421372, guid: 66a0aba2ba55058439c92574558222ac, type: 3}
       propertyPath: m_Sprite
@@ -2531,6 +2720,109 @@ Transform:
   - {fileID: 414404674}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &267677875
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1579809923}
+    m_Modifications:
+    - target: {fileID: 6011988201399623206, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: m_Name
+      value: Dialogue 3D
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297276050750010171, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297276050750010171, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297276050750010171, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297276050750010171, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297276050750010171, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297276050750010171, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297276050750010171, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297276050750010171, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297276050750010171, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297276050750010171, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: triggerState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: NormalSentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: NormalSentences.Array.data[0].sentence
+      value: Wow, this place is huge! I've found the tree I was looking for. Time
+        to save everyone.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: NormalSentences.Array.data[0].sentenceSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 21638805ac4c35545bddadaf7ada33b0, type: 3}
+    - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: NormalSentences.Array.data[0].dialogueCharacter
+      value: 
+      objectReference: {fileID: 11400000, guid: c4dab45419c1cd54bbb0fbd2ce31faba, type: 2}
+    - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: NormalSentences.Array.data[0].sentenceEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: NormalSentences.Array.data[0].sentenceEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 880292023814025696, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+--- !u!114 &267677876 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+  m_PrefabInstance: {fileID: 267677875}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b89b2c8d34df52d4e89cba040401d38b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &267677877 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6297276050750010171, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+  m_PrefabInstance: {fileID: 267677875}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &274834575
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4938,6 +5230,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3450921676356812244, guid: 6f43a8b6aedcd4942a62485bad96d664, type: 3}
   m_PrefabInstance: {fileID: 524507451}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &547780645 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6449296285829880520, guid: 66a0aba2ba55058439c92574558222ac, type: 3}
+  m_PrefabInstance: {fileID: 101899211}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8806150b481b8f543a5774ddeb2d013a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &564392261
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5741,14 +6044,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2716035583683709125, guid: f1f3fd3e22a4d6f439140b653c7707e1, type: 3}
-      propertyPath: m_fontSize
-      value: 72
-      objectReference: {fileID: 0}
-    - target: {fileID: 2716035583683709125, guid: f1f3fd3e22a4d6f439140b653c7707e1, type: 3}
-      propertyPath: m_enableAutoSizing
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3271329290081980329, guid: f1f3fd3e22a4d6f439140b653c7707e1, type: 3}
       propertyPath: m_Name
       value: MainCanvasUI
@@ -5757,14 +6052,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1755605072}
-    - target: {fileID: 6429886295310718596, guid: f1f3fd3e22a4d6f439140b653c7707e1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: pauseMenu
-      objectReference: {fileID: 0}
-    - target: {fileID: 6429886295310718596, guid: f1f3fd3e22a4d6f439140b653c7707e1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ReciveManager, Assembly-CSharp
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6041,6 +6328,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 209673954331782587, guid: 4384cd3476e16de468d0d73d550cf670, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 608109058704225686, guid: 4384cd3476e16de468d0d73d550cf670, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -6048,6 +6339,18 @@ PrefabInstance:
     - target: {fileID: 974706231692819906, guid: 4384cd3476e16de468d0d73d550cf670, type: 3}
       propertyPath: cheatEnable
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1457039382768807145, guid: 4384cd3476e16de468d0d73d550cf670, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506710124765960601, guid: 4384cd3476e16de468d0d73d550cf670, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506710124765960601, guid: 4384cd3476e16de468d0d73d550cf670, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1.3540955
       objectReference: {fileID: 0}
     - target: {fileID: 3592602875213077135, guid: 4384cd3476e16de468d0d73d550cf670, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6100,6 +6403,14 @@ PrefabInstance:
     - target: {fileID: 6853238573976611292, guid: 4384cd3476e16de468d0d73d550cf670, type: 3}
       propertyPath: paused
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7446910598294065142, guid: 4384cd3476e16de468d0d73d550cf670, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7995701606266285187, guid: 4384cd3476e16de468d0d73d550cf670, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7609,8 +7920,8 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 80
+  m_Color: {r: 0.990566, g: 0.9673812, b: 0.75226945, a: 1}
+  m_Intensity: 150
   m_Range: 38.3
   m_SpotAngle: 67.9447
   m_InnerSpotAngle: 59.74678
@@ -7669,7 +7980,7 @@ Transform:
   m_GameObject: {fileID: 819017057}
   serializedVersion: 2
   m_LocalRotation: {x: 0.68266994, y: 0.15882063, z: 0.1829011, w: 0.6894092}
-  m_LocalPosition: {x: 19.57, y: 38.57, z: 96.63}
+  m_LocalPosition: {x: 17.28, y: 42.89, z: 96.54}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9760,7 +10071,6 @@ Transform:
   - {fileID: 294019397}
   - {fileID: 8089669508243697730}
   - {fileID: 1821766668}
-  - {fileID: 1882981810}
   - {fileID: 993893450}
   - {fileID: 969984329}
   - {fileID: 1686233694}
@@ -13593,7 +13903,8 @@ Transform:
   m_LocalPosition: {x: 34.08, y: 12.32, z: 33.46553}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 267677877}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1579809924
@@ -13623,7 +13934,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 267677876}
+        m_TargetAssemblyTypeName: HeneGames.DialogueSystem.DialogueManager, Assembly-CSharp
+        m_MethodName: playDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   finishEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -13840,14 +14163,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7866076482867789348, guid: d5eb1b2644f77774595eaf932a6cc490, type: 3}
       propertyPath: terrainSound.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7866076482867789348, guid: d5eb1b2644f77774595eaf932a6cc490, type: 3}
       propertyPath: terrainSound.Array.data[4].soundName
       value: WalkGround
       objectReference: {fileID: 0}
     - target: {fileID: 7866076482867789348, guid: d5eb1b2644f77774595eaf932a6cc490, type: 3}
+      propertyPath: terrainSound.Array.data[5].soundName
+      value: WalkGround
+      objectReference: {fileID: 0}
+    - target: {fileID: 7866076482867789348, guid: d5eb1b2644f77774595eaf932a6cc490, type: 3}
       propertyPath: terrainSound.Array.data[4]._terrainLayer
+      value: 
+      objectReference: {fileID: 8574412962073106934, guid: 0907e7f4bb6b6e6419de8b50e7fe7b07, type: 2}
+    - target: {fileID: 7866076482867789348, guid: d5eb1b2644f77774595eaf932a6cc490, type: 3}
+      propertyPath: terrainSound.Array.data[5]._terrainLayer
       value: 
       objectReference: {fileID: 8574412962073106934, guid: 7df978af342c7ae4db52171cb9a13ee7, type: 2}
     - target: {fileID: 8685195273215669931, guid: d5eb1b2644f77774595eaf932a6cc490, type: 3}
@@ -14838,6 +15169,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CutSceneManager
       objectReference: {fileID: 0}
+    - target: {fileID: 5293150453476491405, guid: da8df9475cd8b3b43a1bec8d78daa47b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6605945264782136370, guid: da8df9475cd8b3b43a1bec8d78daa47b, type: 3}
       propertyPath: NPCAnimator
       value: 
@@ -14890,6 +15225,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 940519953383037638, guid: da8df9475cd8b3b43a1bec8d78daa47b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 459337237}
+    - targetCorrespondingSourceObject: {fileID: 940519953383037638, guid: da8df9475cd8b3b43a1bec8d78daa47b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 78140736}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da8df9475cd8b3b43a1bec8d78daa47b, type: 3}
 --- !u!114 &1727362393 stripped
@@ -14908,6 +15246,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 940519953383037638, guid: da8df9475cd8b3b43a1bec8d78daa47b, type: 3}
   m_PrefabInstance: {fileID: 1727362392}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1727362395 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5675474733794122891, guid: da8df9475cd8b3b43a1bec8d78daa47b, type: 3}
+  m_PrefabInstance: {fileID: 1727362392}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1740202916
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21300,12 +21649,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1882981804}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -70, y: 9.06, z: -3.4000092}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 32.699997, y: 19.02, z: 76.50001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1030240817}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1910651229
 PrefabInstance:
@@ -29052,6 +29401,7 @@ SceneRoots:
   - {fileID: 65309128}
   - {fileID: 364104006}
   - {fileID: 1519077964}
+  - {fileID: 1882981810}
   - {fileID: 1030240817}
   - {fileID: 626122613}
   - {fileID: 777366459}

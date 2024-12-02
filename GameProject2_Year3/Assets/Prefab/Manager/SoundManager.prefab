@@ -182,6 +182,9 @@ MonoBehaviour:
   - nameSound: Forest
     sound: {fileID: 8300000, guid: 413439db898ebb8489821a980ada9c4a, type: 3}
     clip: {fileID: 8300000, guid: 413439db898ebb8489821a980ada9c4a, type: 3}
+  - nameSound: Flute
+    sound: {fileID: 8300000, guid: 908811fc0686ce4449bc2899e3a8f9bc, type: 3}
+    clip: {fileID: 8300000, guid: 908811fc0686ce4449bc2899e3a8f9bc, type: 3}
   sfxSound:
   - nameSound: Press_Key
     sound: {fileID: 8300000, guid: aee61194365565d44aabbea8bf8de260, type: 3}

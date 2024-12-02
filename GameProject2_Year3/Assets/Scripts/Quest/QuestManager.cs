@@ -63,8 +63,8 @@ public class QuestManager : MonoBehaviour
 
     public void ChangeQuest()
     {
-            resetIndex();
-            currentQuest = null;
+        resetIndex();
+        currentQuest = null;
         
     }
 

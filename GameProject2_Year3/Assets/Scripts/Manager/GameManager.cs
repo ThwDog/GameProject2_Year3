@@ -38,4 +38,14 @@ public class GameManager : SingletonClass<GameManager>
     public void NextChapter(){
         loadScene._LoadScene();
     }
+
+    public void exit(){
+        Application.Quit();
+    }
+
+    public void toMainMenu(){
+        loadScene.toMainMenu();
+        uiManager.resume();
+    }
+
 }

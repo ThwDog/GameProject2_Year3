@@ -16,6 +16,24 @@ public class ReciveManager : MonoBehaviour
             FindObjectOfType<UIManager>().pauseMenu();
         }
         catch{
+            Debug.Log("Cant find");
+        }
+    }
+
+    public void toMainMenu(){
+        try{
+            FindObjectOfType<GameManager>().toMainMenu();
+        }
+        catch{
+
+        }
+    }
+
+    public void exit(){
+        try{
+            FindObjectOfType<GameManager>().exit();
+        }
+        catch{
 
         }
     }

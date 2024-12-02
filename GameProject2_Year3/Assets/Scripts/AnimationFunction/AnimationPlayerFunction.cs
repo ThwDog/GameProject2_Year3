@@ -5,6 +5,7 @@ using UnityEngine;
 public class AnimationPlayerFunction : MonoBehaviour
 {
     [SerializeField] PlayerController playerCon;
+    [SerializeField] GameObject effect;
 
 
     public void playRodHitWaterSFX(){
@@ -17,5 +18,13 @@ public class AnimationPlayerFunction : MonoBehaviour
 
     public void disableShowItemSprite(){
         playerCon.disableShowItemSprite();
+    }
+
+    public void enableEffect(){
+        effect.SetActive(true);
+    }
+
+    public void disableEffect(){
+        effect.SetActive(false);
     }
 }

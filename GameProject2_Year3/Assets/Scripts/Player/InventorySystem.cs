@@ -37,6 +37,7 @@ public class InventorySystem : MonoBehaviour
     public void _AssignItemReq(Inventory_Scriptable inventory)
     {
         itemReq.Clear();
+        this.inventory.Clear();
         this.checkItemReq = inventory;
         _AssignItemReq();
     }
@@ -46,7 +47,7 @@ public class InventorySystem : MonoBehaviour
     }
 
     public void cheat(){
-        inventory = itemReq;
+        inventory.AddRange(itemReq);
     }
 
     // check inventory if have all item require 

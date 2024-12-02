@@ -322,6 +322,7 @@ namespace HeneGames.DialogueSystem
                 }
                 else {
                     questIsFinish = false;
+                    Debug.Log("Doesnt have" + req_item[i]);
                     break;
                 }
             }
