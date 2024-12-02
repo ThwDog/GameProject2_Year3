@@ -907,7 +907,19 @@ MonoBehaviour:
     sentenceSound: {fileID: 0}
     sentenceEvent:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 78140738}
+          m_TargetAssemblyTypeName: PlayCutScene, Assembly-CSharp
+          m_MethodName: setCutSceneImg
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     highLightColor: 1
   - dialogueCharacter: {fileID: 11400000, guid: 01a9051a317955f47a67cc9863d03165, type: 2}
     sentence: A thunderous crack echoed through the cavernous space.
@@ -915,7 +927,19 @@ MonoBehaviour:
     sentenceSound: {fileID: 0}
     sentenceEvent:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: 
+          m_MethodName: 
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     highLightColor: 0
   - dialogueCharacter: {fileID: 11400000, guid: 01a9051a317955f47a67cc9863d03165, type: 2}
     sentence: The End.........
@@ -975,6 +999,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cutSceneSprite:
   - {fileID: 21300000, guid: 3e5f931c57e15b045b6d34e243f9c174, type: 3}
+  - {fileID: 21300000, guid: 35f9c24db4ee1b844a5f6738c5c12e10, type: 3}
   cutSceneImageUI: {fileID: 1727362395}
   playCutSceneWithDialogue: 1
   cutSceneDelay: 0
@@ -5749,7 +5774,7 @@ Transform:
   m_GameObject: {fileID: 626122606}
   serializedVersion: 2
   m_LocalRotation: {x: -0.07542198, y: -0, z: -0, w: 0.9971518}
-  m_LocalPosition: {x: 33.896, y: 13.989, z: 94.622}
+  m_LocalPosition: {x: 33.84, y: 13.44, z: 94.59}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

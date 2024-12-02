@@ -725,6 +725,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 974706231692819906, guid: 4384cd3476e16de468d0d73d550cf670, type: 3}
+      propertyPath: cheatEnable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3076092759938896040, guid: 4384cd3476e16de468d0d73d550cf670, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
