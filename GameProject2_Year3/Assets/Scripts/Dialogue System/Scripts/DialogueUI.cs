@@ -224,6 +224,11 @@ namespace HeneGames.DialogueSystem
             normalBG.SetActive(true);
         }
 
+        public void noneBG(){
+            if(cutSceneBG.activeSelf) cutSceneBG.SetActive(false);
+            if(normalBG.activeSelf) normalBG.SetActive(false);
+        }
+
         public void highLightText(){
             messageText.color = highLightColor;
         }

@@ -35,6 +35,7 @@ namespace HeneGames.DialogueSystem
         public UnityEvent endDialogueEvent;
         [Header("")]
         [SerializeField] bool useCutSceneBG = false;
+        [SerializeField] bool noneBGDialogue = false;
         public bool questIsFinish = false;
         private bool startQuest;
         [Tooltip("Set it if you req item to start dialogue")][SerializeField] private List<CollectableItem_Scriptable> req_item = new List<CollectableItem_Scriptable>();  // check if player inventory and reqment inven is match
@@ -83,8 +84,9 @@ namespace HeneGames.DialogueSystem
 
                 startDialogueEvent.Invoke();
 
-                if(useCutSceneBG) DialogueUI.instance.useCutSceneBg();
-                else DialogueUI.instance.useNormalBg();
+                if (noneBGDialogue) DialogueUI.instance.noneBG();
+                else if(useCutSceneBG) DialogueUI.instance.useCutSceneBg();
+                else if(!useCutSceneBG) DialogueUI.instance.useNormalBg();
                 //If component found start dialogue
                 DialogueUI.instance.StartDialogue(this);
 
@@ -110,8 +112,9 @@ namespace HeneGames.DialogueSystem
 
                     startDialogueEvent.Invoke();
 
-                    if(useCutSceneBG) DialogueUI.instance.useCutSceneBg();
-                    else DialogueUI.instance.useNormalBg();        
+                    if (noneBGDialogue) DialogueUI.instance.noneBG();
+                    else if(useCutSceneBG) DialogueUI.instance.useCutSceneBg();
+                    else if(!useCutSceneBG) DialogueUI.instance.useNormalBg();       
                     //If component found start dialogue
                     DialogueUI.instance.StartDialogue(this);
 
@@ -330,8 +333,9 @@ namespace HeneGames.DialogueSystem
 
         // use for play dialogue that doesn't need to set trigger
         public void playDialogue(){
-            if(useCutSceneBG) DialogueUI.instance.useCutSceneBg();
-            else DialogueUI.instance.useNormalBg();
+            if (noneBGDialogue) DialogueUI.instance.noneBG();
+            else if(useCutSceneBG) DialogueUI.instance.useCutSceneBg();
+            else if(!useCutSceneBG) DialogueUI.instance.useNormalBg();
             DialogueUI.instance.StartDialogue(this);
             try{
                 FindObjectOfType<DialogueTrigger>().startDialogueEvent.Invoke();

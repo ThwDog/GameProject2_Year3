@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f4a308dae7ffd048a8b0eb8d5ae4a02, type: 3}
   m_Name: Mother
   m_EditorClassIdentifier: 
-  characterPhoto: {fileID: 21300000, guid: bfaf01a4faa2c1d4e993a01b5e2096c0, type: 3}
+  characterPhoto: {fileID: 21300000, guid: 4032a2c8ef272024dbb263340dcc68ee, type: 3}
   characterName: Mother
   photoSize: {x: 70, y: 70}
