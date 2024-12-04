@@ -1670,7 +1670,6 @@ GameObject:
   m_Component:
   - component: {fileID: 547964091843320425}
   - component: {fileID: 4092303152620940553}
-  - component: {fileID: 6698655426260996283}
   m_Layer: 9
   m_Name: Cloth_store_all 1
   m_TagString: Untagged
@@ -1737,43 +1736,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.29579565, y: 0.22547877, z: 0.2777284}
   m_Center: {x: 0.42094383, y: -0.0015366912, z: -0.22000001}
---- !u!114 &6698655426260996283
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8484729433898148778}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43fdd43f147ad844cb9e1ff9aa433a18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  closeType: 1
-  target:
-  - {fileID: 7918324657153717250}
-  - {fileID: 374771671226114215}
-  - {fileID: 3261972430544560009}
-  - {fileID: 4597655868708539850}
-  - {fileID: 2326618744062540811}
-  - {fileID: 6651111528903828016}
-  - {fileID: 7821160627407188967}
-  - {fileID: 4808065459452177595}
-  - {fileID: 1456980968739545585}
-  - {fileID: 6216273697823527703}
-  - {fileID: 2834116484797932097}
-  - {fileID: 4024060423927435247}
-  - {fileID: 7902094864570049037}
-  - {fileID: 2836734321881808241}
-  - {fileID: 8867232550641706493}
-  - {fileID: 5895136892034831467}
-  - {fileID: 591310344235476236}
-  - {fileID: 8629879500677326911}
-  - {fileID: 6443046088605749014}
-  - {fileID: 2142255887282910969}
-  - {fileID: 7085075530937199976}
-  - {fileID: 7647052953651470541}
-  - {fileID: 9064057684694069411}
 --- !u!1 &8629879500677326911
 GameObject:
   m_ObjectHideFlags: 0

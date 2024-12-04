@@ -176,7 +176,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4388551769214154055}
   - component: {fileID: 761216053015374244}
-  - component: {fileID: 2376033077994033400}
   - component: {fileID: 1176508227112621372}
   m_Layer: 0
   m_Name: Wildmil
@@ -223,22 +222,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.6269121, y: 1.1246424, z: 0.61721194}
   m_Center: {x: 0.0010616779, y: 0.25685856, z: -0.0007068634}
---- !u!114 &2376033077994033400
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8775883165924790489}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43fdd43f147ad844cb9e1ff9aa433a18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  closeType: 1
-  target:
-  - {fileID: 7431239996394461038}
-  - {fileID: 8291388052224038247}
 --- !u!205 &1176508227112621372
 LODGroup:
   m_ObjectHideFlags: 0

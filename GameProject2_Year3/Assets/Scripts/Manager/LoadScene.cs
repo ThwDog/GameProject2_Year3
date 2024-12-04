@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -42,15 +42,15 @@ public class LoadScene : MonoBehaviour
     IEnumerator LoadingScene(){
         float totalProgress = 0;
         for(int i = 0;i < sceneLoad.Count; i++){
-            while(!sceneLoad[i].isDone){
+            while(sceneLoad[i].progress < 0.9f){
                 totalProgress += sceneLoad[i].progress;
-                Debug.Log("Load" + sceneLoad[i].progress);
+                // Debug.Log("Load" + sceneLoad[i].progress);
                 progressBar.value = totalProgress/sceneLoad.Count;
                 yield return null;
             }
         }
         if(!loadScene) yield break;
-        yield return new WaitForSeconds(1f); // for safe
+        yield return new WaitUntil(() => sceneLoad.All(a => a.progress >= 0.9)); // for safe
         loadScene.gameObject.SetActive(false); 
         setEnable();
         progressBar.value = 0f; // reset
@@ -74,19 +74,6 @@ public class LoadScene : MonoBehaviour
 
     public int CheckNextStage(){
         int index = SceneManager.GetActiveScene().buildIndex;
-        // switch(index){
-        //     case 0: // main menu
-        //         return 1;
-        //     case 1: 
-        //         return 2;
-        //     case 2:
-        //         return 3;
-        //     case 3:
-        //         return 4;
-        //     case 4:
-        //         return 0;
-        // }
-        // // should not be here
         return index + 1;
     }
 

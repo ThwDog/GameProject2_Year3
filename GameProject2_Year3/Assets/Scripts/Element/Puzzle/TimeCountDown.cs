@@ -17,7 +17,7 @@ public class TimeCountDown : MonoBehaviour , Ipauseable , IRestartable
             timeText = _timeSpan.ToString(@"mm\:ss");
             currentTime = maxMin;
             isOpen = true;
-            Debug.Log(timeText);
+            // Debug.Log(timeText);
         }
         if(!isStart) return;
         // Count Down Time //
@@ -26,7 +26,7 @@ public class TimeCountDown : MonoBehaviour , Ipauseable , IRestartable
         TimeSpan timeSpan = TimeSpan.FromMinutes(currentTime);
         timeText = timeSpan.ToString(@"mm\:ss");
 
-        Debug.Log(timeText);
+        // Debug.Log(timeText);
     }
 
 

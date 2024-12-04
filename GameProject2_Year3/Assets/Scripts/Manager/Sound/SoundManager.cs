@@ -38,11 +38,11 @@ public class SoundManager : SingletonClass<SoundManager>
         Sound s = Array.Find(musicSound, x => x.nameSound == nameSound);
         if (s == null)
         {
-            Debug.Log("Not have music");
+            // Debug.Log("Not have music");
         }
         else
         {
-            Debug.Log($"Play music {nameSound}");
+            // Debug.Log($"Play music {nameSound}");
             musicSource.clip = s.clip;
             musicSource.Play();
         }
@@ -53,11 +53,11 @@ public class SoundManager : SingletonClass<SoundManager>
         Sound s = Array.Find(musicSound, x => x.nameSound == nameSound);
         if (s == null)
         {
-            Debug.Log("Not have music");
+            // Debug.Log("Not have music");
         }
         else
         {
-            Debug.Log($"Stop music {nameSound}");
+            // Debug.Log($"Stop music {nameSound}");
             musicSource.clip = s.clip;
             musicSource.Stop();
         }
@@ -65,7 +65,7 @@ public class SoundManager : SingletonClass<SoundManager>
 
     public void StopAllMusic()
     {
-        Debug.Log("Stop all music");
+        // Debug.Log("Stop all music");
         musicSource.Stop();
     }
 
@@ -81,7 +81,7 @@ public class SoundManager : SingletonClass<SoundManager>
         Sound s = Array.Find(sfxSound, x => x.nameSound == nameSfx);
         if (s == null)
         {
-            Debug.Log("Not have SFX");
+            // Debug.Log("Not have SFX");
         }
         else
         {
@@ -95,11 +95,11 @@ public class SoundManager : SingletonClass<SoundManager>
         Sound s = Array.Find(sfxSound, x => x.nameSound == nameSfx);
         if (s == null)
         {
-            Debug.Log("Not have SFX");
+            // Debug.Log("Not have SFX");
         }
         else
         {
-            Debug.Log($"Stop Sfx {nameSfx}");
+            // Debug.Log($"Stop Sfx {nameSfx}");
             Debug.Log(s.clip);
             sfxSource.Stop();
         }
@@ -111,7 +111,7 @@ public class SoundManager : SingletonClass<SoundManager>
         Sound s = Array.Find(sfxSound, x => x.nameSound == nameSound);
         if (s == null)
         {
-            Debug.Log("Not have SFX");
+            // Debug.Log("Not have SFX");
         }
         else
         {
@@ -137,7 +137,7 @@ public class SoundManager : SingletonClass<SoundManager>
         Sound s = Array.Find(ambientSound, x => x.nameSound == nameSound);
         if (s == null)
         {
-            Debug.Log("Not have music");
+            // Debug.Log("Not have music");
         }
         else
         {
@@ -152,11 +152,11 @@ public class SoundManager : SingletonClass<SoundManager>
         Sound s = Array.Find(ambientSound, x => x.nameSound == nameSound);
         if (s == null)
         {
-            Debug.Log("Not have music");
+            // Debug.Log("Not have music");
         }
         else
         {
-            Debug.Log($"Stop music {nameSound}");
+            // Debug.Log($"Stop music {nameSound}");
             gameSoundSource.clip = s.clip;
             gameSoundSource.Stop();
         }
@@ -164,7 +164,7 @@ public class SoundManager : SingletonClass<SoundManager>
 
     public void StopAllGameSound()
     {
-        Debug.Log("Stop all music");
+        // Debug.Log("Stop all music");
         gameSoundSource.Stop();
     }
 

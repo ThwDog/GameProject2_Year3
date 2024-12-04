@@ -34,7 +34,7 @@ public class QuestManager : MonoBehaviour
         // currentQuestIndex will alway smaller than currentQuest.quests.Count
         if (currentQuestIndex < currentQuest.quests.Count == false && currentQuestIndex > 0){
             currentQuestIndex--;
-            Debug.Log("There are no more quest");
+            // Debug.Log("There are no more quest");
             return;
         }
 

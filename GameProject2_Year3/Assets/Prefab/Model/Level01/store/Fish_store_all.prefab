@@ -591,7 +591,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6891522894216696250}
   - component: {fileID: 7460390375143488893}
-  - component: {fileID: 3969711503870732045}
   m_Layer: 9
   m_Name: Fish_store_all
   m_TagString: Untagged
@@ -672,57 +671,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.3936224, y: 0.2235159, z: 0.16265526}
   m_Center: {x: 0.7799999, y: 0.10732575, z: 0.31124574}
---- !u!114 &3969711503870732045
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2015779174743371960}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43fdd43f147ad844cb9e1ff9aa433a18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  closeType: 1
-  target:
-  - {fileID: 3664012649797034852}
-  - {fileID: 5736982150373881984}
-  - {fileID: 2461637388734418810}
-  - {fileID: 7034255091478918715}
-  - {fileID: 4446157456130509350}
-  - {fileID: 26654030604520749}
-  - {fileID: 2914785416165688029}
-  - {fileID: 5287281923044055543}
-  - {fileID: 389674902144687066}
-  - {fileID: 8674658786616261506}
-  - {fileID: 8066081818231079772}
-  - {fileID: 2060383038854037176}
-  - {fileID: 5821934010646891518}
-  - {fileID: 8407515447383925021}
-  - {fileID: 3551558188433869417}
-  - {fileID: 5673948866506755681}
-  - {fileID: 8625667736960428861}
-  - {fileID: 7244775785612292645}
-  - {fileID: 741408382099309309}
-  - {fileID: 4667548309672957727}
-  - {fileID: 5889509744200692692}
-  - {fileID: 7857540948288957132}
-  - {fileID: 6679968534761749326}
-  - {fileID: 1528506083698536401}
-  - {fileID: 2604129083105852035}
-  - {fileID: 7133218483566475555}
-  - {fileID: 1312858283998986001}
-  - {fileID: 5222224545533359093}
-  - {fileID: 5159054151642291403}
-  - {fileID: 619426010958203556}
-  - {fileID: 7827360162218934789}
-  - {fileID: 2811309973492260883}
-  - {fileID: 7965511359357030369}
-  - {fileID: 8639262166303218103}
-  - {fileID: 1915231673040778198}
-  - {fileID: 2869280594692849288}
-  - {fileID: 5737363360941741583}
 --- !u!1 &2060383038854037176
 GameObject:
   m_ObjectHideFlags: 0

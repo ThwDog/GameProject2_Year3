@@ -66,7 +66,7 @@ public class PlatePuzzle : MonoBehaviour , IRestartable
 
             if (isSame) // finish
             {
-                Debug.Log("Win");
+                // Debug.Log("Win");
                 stage++;
                 // resetAllPlate();
                 if(canDelay) {
@@ -78,7 +78,7 @@ public class PlatePuzzle : MonoBehaviour , IRestartable
             }
             else // fail
             {
-                Debug.Log("lose");
+                // Debug.Log("lose");
                 stage = 1;
                 // resetAllPlate();
                 if(canDelay) {

@@ -61,7 +61,7 @@ public class InventorySystem : MonoBehaviour
             {
                 check = false;
 
-                Debug.Log("You doesn't have " + item.name);
+                // Debug.Log("You doesn't have " + item.name);
                 break;
             }
         }

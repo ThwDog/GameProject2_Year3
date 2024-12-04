@@ -49,7 +49,7 @@ public class SpawnPlayer : MonoBehaviour
         player = FindAnyObjectByType<PlayerController>();
         player.canPlayWalkSound = true;
         // player.gameObject.SetActive(false);
-        Debug.Log("ReSpawn");
+        // Debug.Log("ReSpawn");
         StartCoroutine(DeSpawnWait(player.gameObject));
         reSpawn();
         _event._StartEvent();

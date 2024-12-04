@@ -31,7 +31,7 @@ public class SpawnItemByClick : MonoBehaviour , Ipauseable , IRestartable
     
     public void Spawn(){
         if(!isSpawn){
-            Debug.Log("Spawn Item : "  + spawnObj.name);
+            // Debug.Log("Spawn Item : "  + spawnObj.name);
             isSpawn = true;
             if(!spawnObj) {
                 if(_event) _event._FinishEvent();

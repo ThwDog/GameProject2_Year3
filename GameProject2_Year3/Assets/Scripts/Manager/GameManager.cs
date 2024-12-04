@@ -24,7 +24,7 @@ public class GameManager : SingletonClass<GameManager>
         uiManager.updateVolume();
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Debug.Log("Pause");
+            // Debug.Log("Pause");
             uiManager.pauseMenu();
         }
         if(Input.GetMouseButtonDown(0)){

@@ -39,7 +39,7 @@ public class OpenArea : MonoBehaviour
 
         if (Vector3.Distance(transform.position, player.gameObject.transform.position) < loadRange)
         {
-            Debug.Log("Open");
+            // Debug.Log("Open");
             if (openType == _openType.area)
             {
                 _OpenArea(callByIndex);
@@ -51,7 +51,7 @@ public class OpenArea : MonoBehaviour
         }
         else if (Vector3.Distance(transform.position, player.gameObject.transform.position) > loadRange)
         {
-            Debug.Log("close");
+            // Debug.Log("close");
             if (openType == _openType.area)
             {
                 _CloseArea(callByIndex);

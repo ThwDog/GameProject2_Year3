@@ -20,7 +20,7 @@ public class BGSoundPlay : MonoBehaviour , Ipauseable
     private void Start() {
         SoundManager.instance.StopAllMusic();
         if(playOnStart) {
-            Debug.Log("Play Sound");
+            // Debug.Log("Play Sound");
             SoundManager.instance.PlayMusic(bgSound);
         }
     }

@@ -165,7 +165,7 @@ public class PlayerController : MonoBehaviour , Ipauseable
     // check if start fishing
     public void fishingCheck(){
         if(isAnimPlaying(0,"Fishing_Start")){
-            Debug.Log("Fishing");
+            // Debug.Log("Fishing");
             anim.SetBool("IsFishing",true); //set is fishing is true
             _SetFishing(true);
             // if(!isFishing){

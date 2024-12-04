@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCon: {fileID: 6561766938607739572}
+  effect: {fileID: 0}
 --- !u!1 &3428918506781197968
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,7 +216,6 @@ GameObject:
   m_Component:
   - component: {fileID: 846701806657894281}
   - component: {fileID: 1553493249973259677}
-  - component: {fileID: 5071779435058530812}
   - component: {fileID: 4055199754714642241}
   - component: {fileID: 6561766938607739572}
   - component: {fileID: 6764816931950542762}
@@ -273,29 +273,6 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &5071779435058530812
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6461981819148202631}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4055199754714642241
 MonoBehaviour:

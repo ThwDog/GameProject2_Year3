@@ -16,7 +16,7 @@ public class PuzzleCheck : MonoBehaviour
             checkBool check = obj.GetComponent<checkBool>();
             if(check != null){
                 checks.Add(check);
-                Debug.Log("Add" + check);
+                // Debug.Log("Add" + check);
             }
         }
     }
@@ -27,7 +27,7 @@ public class PuzzleCheck : MonoBehaviour
                 return;
             }
         }
-        Debug.Log("All Win");
+        // Debug.Log("All Win");
         allWin = true;
         _event._FinishEvent();
     } 

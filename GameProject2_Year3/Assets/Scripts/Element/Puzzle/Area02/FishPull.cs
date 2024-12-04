@@ -57,7 +57,7 @@ public class FishPull : MonoBehaviour
 
     private void winCheck(){
         if(playerPer >= 100 ) {
-            Debug.Log("player Win");
+            // Debug.Log("player Win");
             playerPer = 100;
             IsPlaying = false;
             pool.finishPool();

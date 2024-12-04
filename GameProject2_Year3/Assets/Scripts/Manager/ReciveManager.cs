@@ -16,7 +16,7 @@ public class ReciveManager : MonoBehaviour
             FindObjectOfType<UIManager>().pauseMenu();
         }
         catch{
-            Debug.Log("Cant find");
+            // Debug.Log("Cant find");
         }
     }
 

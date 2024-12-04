@@ -1338,7 +1338,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3631694086218516669}
   - component: {fileID: 4271106212527208913}
-  - component: {fileID: 1384609790557051263}
   m_Layer: 9
   m_Name: Vegetable_store
   m_TagString: Untagged
@@ -1427,65 +1426,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.4191353, y: 0.21848829, z: 0.20848279}
   m_Center: {x: -0.130616, y: 0.10159403, z: 0.16186927}
---- !u!114 &1384609790557051263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2425155182225793504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43fdd43f147ad844cb9e1ff9aa433a18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  closeType: 1
-  target:
-  - {fileID: 3837329762596418334}
-  - {fileID: 2381641236680275672}
-  - {fileID: 1870188943771042509}
-  - {fileID: 4621347635066999928}
-  - {fileID: 7884030831221647530}
-  - {fileID: 5012864132875002286}
-  - {fileID: 5429173356123736136}
-  - {fileID: 7433203153200337553}
-  - {fileID: 6163131126568791449}
-  - {fileID: 1052470501370547715}
-  - {fileID: 3526760618788257624}
-  - {fileID: 5798346223647687642}
-  - {fileID: 1011120917829613915}
-  - {fileID: 1654864051810473941}
-  - {fileID: 6480287780776491284}
-  - {fileID: 1750803069303458289}
-  - {fileID: 6044651597473093436}
-  - {fileID: 7754585240515857093}
-  - {fileID: 3319106278447435013}
-  - {fileID: 5052344546201301105}
-  - {fileID: 6148406926571682213}
-  - {fileID: 8024674824580702399}
-  - {fileID: 3152491327388367316}
-  - {fileID: 1859003243980339283}
-  - {fileID: 5338746631875391458}
-  - {fileID: 810532230277783437}
-  - {fileID: 6424868916174468364}
-  - {fileID: 8179277504922783395}
-  - {fileID: 50785333633793603}
-  - {fileID: 567558462869439860}
-  - {fileID: 2000463512309455229}
-  - {fileID: 2426150575760921031}
-  - {fileID: 2850470995060107685}
-  - {fileID: 8565871323836671621}
-  - {fileID: 1641444063711426938}
-  - {fileID: 7835868085030084897}
-  - {fileID: 2191354579988871207}
-  - {fileID: 5471984632110679535}
-  - {fileID: 995197452521021615}
-  - {fileID: 1760412003646491336}
-  - {fileID: 8459544854037550179}
-  - {fileID: 4529753298904898932}
-  - {fileID: 1622721308384975173}
-  - {fileID: 3876907769500166794}
-  - {fileID: 3645831572103434875}
 --- !u!1 &2426150575760921031
 GameObject:
   m_ObjectHideFlags: 0

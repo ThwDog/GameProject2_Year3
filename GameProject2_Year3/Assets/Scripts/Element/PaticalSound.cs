@@ -16,8 +16,8 @@ public class FireworksParticleSoundSystem : MonoBehaviour
     private void OnEnable()
     {
         _parentParticleSystem = this.GetComponent<ParticleSystem>();
-        if(_parentParticleSystem == null)
-            Debug.LogError("Missing ParticleSystem!", this);
+        // if(_parentParticleSystem == null)
+            // Debug.LogError("Missing ParticleSystem!", this);
     }
 
     void Update()

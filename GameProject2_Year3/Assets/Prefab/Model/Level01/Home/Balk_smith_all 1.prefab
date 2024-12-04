@@ -674,7 +674,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5446407461758724395}
   - component: {fileID: 7956319079172065755}
-  - component: {fileID: 6326316983382557614}
   - component: {fileID: 4076736069104249642}
   m_Layer: 0
   m_Name: Balk_smith_all 1
@@ -729,30 +728,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.9191789, y: 0.6044422, z: 0.7966939}
   m_Center: {x: -0.2235416, y: 0.3037302, z: 0.046904843}
---- !u!114 &6326316983382557614
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8611060447698779551}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43fdd43f147ad844cb9e1ff9aa433a18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  closeType: 1
-  target:
-  - {fileID: 8868271885072407349}
-  - {fileID: 4165921745547990507}
-  - {fileID: 4111982378644986120}
-  - {fileID: 8683875758812177749}
-  - {fileID: 7141700113611600517}
-  - {fileID: 4836897402266401790}
-  - {fileID: 1230409090893938295}
-  - {fileID: 2821277916473375008}
-  - {fileID: 7494281010842672458}
-  - {fileID: 536426581505893803}
 --- !u!205 &4076736069104249642
 LODGroup:
   m_ObjectHideFlags: 0
